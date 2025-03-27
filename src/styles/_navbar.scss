@@ -1,0 +1,115 @@
+/* 🌍 Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🏡 Logo */
+.navbar-brand img {
+  width: 115%;
+  height: 50px;
+  display: block;
+  margin: auto;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15); /* effet glassy */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 📌 Style des liens */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* 🎨 Effet hover sur les liens */
+.navbar-nav .nav-link {
+  color: #365b6d; /* Couleur principale Amani */
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff7b00; /* Orange hover */
+}
+
+/* 🔥 Style du bouton "Nous Contacter" */
+.navbar-nav .contact-link {
+  background-color: #f4a261;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar-nav .contact-link:hover {
+  background-color: #e06a00;
+  transform: scale(1.05); /* Léger effet de zoom au survol */
+}
+
+/* 🎯 Centrer les icônes utilisateur et globe */
+.navbar .btn-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+
+.navbar .btn-light svg {
+  font-size: 20px;
+}
+
+/* 📌 Ajustement du menu déroulant */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* ✅ Aligner correctement les drapeaux et le texte */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.dropdown-item img {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 2px;
+}

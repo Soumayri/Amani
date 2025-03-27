@@ -1,0 +1,229 @@
+/* 🌟 Style général de la page service */
+.service-page {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Changement du fond global */
+body {
+  background: linear-gradient(to right, #eef5f9, #ffffff);
+}
+
+/* 🌍 Background spécifique pour chaque service */
+.service-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 80px 10%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* 📌 Correction des backgrounds */
+.key-holding-header {
+  background-image: url("../../public/img/KeyStorage.png");
+}
+.mail-collection-header {
+  background-image: url("../../public/img/MailCollection.png");
+}
+.monthly-checks-header {
+  background-image: url("../../public/img/MonthlyChecks.png");
+}
+.preventive-maintenance-header {
+  background-image: url("../../public/img/PreventiveMaintenance.png");
+}
+.welcome-home-header {
+  background-image: url("../../public/img/WelcomeHome.png");
+}
+.airport-transfers-header {
+  background-image: url("../../public/img/AirportTransfer.png");
+}
+/* 🔹 TITRE PRINCIPAL */
+.service-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+/* 🔹 SOUS-TITRE */
+.service-intro {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #2c3e50;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 40px auto 60px;
+}
+.service-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.service-benefits li {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-align: justify;
+}
+
+/* ✅ Icônes */
+.benefit-icon {
+  font-size: 1.5rem;
+  color: #365b6d;
+}
+/* 📌 MISE EN PAGE COMPARAISON STANDARD VS PREMIUM */
+.service-levels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* 📦 Bloc standard et premium */
+.service-box {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+.service-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 🔥 PREMIUM - Style spécifique */
+.premium-box {
+  background: #365b6d;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.premium-box h3 {
+  color: white;
+  text-align: center;
+}
+
+.premium-badge {
+  background: gold;
+  color: black;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* ✅ Liste des services */
+.service-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-box li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.service-box li svg {
+  color: #365b6d;
+  margin-right: 10px;
+}
+
+.premium-box li svg {
+  color: gold;
+}
+
+/* 🔹 Section FAQ */
+.faq-section {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.faq-section h3 {
+  font-size: 1.3rem;
+}
+/* 🎯 Boutons CTA */
+.cta-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  background: #365b6d;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #2c3e50;
+  transform: translateY(-3px);
+}
+
+/* 🔙 Bouton Retour */
+.back-button {
+  margin-top: 20px;
+  background: #ddd;
+  color: #333;
+  font-size: 0.7em;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.back-button:hover {
+  background: #bbb;
+  transform: translateY(-3px);
+}
+
+/* 🔥 Responsive */
+@media (max-width: 768px) {
+  .service-page {
+    padding: 20px;
+  }
+
+  .service-header h1 {
+    font-size: 2rem;
+  }
+
+  .service-levels {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service-benefits li {
+    font-size: 1rem;
+  }
+}

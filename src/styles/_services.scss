@@ -1,0 +1,72 @@
+/* 🌍 Section Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #365b6d; /* Bleu foncé Amani */
+}
+
+.services h2 {
+  font-size: 2rem; /* 🔹 Réduction du titre pour plus d'harmonie */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* 📌 Conteneur des services avec grille 3 colonnes */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* 🛠️ Ajustement pour mobile */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 🎯 Cartes des services */
+.service-card {
+  background: white;
+  padding: 20px; /* 🔹 Réduction de la taille */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #365b6d;
+  font-size: 0.9rem; /* 🔹 Réduction de la taille du texte */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🎨 Icônes */
+.service-icon {
+  font-size: 2rem; /* 🔹 Réduction de la taille des icônes */
+  color: #365b6d;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border: 2px solid #365b6d;
+}
+
+/* 🎯 Titres des services */
+.service-card h3 {
+  font-size: 1.1rem;
+}

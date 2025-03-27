@@ -1,0 +1,83 @@
+/* 🟦 FAQ Page Container */
+.faq-page {
+  padding: 80px 10%;
+  background: linear-gradient(to right, #eef5f9, #ffffff);
+  font-family: "Lora", serif;
+}
+
+/* 📌 Header */
+.faq-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.faq-header h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.faq-header p {
+  font-size: 1.3rem;
+  color: #555;
+  font-family: "Lora", serif;
+}
+
+/* ❓ Questions Container */
+.faq-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 📄 FAQ Item */
+.faq-item {
+  margin-bottom: 35px;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: #365b6d;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .faq-page {
+    padding: 60px 6%;
+  }
+
+  .faq-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .faq-header p {
+    font-size: 1.1rem;
+  }
+
+  .faq-content {
+    padding: 30px 20px;
+  }
+
+  .faq-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+  }
+}

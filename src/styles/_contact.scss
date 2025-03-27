@@ -1,0 +1,83 @@
+/* 🌟 Contact Page Container */
+.contact-page {
+  padding: 80px 10%;
+  background: linear-gradient(to right, #eef5f9, #ffffff);
+  text-align: center;
+}
+
+/* 🔹 Titre principal */
+.contact-page h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Sous-titre */
+.contact-subtitle {
+  font-size: 1.3rem;
+  font-family: "Lora", serif;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* 📝 Formulaire */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 🧾 Champs */
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #365b6d;
+}
+
+/* 🟢 Bouton Submit */
+.contact-submit {
+  background-color: #365b6d;
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Lora", serif;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.contact-submit:hover {
+  background-color: #2c3e50;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 40px 5%;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+}

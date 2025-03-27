@@ -1,0 +1,124 @@
+.they-trust-us {
+  background: #f8f9fa;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Partenaires */
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 100px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden; /* Empêche l’image de dépasser */
+  padding: 10px; /* Ajoute un léger espace autour */
+  margin-top: 40px;
+}
+
+.partner-logo {
+  max-width: 80%; /* 🔹 La largeur s’adapte sans déformer */
+  max-height: 80%; /* 🔹 S'assure que le logo ne dépasse pas */
+  object-fit: contain; /* 🔹 Garde les proportions sans cropper */
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌟 Section Amani en chiffres */
+/* 🌟 Section complète */
+.numbers-section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+/* 🏆 Titre principal */
+.numbers-title {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* 📊 Bloc contenant les chiffres */
+.numbers-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  background: #f0f4f8; /* 🌿 Fond léger pour démarquer */
+  border-radius: 15px; /* 🔥 Coins arrondis uniquement sur le bloc */
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 🏅 Chaque chiffre clé */
+.number-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🔥 Chiffre en grand */
+.number-value {
+  font-size: 3.1rem;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  color: #365b6d;
+}
+
+/* 🎨 Ligne fine sous le chiffre */
+.number-line {
+  width: 70px;
+  height: 2px;
+  background-color: #365b6d;
+  margin: 8px 0;
+}
+
+/* 🏡 Texte explicatif */
+.number-label {
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  color: #444;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 1024px) {
+  .numbers-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

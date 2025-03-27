@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  // background: url("/hero-image.webp") center/cover no-repeat;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Assombrit l'image pour améliorer la lisibilité */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: 200px; /* Ajuste la taille du logo */
+  margin-bottom: 15px; /* Espacement avec le slogan */
+}
+
+.hero-slogan {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 0px 20px 40px 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #365b6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin: 30px;
+}
+
+.hero-btn:hover {
+  background: #e06a00;
+}

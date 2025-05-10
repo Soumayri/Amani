@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <Link className="navbar-brand" to="/" onClick={handleNavLinkClick}>
-          <img src="/logoAmani.webp" alt="Amani Logo" />
+          <img src="/LogoAmani.webp" alt="Amani Logo" />
         </Link>
         <button
           className="navbar-toggler"

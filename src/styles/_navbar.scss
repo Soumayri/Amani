@@ -9,8 +9,19 @@
 }
 
 /* 🏡 Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  max-width: 130px;
+  flex-shrink: 0;
+}
+.navbar,
+.navbar .container {
+  flex-wrap: nowrap;
+}
 .navbar-brand img {
-  width: 115%;
+  max-width: 120px;
+  width: auto;
   height: 50px;
   display: block;
   margin: auto;

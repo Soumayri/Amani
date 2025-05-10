@@ -106,10 +106,20 @@
   color: #2c3e50;
 }
 
-.plan-card.highlight .plan-features li {
-  color: #f8f8f8;
+/* ✨ Style for links inside features */
+.plan-features li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  font-size: inherit;
+  transition: all 0.2s ease;
 }
 
+.plan-features li a:hover {
+  text-decoration: underline;
+}
+
+/* 🎯 Bullet points */
 .plan-features li::before {
   content: "•";
   position: absolute;

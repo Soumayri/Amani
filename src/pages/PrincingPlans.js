@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import ScrollToTop from "../components/ScrollToTop";
 
 
 const Plans = () => {
@@ -50,6 +50,7 @@ const Plans = () => {
 
   return (
     <>
+      <ScrollToTop />
     <Navbar />
     <div className="plans-page">
       <div className="plans-header">

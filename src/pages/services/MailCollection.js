@@ -3,13 +3,14 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { FaEnvelope, FaLock, FaHome, FaPlane, FaClipboardList } from "react-icons/fa";
-
+import ScrollToTop from "../../components/ScrollToTop";
 const MailCollection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
     <>
+      <ScrollToTop />
     <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC IMAGE DE FOND */}

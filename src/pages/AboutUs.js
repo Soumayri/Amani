@@ -2,12 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
-
+import ScrollToTop from "../components/ScrollToTop";
 const AboutUs = () => {
   const { t } = useTranslation();
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <div className="about-page">
         {/* 🔹 Header avec image */}

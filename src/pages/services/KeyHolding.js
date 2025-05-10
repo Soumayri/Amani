@@ -10,6 +10,7 @@ import {
   FaExclamationTriangle,
   FaArrowLeft
 } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const KeyHolding = () => {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ const KeyHolding = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC TITRE ET SOUS-TITRE */}

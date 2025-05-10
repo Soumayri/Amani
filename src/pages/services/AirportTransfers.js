@@ -9,6 +9,7 @@ import {
   FaMoneyBillWave,
   FaCheckCircle,
 } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const MonthlyChecks = () => {
   const { t } = useTranslation();
@@ -16,6 +17,7 @@ const MonthlyChecks = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <div className="service-page">

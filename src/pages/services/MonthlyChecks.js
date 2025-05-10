@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { FaSearch, FaWind, FaClipboardList, FaHome, FaExclamationTriangle } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const MonthlyChecks = () => {
   const { t } = useTranslation();
@@ -10,6 +11,7 @@ const MonthlyChecks = () => {
 
   return (
     <>
+      <ScrollToTop />
     <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC IMAGE DE FOND UNIQUE POUR CE SERVICE */}

@@ -6,6 +6,7 @@ import {
  FaBroom, FaShoppingCart, FaTree, FaLock,FaCouch,FaPaintRoller
 } from "react-icons/fa";
 import Navbar  from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
  // Importation du CSS pour cette page
 
 const Services = () => {
@@ -81,9 +82,9 @@ const Services = () => {
      
            <strong>What sets Amani apart in home maintenance & handyman services?</strong>
            <ul className="modal-list">
-             <li>{t("✔️ Punctual, courteous, and qualified operators")}</li>
-             <li>{t("✔️ Clean work and attention to detail")}</li>
-             <li>{t("✔️ No need to coordinate – we manage everything")}</li>
+             <li>{t(" Punctual, courteous, and qualified operators")}</li>
+             <li>{t(" Clean work and attention to detail")}</li>
+             <li>{t(" No need to coordinate – we manage everything")}</li>
            </ul>
      
            <em>We make home maintenance simple, so you can focus on what matters most.</em>
@@ -345,6 +346,7 @@ const Services = () => {
 
   return (
     <div>
+      <ScrollToTop />
       <Navbar />
     <div className="services-page">
       {/* 🏡 HEADER IMMERSIF */}

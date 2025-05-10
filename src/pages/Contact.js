@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import ScrollToTop from "../components/ScrollToTop";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -54,6 +54,7 @@ Message: ${form.message}
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <div className="contact-page">
         <h1>{t("Let's get in touch")}</h1>

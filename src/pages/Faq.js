@@ -1,13 +1,17 @@
 // 📁 src/pages/Faq.js
 import React from "react";
-
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Faq = () => {
   const { t } = useTranslation();
 
   return (
+    <>
+      <ScrollToTop />
+      <Navbar />
     <div className="faq-page">
       <div className="faq-header">
         <h1>{t("Frequently Asked Questions")}</h1>
@@ -57,7 +61,7 @@ const Faq = () => {
       </div>
 
       <Footer />
-    </div>
+    </div></>
   );
 };
 

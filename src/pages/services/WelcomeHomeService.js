@@ -10,6 +10,7 @@ import {
   FaClock,
   FaTools,
 } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const WelcomeHomeService = () => {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ const WelcomeHomeService = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <div className="service-page">

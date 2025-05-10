@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { FaTools, FaWater, FaBolt, FaWrench } from "react-icons/fa";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const PreventiveMaintenance = () => {
   const { t } = useTranslation();
@@ -10,6 +11,7 @@ const PreventiveMaintenance = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC TITRE & SOUS-TITRE */}

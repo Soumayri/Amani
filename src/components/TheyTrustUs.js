@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 
 // 📌 Liste des partenaires (tu pourras en ajouter d'autres facilement ici)
 const partners = [
-  { name: "Attijariwafa Bank", logo: "/partners/attijariwafa.png", link: "https://www.attijariwafabank.com/" },
-  { name: "Sanlam Maroc", logo: "/partners/sanlam.png", link: "https://www.sanlam.ma/" },
+  { name: "Attijariwafa Bank", logo: "/partners/attijariwafa.webp", link: "https://www.attijariwafabank.com/" },
+  { name: "Sanlam Maroc", logo: "/partners/sanlam.webp", link: "https://www.sanlam.ma/" },
 ];
 
 const numbersData = [

@@ -26,9 +26,9 @@ const Footer = () => {
         {/* 📍 Colonne 3 : Contact */}
         <div className="footer-contact">
           <h3>Contact</h3>
-          <p><FaMapMarkerAlt className="icon" /> Casablanca, Morocco</p>
-          <p><FaPhone className="icon" /> +212 6XX-XXX-XXX</p>
-          <p><FaEnvelope className="icon" /> contact@amani.com</p>
+          <p><FaMapMarkerAlt className="icon" /> 29 BD Lalla Yacout,Casablanca, Morocco</p>
+          <p><FaPhone className="icon" /> +33 670 779 256</p>
+          <p><FaEnvelope className="icon" /> contact.amani.home@gmail.com</p>
         </div>
 
         {/* 🌐 Colonne 4 : Réseaux sociaux */}

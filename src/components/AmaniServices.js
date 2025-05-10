@@ -19,11 +19,11 @@ const AmaniServices = () => {
     title: t("Emergency Repairs"),
     description: t("Fast intervention for urgent issues: plumbing, electrical..."),
     details: (
-      <>
+      <div>
         <strong>{t("When a problem can’t wait, we’re here.")}</strong><br />
-        {t("A water leak, an electrical outage, a malfunctioning air conditioner... These are the kinds of emergencies that require quick and reliable action — especially when you're not there to handle it yourself.")}<br /><br />
+        <p>{t("A water leak, an electrical outage, a malfunctioning air conditioner... These are the kinds of emergencies that require quick and reliable action — especially when you're not there to handle it yourself.")}</p><br /><br />
 
-        {t("Our teams intervene promptly to minimize damage, restore functionality, and give you peace of mind.")}<br /><br />
+        <p>{t("Our teams intervene promptly to minimize damage, restore functionality, and give you peace of mind.")}</p><br /><br />
 
         <strong>{t("What we cover:")}</strong>
         <ul className="modal-list">
@@ -35,16 +35,16 @@ const AmaniServices = () => {
 
         <strong>{t("Why choose Amani for emergency repairs?")}</strong>
         <ul className="modal-list">
-          <li>{t("✔️  Fast dispatch of qualified technicians")}</li>
-          <li>{t("✔️  Transparent follow-up with photos and report")}</li>
-          <li>{t("✔️  Clear quote if additional repairs are needed")}</li>
-          <li>{t("✔️  No need to be present — we coordinate everything")}</li>
+          <li>{t("  Fast dispatch of qualified technicians")}</li>
+          <li>{t("  Transparent follow-up with photos and report")}</li>
+          <li>{t("  Clear quote if additional repairs are needed")}</li>
+          <li>{t("  No need to be present — we coordinate everything")}</li>
         </ul>
 
         <p><em>{t("With Amani, your property is in safe hands — even when the unexpected strikes.")}</em></p>
-      </>
+      </div>
     ),
-    image: "/img/EmergencyRepairs.png"
+    image: "/img/EmergencyRepairs.webp"
   },
     
   
@@ -53,7 +53,7 @@ const AmaniServices = () => {
       title: t("Handyman Services"),
       description: t("Painting, minor renovations, and general maintenance."),
       details: (
-        <>
+        <div>
           <strong>Reliable fixes for a flawless home.</strong>
           <p>
             From fixing that squeaky door to repainting your living room, Amani’s handyman services are designed to keep your property in perfect condition — effortlessly.
@@ -70,15 +70,15 @@ const AmaniServices = () => {
     
           <strong>What sets Amani apart in home maintenance & handyman services?</strong>
           <ul className="modal-list">
-            <li>{t("✔️ Punctual, courteous, and qualified operators")}</li>
-            <li>{t("✔️ Clean work and attention to detail")}</li>
-            <li>{t("✔️ No need to coordinate – we manage everything")}</li>
+            <li>{t(" Punctual, courteous, and qualified operators")}</li>
+            <li>{t(" Clean work and attention to detail")}</li>
+            <li>{t(" No need to coordinate – we manage everything")}</li>
           </ul>
     
           <em>We make home maintenance simple, so you can focus on what matters most.</em>
-        </>
+        </div>
       ),
-      image: "/img/HandyMan.png"
+      image: "/img/HandyMan.webp"
     }
     
   , {
@@ -86,7 +86,7 @@ const AmaniServices = () => {
     title: t("Property Insurance Assistance"),
     description: t("Guidance for home insurance subscription and claims."),
     details: (
-      <>
+      <div>
         <strong>Protect your investment, without the paperwork headache.</strong>
         <p>
           Navigating property insurance in Morocco can be complex — especially when you live abroad. 
@@ -112,9 +112,9 @@ const AmaniServices = () => {
         <em>
           With Amani, you’re not just covered — you’re supported, every step of the way.
         </em>
-      </>
+      </div>
     ),
-    image: "/img/PropertyInsurance.png"
+    image: "/img/PropertyInsurance.webp"
   }
   ,
   {
@@ -122,7 +122,7 @@ const AmaniServices = () => {
     title: t("Appliance Installation"),
     description: t("Assembly of furniture, installation of home appliances."),
     details: (
-      <>
+      <div>
         <strong>Settle in with ease — we handle the heavy lifting.</strong>
         <p>
           Whether you've just furnished your home or need help installing a new appliance, Amani provides reliable assembly and installation services, so everything is ready to use when you arrive.
@@ -148,9 +148,9 @@ const AmaniServices = () => {
         <em>
           Amani ensures your home is functional, welcoming, and ready — down to the last screw.
         </em>
-      </>
+      </div>
     ),
-    image: "/img/ApplianceInstall.png"
+    image: "/img/ApplianceInstall.webp"
   }
   ,
   {
@@ -158,7 +158,7 @@ const AmaniServices = () => {
     title: t("Deep Cleaning"),
     description: t("Full property cleaning before your arrival."),
     details: (
-      <>
+      <div>
         <strong>Start fresh — we prepare your home like it’s brand new.</strong>
         <p>
           After months of vacancy, a deep cleaning is essential to eliminate dust, odors, and restore freshness. Amani takes care of everything, so you return to a pristine home.
@@ -184,9 +184,9 @@ const AmaniServices = () => {
         <em>
           With Amani, enjoy a fresh, healthy, and welcoming environment from the moment you walk in.
         </em>
-      </>
+      </div>
     ),
-    image: "/img/DeepClean.png"
+    image: "/img/DeepClean.webp"
   }
   ,
   {
@@ -194,7 +194,7 @@ const AmaniServices = () => {
     title: t("Grocery & Home Stocking"),
     description: t("Stocking your home with essentials before you arrive."),
     details: (
-      <>
+      <div>
         <strong>Everything you need, waiting for you at home.</strong>
         <p>
           Arrive to a fully stocked fridge and pantry — no errands, no stress. We take care of your grocery shopping and prepare your home just the way you like it.
@@ -219,9 +219,9 @@ const AmaniServices = () => {
         <em>
           With Amani, walk into a home that feels lived-in, warm, and ready — from kitchen to comfort.
         </em>
-      </>
+      </div>
     ),
-    image: "/img/GroceriesHome.png"
+    image: "/img/GroceriesHome.webp"
   }
   ,
   {
@@ -229,7 +229,7 @@ const AmaniServices = () => {
     title: t("Pool & Garden Maintenance"),
     description: t("Keep your outdoor spaces clean, green, and ready to enjoy."),
     details: (
-      <>
+      <div>
         <strong>Enjoy a well-maintained exterior, even when you're miles away.</strong>
         <p>
           Your garden and pool need care all year long — not just when you're here. Our reliable maintenance ensures your outdoor spaces stay beautiful, functional, and hassle-free.
@@ -253,9 +253,9 @@ const AmaniServices = () => {
         </ul>
   
         <em>With Amani, your garden flourishes and your pool stays crystal clear — even in your absence.</em>
-      </>
+      </div>
     ),
-    image: "/img/PoolGardenMaintenance.png"
+    image: "/img/PoolGardenMaintenance.webp"
   }
   ,
     {
@@ -263,7 +263,7 @@ const AmaniServices = () => {
       title: t("Security & Smart Home Installation"),
       description: t("Installation of alarms, smart locks, surveillance systems."),
       details: (
-        <>
+        <div>
           <strong>Protect your home with intelligent, discreet technology.</strong>
           <p>
             Enjoy total peace of mind with a secure home — even when you're miles away. We install reliable and modern systems that let you monitor and control your property remotely.
@@ -289,9 +289,9 @@ const AmaniServices = () => {
           <em>
             Amani brings you closer to your home — even from the other side of the world.
           </em>
-        </>
+        </div>
       ),
-      image: "/img/SecuritySmartHome.png"
+      image: "/img/SecuritySmartHome.webp"
     }
     ,
 
@@ -300,7 +300,7 @@ const AmaniServices = () => {
       title: t("Car Maintenance & Storage"),
       description: t("Keep your vehicle safe, serviced, and ready to drive."),
       details: (
-        <>
+        <div>
           <strong>Because your car deserves care, even when you're away.</strong>
           <p>
             Don’t let your vehicle sit unused and deteriorate while you're abroad. We provide secure storage, regular maintenance, and check-ups so it’s always ready when you need it.
@@ -324,9 +324,9 @@ const AmaniServices = () => {
           </ul>
     
           <em>With Amani, your car stays as ready as your home — anytime you return.</em>
-        </>
+        </div>
       ),
-      image: "/img/CarMaintenance.png"
+      image: "/img/CarMaintenance.webp"
     }
     ,
 

@@ -2,6 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
+
 
 const Plans = () => {
   const { t } = useTranslation();
@@ -46,6 +49,8 @@ const Plans = () => {
   ];
 
   return (
+    <>
+    <Navbar />
     <div className="plans-page">
       <div className="plans-header">
         <h1>{t("Choose the Right Plan for Your Home")}</h1>
@@ -81,7 +86,7 @@ const Plans = () => {
       </div>
 
       <Footer />
-    </div>
+    </div></>
   );
 };
 

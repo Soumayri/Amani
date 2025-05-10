@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-// Fichier CSS global pour les services
+import Navbar from "../../components/Navbar";
 import { FaTools, FaWater, FaBolt, FaWrench } from "react-icons/fa";
 
 const PreventiveMaintenance = () => {
@@ -9,6 +9,8 @@ const PreventiveMaintenance = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+      <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC TITRE & SOUS-TITRE */}
       <div className="service-header preventive-maintenance-header">
@@ -72,7 +74,7 @@ const PreventiveMaintenance = () => {
           </button>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

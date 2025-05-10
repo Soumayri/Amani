@@ -1,5 +1,5 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 
@@ -8,10 +8,11 @@ const AboutUs = () => {
 
   return (
     <>
+      <Navbar />
       <div className="about-page">
         {/* 🔹 Header avec image */}
         <div className="about-header"style={{
-    background: `url("/img/aboutBanner.png") center/cover no-repeat`,
+    background: `url("/img/aboutBanner.webp") center/cover no-repeat`,
   }}>
           <div className="about-overlay">
             <h1>{t("About Us")}</h1>

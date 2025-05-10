@@ -62,8 +62,9 @@
 /* 📍 Contact */
 .footer-contact p {
   display: flex;
-  align-items: center;
+  align-items:center;
   margin-bottom: 10px;
+  justify-content:center;
 }
 
 .footer-contact .icon {
@@ -75,6 +76,7 @@
 /* 🌐 Réseaux sociaux */
 .footer-social .social-icons {
   display: flex;
+  
   gap: 15px;
 }
 

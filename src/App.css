@@ -24,3 +24,52 @@ a {
   text-transform: uppercase;
   font-weight: 500 !important;
 }
+/* Personnalise le menu déroulant Google Translate */
+.goog-te-combo {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #365b6d;
+  background-color: #ffffff;
+  color: #365b6d;
+  font-family: "Lora", serif;
+  cursor: pointer;
+}
+
+/* Supprime le logo Google en bas */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Supprime la barre Google en haut (si elle apparaît) */
+body > .skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Supprime la marge ajoutée par Google Translate */
+body {
+  top: 0 !important;
+}
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.language-switcher button {
+  background-color: #365b6d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #e06a00;
+}

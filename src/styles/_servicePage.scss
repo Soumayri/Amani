@@ -32,22 +32,22 @@ body {
 
 /* 📌 Correction des backgrounds */
 .key-holding-header {
-  background-image: url("../../public/img/KeyStorage.png");
+  background-image: url("../../public/img/KeyStorage.webp");
 }
 .mail-collection-header {
-  background-image: url("../../public/img/MailCollection.png");
+  background-image: url("../../public/img/MailCollection.webp");
 }
 .monthly-checks-header {
-  background-image: url("../../public/img/MonthlyChecks.png");
+  background-image: url("../../public/img/MonthlyChecks.webp");
 }
 .preventive-maintenance-header {
-  background-image: url("../../public/img/PreventiveMaintenance.png");
+  background-image: url("../../public/img/PreventiveMaintenance.webp");
 }
 .welcome-home-header {
-  background-image: url("../../public/img/WelcomeHome.png");
+  background-image: url("../../public/img/WelcomeHome.webp");
 }
 .airport-transfers-header {
-  background-image: url("../../public/img/AirportTransfer.png");
+  background-image: url("../../public/img/AirportTransfer.webp");
 }
 /* 🔹 TITRE PRINCIPAL */
 .service-header h1 {
@@ -214,7 +214,10 @@ body {
   .service-page {
     padding: 20px;
   }
-
+.services-page h2{
+  text-align: center;
+  font-size: 2rem;
+}
   .service-header h1 {
     font-size: 2rem;
   }

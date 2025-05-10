@@ -9,7 +9,7 @@ const NotFound = () => {
     <div
       className="notfound-page"
       style={{
-        backgroundImage: 'url("/img/404-bg.png")',
+        backgroundImage: 'url("/img/404-bg.webp")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

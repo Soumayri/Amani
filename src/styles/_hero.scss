@@ -3,7 +3,7 @@
   width: 100%;
   height: 80vh;
   // background: url("/hero-image.webp") center/cover no-repeat;
-  background-blend-mode: darken;
+
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
@@ -47,7 +47,6 @@
 
 .hero-btn {
   display: inline-block;
-  width: 200px;
   padding: 10px 20px;
   font-size: 1.1rem;
   background: #365b6d;
@@ -56,8 +55,41 @@
   border-radius: 5px;
   transition: 0.3s;
   margin: 30px;
+  min-width: 220px; /* largeur minimale à définir selon ton besoin */
+  text-align: center; /* texte centré */
+  white-space: nowrap; /* empêche les retours à la ligne */
+  overflow: hidden;
 }
 
 .hero-btn:hover {
   background: #e06a00;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .hero-logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .hero-slogan {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  .hero-btn {
+    margin: 10px auto;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
 }

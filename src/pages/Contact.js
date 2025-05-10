@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 
@@ -53,6 +54,7 @@ Message: ${form.message}
 
   return (
     <>
+      <Navbar />
       <div className="contact-page">
         <h1>{t("Let's get in touch")}</h1>
         <p className="contact-subtitle">

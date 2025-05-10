@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
+import Navbar from "../../components/Navbar";
 import {
   FaKey,
   FaShieldAlt,
@@ -16,6 +16,8 @@ const KeyHolding = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+      <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC TITRE ET SOUS-TITRE */}
       <div className="service-header key-holding-header">
@@ -96,7 +98,7 @@ const KeyHolding = () => {
           </button>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

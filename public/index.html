@@ -2,17 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#365b6d" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="AMANI HOME vous offre des services exclusifs de gestion immobilière à Casablanca et partout au Maroc pour expatriés et MRE. Key holding, inspections, maintenance & conciergerie immobilière."
     />
+
+    <title>
+      AMANI HOME | Property Management à Casablanca - Gestion Immobilière Maroc
+    </title>
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Google Fonts Icons -->
+    <!-- Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -22,12 +29,10 @@
       rel="stylesheet"
     />
 
-    <title>
-      AMANI HOME | Property Management à Casablanca - Gestion Immobilière Maroc
-    </title>
-    <meta
-      name="description"
-      content="AMANI HOME vous offre des services exclusifs de gestion immobilière à Casablanca et partout au Maroc pour expatriés et MRE. Key holding, inspections, maintenance & conciergerie immobilière."
+    <!-- Cookie Consent CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
     />
 
     <!-- Google Translate Integration -->
@@ -50,10 +55,31 @@
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
     <!-- Hidden Google Translate Widget -->
     <div id="google_translate_element" style="display: none"></div>
+
+    <!-- Cookie Consent Script -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#365b6d" },
+            button: { background: "#e06a00" },
+          },
+          theme: "classic",
+          position: "bottom-right",
+          content: {
+            message:
+              "Ce site utilise des cookies pour vous garantir la meilleure expérience.",
+            dismiss: "J'accepte",
+            link: "En savoir plus",
+            href: "/politique-cookies",
+          },
+        });
+      });
+    </script>
   </body>
 </html>

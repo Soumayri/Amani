@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-const logoAmani = "/logoAmani.png"; // Chemin vers le fichier dans public
+const logoAmani = "/logoAmani.webp"; // Chemin vers le fichier dans public
 
 
 const Hero = () => {

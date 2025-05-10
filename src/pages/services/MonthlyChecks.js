@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
+import Navbar from "../../components/Navbar";
 import { FaSearch, FaWind, FaClipboardList, FaHome, FaExclamationTriangle } from "react-icons/fa";
 
 const MonthlyChecks = () => {
@@ -9,6 +9,8 @@ const MonthlyChecks = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC IMAGE DE FOND UNIQUE POUR CE SERVICE */}
       <div className="service-header monthly-checks-header">
@@ -77,7 +79,7 @@ const MonthlyChecks = () => {
           </button>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
- // Import du CSS général des pages services
+import Navbar from "../../components/Navbar";
 import { FaEnvelope, FaLock, FaHome, FaPlane, FaClipboardList } from "react-icons/fa";
 
 const MailCollection = () => {
@@ -9,6 +9,8 @@ const MailCollection = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Navbar />
     <div className="service-page">
       {/* 🔹 HEADER AVEC IMAGE DE FOND */}
       <div className="service-header mail-collection-header">
@@ -54,7 +56,7 @@ const MailCollection = () => {
           
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

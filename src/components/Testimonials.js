@@ -7,25 +7,25 @@ const testimonials = [
     name: "Kaoutar M.",
     rating: 5,
     text: "Amani took care of everything while I was away. My property was spotless and perfectly maintained. A real game changer!",
-    avatar: "/avatars/avatar1.png",
+    avatar: "/avatars/avatar1.webp",
   },
   {
     name: "Karim B.",
     rating: 4.5,
     text: "Excellent service! Regular updates, quick interventions, and a professional team. I trust Amani completely with my home.",
-    avatar: "/avatars/avatar2.png",
+    avatar: "/avatars/avatar2.webp",
   },
   {
     name: "Nadia L.",
     rating: 5,
     text: "Very responsive team and high-quality services. I highly recommend Amani for any homeowner living abroad!",
-    avatar: "/avatars/avatar3.png",
+    avatar: "/avatars/avatar3.webp",
   },
   {
     name: "Youssef D.",
     rating: 4.5,
     text: "I needed a deep cleaning before my arrival and Amani handled everything perfectly. The house was spotless, the service was seamless. I will definitely use their à la carte services again!",
-    avatar: "/avatars/avatar4.png",
+    avatar: "/avatars/avatar4.webp",
   }
 ];
 

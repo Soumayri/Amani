@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <img src={logoAmani} alt="Amani Logo" className="hero-logo" />
-        <h1 className="hero-slogan">{t("The Key to Your Comfort")}</h1>
+        <h1 className="hero-slogan">{t("Welcome back to peace of mind")}</h1>
         <a href="/services" className="hero-btn">
           {t("Explore Services")}
         </a>

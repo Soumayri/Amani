@@ -8,7 +8,7 @@ const Services = () => {
 
   // Liste des services avec leurs routes
   const servicesList = [
-    { icon: <FaKey className="service-icon" />, title: t("Keys Holding"), path: "/services/key-holding" },
+    { icon: <FaKey className="service-icon" />, title: t("Keys Holding"), path: "/services/key care" },
     { icon: <FaEnvelope className="service-icon" />, title: t("Mail Collection"), path: "/services/mail-collection" },
     { icon: <FaHome className="service-icon" />, title: t("Monthly Checks"), path: "/services/monthly-checks" },
     { icon: <FaTools className="service-icon" />, title: t("Preventive Maintenance"), path: "/services/preventive-maintenance" },

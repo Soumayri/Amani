@@ -63,7 +63,7 @@ const Services = () => {
      {
        icon: <FaPaintRoller />,
        title: t("Handyman Services"),
-       description: t("Painting, minor renovations, and general maintenance."),
+       description: t("Painting, renovations, and general maintenance."),
        details: (
          <div>
            <strong>Reliable fixes for a flawless home.</strong>
@@ -387,7 +387,7 @@ const Services = () => {
       {/* 📞 CTA FINAL */}
       <div className="cta-section">
         <h2>{t("Can’t find what you need?")}</h2>
-        <p>{t("Contact us for a custom solution tailored to your needs!")}</p>
+        <p>{t("Contact us for a custom solution")}</p>
         <button className="cta-button" onClick={() => navigate("/contact")}>
           {t("Contact Us")}
         </button>

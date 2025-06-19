@@ -3,31 +3,39 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 const Navbar = () => {
-  const { t } = useTranslation();
-  const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+  const { t, i18n } = useTranslation();
 
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+
+  const userDropdownRef = useRef(null);
+  const langDropdownRef = useRef(null);
+
+  // Fermer les dropdowns si clic en dehors
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
+      if (
+        userDropdownRef.current &&
+        !userDropdownRef.current.contains(event.target)
+      ) {
+        setShowUserDropdown(false);
+      }
+      if (
+        langDropdownRef.current &&
+        !langDropdownRef.current.contains(event.target)
+      ) {
+        setShowLangDropdown(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
-  const handleCloseMenus = () => {
-    setShowDropdown(false);
-  };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleNavLinkClick = () => {
     const navbarCollapse = document.querySelector(".navbar-collapse");
-    if (navbarCollapse.classList.contains("show")) {
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
       navbarCollapse.classList.remove("show");
     }
   };
@@ -35,9 +43,13 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
+
+        {/* Logo */}
         <Link className="navbar-brand" to="/" onClick={handleNavLinkClick}>
-          <img src="/LogoAmani.webp" alt="Amani Logo" />
+          <img src="/LogoAmani.webp" alt="Logo Amani" height="40" />
         </Link>
+
+        {/* Toggler mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -50,52 +62,111 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Contenu du menu */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-center">
+
             <li className="nav-item">
               <Link className="nav-link" to="/services" onClick={handleNavLinkClick}>
                 {t("Services")}
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/plans" onClick={handleNavLinkClick}>
                 {t("Pricing & Plans")}
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/about" onClick={handleNavLinkClick}>
                 {t("About Us")}
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/contact" onClick={handleNavLinkClick}>
                 {t("Get in Touch")}
               </Link>
             </li>
-            <li className="nav-item dropdown" ref={dropdownRef}>
-              <button className="btn btn-light" onClick={() => setShowDropdown(!showDropdown)}>
+
+            {/* Portail utilisateur */}
+            <li className="nav-item dropdown" ref={userDropdownRef} style={{ position: "relative" }}>
+              <button
+                className="btn btn-light"
+                onClick={() => setShowUserDropdown(prev => !prev)}
+                aria-label="Portail"
+              >
                 <span className="material-symbols-outlined">person</span>
               </button>
-              {showDropdown && (
-                <ul className="dropdown-menu show">
+              {showUserDropdown && (
+                <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
                   <li>
-                    <Link className="dropdown-item" to="/client-portal" onClick={() => { handleCloseMenus(); handleNavLinkClick(); }}>
+                    <Link
+                      className="dropdown-item"
+                      to="/client-portal"
+                      onClick={() => {
+                        setShowUserDropdown(false);
+                        handleNavLinkClick();
+                      }}
+                    >
                       {t("Client Portal")}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/operator-portal" onClick={() => { handleCloseMenus(); handleNavLinkClick(); }}>
+                    <Link
+                      className="dropdown-item"
+                      to="/operator-portal"
+                      onClick={() => {
+                        setShowUserDropdown(false);
+                        handleNavLinkClick();
+                      }}
+                    >
                       {t("Operator Portal")}
                     </Link>
                   </li>
                 </ul>
               )}
             </li>
+
+            {/* Menu langue 🌐 */}
+            <li className="nav-item dropdown" ref={langDropdownRef} style={{ position: "relative" }}>
+              <button
+                className="btn btn-light"
+                onClick={() => setShowLangDropdown(prev => !prev)}
+                aria-label="Changer de langue"
+              >
+                🌐
+              </button>
+              {showLangDropdown && (
+                <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
+                  <li>
+                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("fr"); setShowLangDropdown(false); }}>
+                      🇫🇷 Français
+                    </button>
+                  </li>
+                  <li>
+                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("en"); setShowLangDropdown(false); }}>
+                      🇬🇧 English
+                    </button>
+                  </li>
+                  <li>
+                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("es"); setShowLangDropdown(false); }}>
+                      🇪🇸 Español
+                    </button>
+                  </li>
+                  <li>
+                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("it"); setShowLangDropdown(false); }}>
+                      🇮🇹 Italiano
+                    </button>
+                  </li>
+                </ul>
+              )}
+            </li>
+
           </ul>
         </div>
       </div>
-      <div id="google_translate_element" style={{ display: "none" }}></div>
-
     </nav>
   );
 };

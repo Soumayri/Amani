@@ -136,28 +136,32 @@ const Navbar = () => {
                 onClick={() => setShowLangDropdown(prev => !prev)}
                 aria-label="Changer de langue"
               >
-                🌐
+                {/* Affiche le drapeau de la langue active */}
+                {i18n.language.startsWith("fr") && "🇫🇷"}
+                {i18n.language.startsWith("en") && "🇬🇧"}
+                {i18n.language.startsWith("es") && "🇪🇸"}
+                {i18n.language.startsWith("it") && "🇮🇹"}
               </button>
               {showLangDropdown && (
                 <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("fr"); setShowLangDropdown(false); }}>
-                      🇫🇷 Français
+                      🇫🇷
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("en"); setShowLangDropdown(false); }}>
-                      🇬🇧 English
+                      🇬🇧
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("es"); setShowLangDropdown(false); }}>
-                      🇪🇸 Español
+                      🇪🇸
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("it"); setShowLangDropdown(false); }}>
-                      🇮🇹 Italiano
+                      🇮🇹
                     </button>
                   </li>
                 </ul>

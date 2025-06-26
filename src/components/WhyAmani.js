@@ -10,7 +10,7 @@ const WhyAmani = () => {
       <div className="why-amani-content">
         {/* IMAGE OCCUPANT L’ESPACE GAUCHE */}
         <div className="why-image">
-          <img src="/CompoAmani.webp" alt="Why Choose Amani" />
+          <img src="/CompoAmani.webp" alt="Why Choose Amani" loading="lazy" />
         </div>
 
         {/* TEXTE À DROITE AVEC STYLE ÉLÉGANT */}

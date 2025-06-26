@@ -384,7 +384,7 @@ const AmaniServices = () => {
               </div>
 
               <div className="modal-body">
-                <img src={selectedService.image} alt={selectedService.title} className="modal-image"/>
+                <img src={selectedService.image} alt={selectedService.title} className="modal-image" loading="lazy"/>
                 <div>{selectedService.details}</div>
               </div>
 

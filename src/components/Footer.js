@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* 🌟 Colonne 1 : Logo & Slogan */}
         <div className="footer-logo">
-          <img src="/LogoAmaniFull.webp" alt="Amani Logo" />
+        <img src="/LogoAmaniFull.webp" alt="Amani Logo" loading="lazy" />
           <p className="footer-slogan">"The Key to Your Comfort."</p>
         </div>
 

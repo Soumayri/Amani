@@ -35,7 +35,7 @@ const HowItWorks = () => {
       <div className="how-content">
         {/* IMAGE OU ILLUSTRATION À GAUCHE */}
         <div className="how-image">
-          <img src="/process-illustration.webp" alt="How Amani Works" />
+       <img src="/process-illustration.webp" alt="How Amani Works" loading="lazy" />
         </div>
 
         {/* ÉTAPES À DROITE */}

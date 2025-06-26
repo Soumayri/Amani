@@ -27,7 +27,7 @@ const TheyTrustUs = () => {
         <div className="partners-grid">
           {partners.map((partner, index) => (
             <a key={index} href={partner.link} target="_blank" rel="noopener noreferrer" className="partner-card">
-              <img src={partner.logo} alt={partner.name} className="partner-logo" />
+               <img src={partner.logo} alt={partner.name} className="partner-logo" loading="lazy" />
             </a>
           ))}
         </div>

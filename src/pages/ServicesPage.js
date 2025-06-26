@@ -406,7 +406,7 @@ const Services = () => {
               {selectedService.icon}
               <h2>{selectedService.title}</h2>
             </div>
-            <img src={selectedService.image} alt={selectedService.title} className="modal-image"/>
+            <img src={selectedService.image} alt={selectedService.title} className="modal-image" loading="lazy"/>
             <p>{selectedService.details}</p>
             <button className="quote-btn" onClick={() => navigate(`/contact?service=${encodeURIComponent(selectedService.title)}`)}>
               {t("Request This Service")}

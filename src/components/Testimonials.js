@@ -93,7 +93,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial, i) => (
             <div key={i} className={`testimonial-card ${i === index ? "active" : ""}`}>
-              <img src={testimonial.avatar} alt={testimonial.name} className="testimonial-avatar" />
+              <img src={testimonial.avatar} alt={testimonial.name} className="testimonial-avatar" loading="lazy" />
               <h3 className="testimonial-name">{testimonial.name}</h3>
               <div className="testimonial-stars">
                 {[...Array(Math.floor(testimonial.rating))].map((_, i) => (

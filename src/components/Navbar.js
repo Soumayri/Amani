@@ -6,6 +6,8 @@ import "flag-icons/css/flag-icons.min.css";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
+
+    const [menuOpen, setMenuOpen] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
 
@@ -34,10 +36,7 @@ const Navbar = () => {
   }, []);
 
   const handleNavLinkClick = () => {
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
-      navbarCollapse.classList.remove("show");
-    }
+    setMenuOpen(false);
   };
 
   return (
@@ -53,17 +52,16 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+             onClick={() => setMenuOpen(prev => !prev)}
           aria-controls="navbarNav"
-          aria-expanded="false"
+         aria-expanded={menuOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* Contenu du menu */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse${menuOpen ? " show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center">
 
             <li className="nav-item">

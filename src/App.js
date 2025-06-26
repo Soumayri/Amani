@@ -1,32 +1,33 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import './styles/main.scss';
 import "./i18n";
 import SeoHead from "./components/SeoHead";
-import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
-import KeyHolding from "./pages/services/KeyHolding";
-import MailCollection from "./pages/services/MailCollection";
-import MonthlyChecks from "./pages/services/MonthlyChecks";
-import PreventiveMaintenance from "./pages/services/PreventiveMaintenance";
-import WelcomeHomeService from "./pages/services/WelcomeHomeService";
-import AirportTransfers from "./pages/services/AirportTransfers";
-import AllServices from "./pages/ServicesPage";
-import Plans from "./pages/PrincingPlans";
-import Contact from "./pages/Contact";
-import About from "./pages/AboutUs";
-import Faq from "./pages/Faq";
-import OperatorPortal from "./pages/OperatorPortal";
-import ClientPortal from "./pages/ClientPortal";
 import Hero from "./components/Hero";
-import WhyAmani from "./components/WhyAmani"; 
+import WhyAmani from "./components/WhyAmani";
 import HowItWorks from "./components/HowItWorks";
 import AmaniServices from "./components/AmaniServices";
 import Testimonials from "./components/Testimonials";
 import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
 import Footer from "./components/Footer";
+
+const NotFound = lazy(() => import("./pages/NotFound"));
+const KeyHolding = lazy(() => import("./pages/services/KeyHolding"));
+const MailCollection = lazy(() => import("./pages/services/MailCollection"));
+const MonthlyChecks = lazy(() => import("./pages/services/MonthlyChecks"));
+const PreventiveMaintenance = lazy(() => import("./pages/services/PreventiveMaintenance"));
+const WelcomeHomeService = lazy(() => import("./pages/services/WelcomeHomeService"));
+const AirportTransfers = lazy(() => import("./pages/services/AirportTransfers"));
+const AllServices = lazy(() => import("./pages/ServicesPage"));
+const Plans = lazy(() => import("./pages/PrincingPlans"));
+const Contact = lazy(() => import("./pages/Contact"));
+const About = lazy(() => import("./pages/AboutUs"));
+const Faq = lazy(() => import("./pages/Faq"));
+const OperatorPortal = lazy(() => import("./pages/OperatorPortal"));
+const ClientPortal = lazy(() => import("./pages/ClientPortal"));
 
 function RootLayout() {
   useEffect(() => {
@@ -119,13 +120,15 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider
-      router={router}
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider
+        router={router}
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      />
+    </Suspense>
   );
 }
 

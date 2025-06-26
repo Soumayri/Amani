@@ -13,7 +13,11 @@
   max-width: 90%;
   line-height: 1.3;
 }
-
+.services h2 {
+    font-size: 1.2rem;
+    margin: 15px;
+   
+  }
 /* 📌 Conteneur des services */
 .services-container {
   display: grid;
@@ -27,8 +31,9 @@
 /* 🛠️ Responsive mobile */
 @media (max-width: 768px) {
   .services h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin: 15px;
+   
   }
 
   .services-container {

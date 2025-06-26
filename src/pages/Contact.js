@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import SeoHead from "../components/SeoHead";
+
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -54,6 +56,11 @@ Message: ${form.message}
 
   return (
     <>
+      <SeoHead
+        titleKey="Contactez-nous | AMANI HOME"
+        descriptionKey="ContactMetaDescription"
+        canonical="https://www.amani-services.com/contact"
+      />
       <ScrollToTop />
       <Navbar />
       <div className="contact-page">

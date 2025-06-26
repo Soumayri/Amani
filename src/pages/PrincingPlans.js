@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
-
+import SeoHead from "../components/SeoHead";
 
 const Plans = () => {
   const { t } = useTranslation();
@@ -50,6 +50,11 @@ const Plans = () => {
 
   return (
     <>
+      <SeoHead
+        titleKey="Tarifs et Abonnements | AMANI HOME"
+        descriptionKey="PlansMetaDescription"
+        canonical="https://www.amani-services.com/plans"
+      />
       <ScrollToTop />
     <Navbar />
     <div className="plans-page">

@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useEffect } from "react";
 import './styles/main.scss';
 import "./i18n";
-
+import SeoHead from "./components/SeoHead";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
@@ -35,6 +35,11 @@ function RootLayout() {
 
   return (
     <>
+      <SeoHead
+        titleKey="Accueil - Gestion Immobilière à Casablanca & Maroc | AMANI HOME"
+        descriptionKey="AccueilMetaDescription"
+        canonical="https://www.amani-services.com/"
+      />
       <Navbar />
       <Hero />
       <Services />

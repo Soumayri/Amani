@@ -8,6 +8,9 @@ import {
 import Navbar  from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
  // Importation du CSS pour cette page
+import SeoHead from "../components/SeoHead";
+
+
 
 const Services = () => {
   const { t } = useTranslation();
@@ -340,7 +343,13 @@ const Services = () => {
  ];
 
   return (
+    
     <div>
+      <SeoHead
+        titleKey="FAQ - Questions fréquentes | AMANI HOME"
+        descriptionKey="FaqMetaDescription"
+        canonical="https://www.amani-services.com/faq"
+      />
       <ScrollToTop />
       <Navbar />
     <div className="services-page">

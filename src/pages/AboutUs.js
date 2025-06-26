@@ -3,11 +3,19 @@ import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import SeoHead from "../components/SeoHead";
+
+
 const AboutUs = () => {
   const { t } = useTranslation();
 
   return (
     <>
+      <SeoHead
+        titleKey="À propos de AMANI HOME | Gestion Immobilière Maroc"
+        descriptionKey="AboutMetaDescription"
+        canonical="https://www.amani-services.com/about"
+      />
       <ScrollToTop />
       <Navbar />
       <div className="about-page">

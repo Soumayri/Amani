@@ -4,12 +4,19 @@ import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import SeoHead from "../components/SeoHead";
+
 
 const Faq = () => {
   const { t } = useTranslation();
 
   return (
     <>
+      <SeoHead
+        titleKey="FAQ - Questions fréquentes | AMANI HOME"
+        descriptionKey="FaqMetaDescription"
+        canonical="https://www.amani-services.com/faq"
+      />
       <ScrollToTop />
       <Navbar />
     <div className="faq-page">

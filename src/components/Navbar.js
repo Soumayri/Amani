@@ -128,43 +128,50 @@ const Navbar = () => {
             </li>
 
             {/* Menu langue 🌐 */}
-            <li className="nav-item dropdown" ref={langDropdownRef} style={{ position: "relative" }}>
-              <button
-                className="btn btn-light"
-                onClick={() => setShowLangDropdown(prev => !prev)}
-                aria-label="Changer de langue"
-              >
-                {/* Affiche le drapeau de la langue active */}
-                {i18n.language.startsWith("fr") && <span class="fi fi-fr"></span>}
-                {i18n.language.startsWith("en") && <span class="fi fi-gb"></span>}
-                {i18n.language.startsWith("es") && <span class="fi fi-es"></span>}
-                {i18n.language.startsWith("it") && <span class="fi fi-it"></span>}
-              </button>
-              {showLangDropdown && (
-                <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
-                  <li>
-                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("fr"); setShowLangDropdown(false); }}>
-                      <span class="fi fi-fr"></span>
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("en"); setShowLangDropdown(false); }}>
-                     <span class="fi fi-gb"></span>
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("es"); setShowLangDropdown(false); }}>
-                      <span class="fi fi-es"></span>
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" onClick={() => { i18n.changeLanguage("it"); setShowLangDropdown(false); }}>
-                      <span class="fi fi-it"></span>
-                    </button>
-                  </li>
-                </ul>
-              )}
-            </li>
+        <li className="nav-item dropdown" ref={langDropdownRef} style={{ position: "relative" }}>
+  <button
+    className="btn btn-light"
+    onClick={() => setShowLangDropdown(prev => !prev)}
+    aria-label="Changer de langue"
+  >
+    {/* Affiche le drapeau de la langue active */}
+    {i18n.language.startsWith("fr") && <span className="fi fi-fr"></span>}
+    {i18n.language.startsWith("en") && <span className="fi fi-gb"></span>}
+    {i18n.language.startsWith("es") && <span className="fi fi-es"></span>}
+    {i18n.language.startsWith("it") && <span className="fi fi-it"></span>}
+    {i18n.language.startsWith("de") && <span className="fi fi-de"></span>}
+  </button>
+  {showLangDropdown && (
+    <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
+      <li>
+        <button className="dropdown-item" onClick={() => { i18n.changeLanguage("fr"); setShowLangDropdown(false); }}>
+          <span className="fi fi-fr"></span>
+        </button>
+      </li>
+      <li>
+        <button className="dropdown-item" onClick={() => { i18n.changeLanguage("en"); setShowLangDropdown(false); }}>
+          <span className="fi fi-gb"></span>
+        </button>
+      </li>
+      <li>
+        <button className="dropdown-item" onClick={() => { i18n.changeLanguage("es"); setShowLangDropdown(false); }}>
+          <span className="fi fi-es"></span>
+        </button>
+      </li>
+      <li>
+        <button className="dropdown-item" onClick={() => { i18n.changeLanguage("it"); setShowLangDropdown(false); }}>
+          <span className="fi fi-it"></span>
+        </button>
+      </li>
+      <li>
+        <button className="dropdown-item" onClick={() => { i18n.changeLanguage("de"); setShowLangDropdown(false); }}>
+          <span className="fi fi-de"></span>
+        </button>
+      </li>
+    </ul>
+  )}
+</li>
+
 
           </ul>
         </div>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "flag-icons/css/flag-icons.min.css";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
@@ -137,31 +137,31 @@ const Navbar = () => {
                 aria-label="Changer de langue"
               >
                 {/* Affiche le drapeau de la langue active */}
-                {i18n.language.startsWith("fr") && "🇫🇷"}
-                {i18n.language.startsWith("en") && "🇬🇧"}
-                {i18n.language.startsWith("es") && "🇪🇸"}
-                {i18n.language.startsWith("it") && "🇮🇹"}
+                {i18n.language.startsWith("fr") && <span class="fi fi-fr"></span>}
+                {i18n.language.startsWith("en") && <span class="fi fi-gb"></span>}
+                {i18n.language.startsWith("es") && <span class="fi fi-es"></span>}
+                {i18n.language.startsWith("it") && <span class="fi fi-it"></span>}
               </button>
               {showLangDropdown && (
                 <ul className="dropdown-menu show" style={{ position: "absolute", right: 0 }}>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("fr"); setShowLangDropdown(false); }}>
-                      🇫🇷
+                      <span class="fi fi-fr"></span>
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("en"); setShowLangDropdown(false); }}>
-                      🇬🇧
+                     <span class="fi fi-gb"></span>
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("es"); setShowLangDropdown(false); }}>
-                      🇪🇸
+                      <span class="fi fi-es"></span>
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" onClick={() => { i18n.changeLanguage("it"); setShowLangDropdown(false); }}>
-                      🇮🇹
+                      <span class="fi fi-it"></span>
                     </button>
                   </li>
                 </ul>

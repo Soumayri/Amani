@@ -5,19 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#365b6d" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      AMANI HOME | Gestion Immobilière Maroc - Services Expatriés & MRE
+    </title>
     <meta
       name="description"
-      content="AMANI HOME vous offre des services exclusifs de gestion immobilière à Casablanca et partout au Maroc pour expatriés et MRE. Key holding, inspections, maintenance & conciergerie immobilière."
+      content="AMANI HOME - Services de gestion immobilière au Maroc pour expatriés et MRE. Key holding, inspections mensuelles, maintenance préventive, conciergerie. Basé à Casablanca, service partout au Maroc."
+    />
+    <meta
+      name="keywords"
+      content="gestion immobilière maroc, expatriés maroc, MRE, key holding, maintenance préventive, conciergerie casablanca, gestion propriété maroc"
+    />
+    <meta name="author" content="AMANI HOME" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.amani-services.com" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="AMANI HOME | Gestion Immobilière Maroc - Services Expatriés & MRE"
+    />
+    <meta
+      property="og:description"
+      content="Services de gestion immobilière au Maroc pour expatriés et MRE. Key holding, inspections mensuelles, maintenance préventive, conciergerie."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.amani-services.com" />
+    <meta
+      property="og:image"
+      content="https://www.amani-services.com/LogoAmaniFull.webp"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="AMANI HOME" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AMANI HOME | Gestion Immobilière Maroc"
+    />
+    <meta
+      name="twitter:description"
+      content="Services de gestion immobilière au Maroc pour expatriés et MRE. Key holding, inspections, maintenance préventive."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.amani-services.com/LogoAmaniFull.webp"
     />
 
-    <title>
-      AMANI HOME | Property Management à Casablanca - Gestion Immobilière Maroc
-    </title>
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="MA" />
+    <meta name="geo.placename" content="Casablanca, Morocco" />
+    <meta name="geo.position" content="33.5731;-7.5898" />
+    <meta name="ICBM" content="33.5731, -7.5898" />
 
     <!-- Icons & Manifest -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/LogoAmani.webp" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://translate.google.com" />
 
     <!-- Google Fonts -->
     <link
@@ -35,13 +89,27 @@
       href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
     />
 
+    <!-- Google Analytics (remplace GA_MEASUREMENT_ID par le tien) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
+
     <!-- Google Translate Integration -->
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
           {
-            pageLanguage: "en",
-            includedLanguages: "fr,de,es,it,ar",
+            pageLanguage: "fr",
+            includedLanguages: "fr,en,de,es,it,ar",
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
           },
           "google_translate_element"

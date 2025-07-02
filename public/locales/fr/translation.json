@@ -441,7 +441,14 @@
   "Our partners trust us to deliver exceptional property management services.": "Nos partenaires nous font confiance pour fournir des services de gestion immobilière exceptionnels.",
   "Page not found": "Page non trouvée",
   "The page you are looking for does not exist.": "La page que vous recherchez n'existe pas.",
-  "Go back home": "Retourner à l'accueil"
-
+  "Go back home": "Retourner à l'accueil",
+  "Client Login": "Connexion au Portail Client",
+  "Email or phone number": "Email ou numéro de téléphone",
+  "Password": "Mot de passe",
+  "Sign in": "Se connecter",
+  "Forgot password?": "Mot de passe oublié ?",
+  "All fields are required": "Tous les champs sont obligatoires",
+  "Please enter a valid email or phone number": "Veuillez saisir un email ou numéro valide",
+  "Invalid credentials": "Identifiants invalides"
 
 }

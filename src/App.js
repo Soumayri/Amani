@@ -27,7 +27,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/AboutUs"));
 const Faq = lazy(() => import("./pages/Faq"));
 const OperatorPortal = lazy(() => import("./pages/OperatorPortal"));
-const ClientPortal = lazy(() => import("./pages/ClientPortal"));
+const ClientLogin = lazy(() => import("./pages/ClientLogin"));
 
 function RootLayout() {
   useEffect(() => {
@@ -97,11 +97,11 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: "/About",
+    path: "/about",
     element: <About />,
   },
   {
-    path: "/Faq",
+    path: "/faq",
     element: <Faq />,
   },
   {
@@ -110,7 +110,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/client-portal",
-    element: <ClientPortal />,
+    element: <ClientLogin />,
   },
   {
     path: "*",

@@ -13,6 +13,7 @@ import Testimonials from "./components/Testimonials";
 import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 const KeyHolding = lazy(() => import("./pages/services/KeyHolding"));
@@ -26,8 +27,7 @@ const Plans = lazy(() => import("./pages/PrincingPlans"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/AboutUs"));
 const Faq = lazy(() => import("./pages/Faq"));
-const OperatorPortal = lazy(() => import("./pages/OperatorPortal"));
-const ClientLogin = lazy(() => import("./pages/ClientLogin"));
+
 
 function RootLayout() {
   useEffect(() => {
@@ -106,11 +106,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/operator-portal",
-    element: <OperatorPortal />,
+    element: <Login />,
   },
   {
     path: "/client-portal",
-    element: <ClientLogin />,
+    element: <Login/>,
   },
   {
     path: "*",

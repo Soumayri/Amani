@@ -130,6 +130,7 @@ function App() {
           v7_relativeSplatPath: true,
         }}
       />
+      <Analytics />
     </Suspense>
   );
 }

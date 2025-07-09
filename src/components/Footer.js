@@ -36,7 +36,7 @@ const Footer = () => {
           <h3>Follow Us</h3>
           <div className="social-icons">
             <a href="www.facebook.com" target="_blank" rel=""><FaFacebookF /></a>
-            <a href="wWw.instagram.com" target="_blank" rel=""><FaInstagram /></a>
+            <a href="https://www.instagram.com/amani.home.services/" target="_blank" rel=""><FaInstagram /></a>
             <a href="www.linkedin.com" target="_blank" rel=""><FaLinkedinIn /></a>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react"
+
 import './styles/main.scss';
 import "./i18n";
 import SeoHead from "./components/SeoHead";

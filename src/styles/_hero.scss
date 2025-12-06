@@ -17,7 +17,7 @@
     position: absolute;
     inset: 0;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: brightness(0.75);
+    backdrop-filter: brightness(0.7);
     z-index: 0;
   }
 
@@ -169,7 +169,7 @@
 
   .hero__card {
     padding: 16px 14px 20px;
-    margin-top: -1rem;          // on annule le -3rem sur mobile
+    margin-top: 3rem;          // on annule le -3rem sur mobile
     margin-bottom:1rem;    // léger espace en bas
   }
 

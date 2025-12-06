@@ -50,7 +50,7 @@ const Services= () => {
             </h3>
             <p className="home-overview__card-text">
               {t(
-                "Your keys are stored securely in Casablanca, ready for emergencies, visits or trusted professionals."
+                "Your keys are stored securely, ready for emergencies, visits or trusted professionals."
               )}
             </p>
             <p className="home-overview__badge">

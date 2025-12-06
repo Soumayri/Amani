@@ -58,7 +58,7 @@ const Services= () => {
             </p>
           </article></Link>
           {/* Monthly Home Check */}
-          {/* Key Holding */}
+         
           <Link
   to="/services/monthly-checks"
   className="home-overview__card-link"
@@ -80,7 +80,8 @@ const Services= () => {
             </p>
           </article>
 </Link>
-          {/* Seasonal Care */}          <Link
+          {/* Seasonal Care */}
+          <Link
   to="/services/mail-collection"
   className="home-overview__card-link"
 >
@@ -139,7 +140,7 @@ const Services= () => {
       <div className="home-overview__addon-icon">
         <FaDoorOpen aria-hidden="true" />
       </div>
-      <div className="home-overview__addon-title">{t("ProAccess")}</div>
+      <div className="home-overview__addon-title">{t("ProAccess service")}</div>
       <p className="home-overview__addon-desc">
         {t("One-off access and short supervision for trusted professionals.")}
       </p>

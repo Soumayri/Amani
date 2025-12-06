@@ -1,94 +1,376 @@
-/* 🌍 Section Services */
-.services {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #365b6d;
-}
+/* src/styles/_home-overview.scss */
 
-.services h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin: 0 auto 30px auto;
-  max-width: 90%;
-  line-height: 1.3;
-}
-.services h2 {
-    font-size: 1.2rem;
-    margin: 15px;
-   
-  }
-/* 📌 Conteneur des services */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
-  justify-content: center;
-}
+.home-overview {
+  width: 100%;
+  padding: 48px 20px 56px;
 
-/* 🛠️ Responsive mobile */
-@media (max-width: 768px) {
-  .services h2 {
-    font-size: 1.2rem;
-    margin: 15px;
-   
+  background: rgba(249, 239, 228, 0.55); /* beige Amani translucide */
+  backdrop-filter: blur(12px);           /* effet glassy */
+  -webkit-backdrop-filter: blur(12px);   /* support Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* bordure verre */
+  box-shadow: 15px 8px 22px rgba(0, 0, 0, 0.1);  /* ombre très légère */
+  box-sizing: border-box;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .services-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .service-card {
-    padding: 16px;
-    font-size: 0.95rem;
-  }
-
-  .service-card h3 {
+  &__eyebrow {
     font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6b7b83;
+    margin-bottom: 1.5rem;
+    
   }
-}
 
-/* 🎯 Cartes des services */
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  color: #365b6d;
-  font-size: 0.9rem;
-}
+  &__title {
+    font-size: 4.5rem;
+    margin: 0 0 0.75rem 0;
+    color: #28424f;
+    font-weight: 600;
+    text-align: left;
+  }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+  &__lead {
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 2rem auto 2.2rem auto; /* <--- centré dans sa ligne */
 
-/* 🎨 Icônes */
-.service-icon {
-  font-size: 2rem;
-  color: #365b6d;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  padding: 12px;
-  width: 60px;
-  height: 60px;
+    line-height: 1.6;
+    color: #3b4a52;
+
+  }
+
+  /* GRID PRINCIPALE */
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 2.5rem;
+    align-items: stretch;
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    padding: 18px 18px 20px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(40, 66, 79, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+height: 100%;        /* occupe toute la cellule */
+    min-height: 190px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      border-color 0.18s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      border-color: rgba(54, 91, 109, 0.24);
+    }
+  }
+
+&__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+
+  background: rgba(54, 91, 109, 0.10); /* cercle un peu plus visible */
+  backdrop-filter: blur(4px); /* léger effet verre premium */
+  border: 1px solid rgba(54, 91, 109, 0.12);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
-  border: 2px solid #365b6d;
+
+  color: #365b6d;
+  margin: 0 auto 0.5rem auto; /* CENTRAGE PARFAIT */
+
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  svg {
+    font-size: 1.35rem; /* icône un peu plus grande */
+  }
+
+  /* Effet hover subtil et élégant */
+  .home-overview__card:hover & {
+    transform: scale(1.07);
+    background: rgba(54, 91, 109, 0.15);
+  }
 }
 
-/* 🎯 Titres des services */
-.service-card h3 {
-  font-size: 1.1rem;
-}
+
+  &__card-title {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0;
+  }
+
+  &__card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4a5a61;
+    margin: 0 0 0.25rem 0;
+  }
+
+  &__badge {
+    font-size: 0.8rem;
+    color: #365b6d;
+    background: rgba(54, 91, 109, 0.06);
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    display: inline-block;
+    margin-top: 0.15rem;
+  }
+
+  &__badge--highlight {
+    background: rgba(224, 106, 0, 0.12);
+    color: #c25a00;
+  }
+
+  /* ADD-ONS */
+   /* ADD-ONS – cartes premium */
+  &__addons {
+    margin-top: 2rem;
+    text-align: center;
+
+    background: rgba(255, 245, 235, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 32px 28px;
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__addons-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__addons-text {
+    font-size: 0.95rem;
+    color: #4a5a61;
+    margin: 0 0 1.4rem 0;
+    max-width: 520px;
+  }
+
+  /* grille 2x2 */
+   /* Grille ADD-ONS */
+    /* Grille 2 colonnes pour les add-ons */
+  
+
+  /* Le lien qui entoure chaque carte d’addon */
+  &__addon-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;        /* important pour que le grid le gère bien */
+  }
+
+   /* grille 2x2 */
+  &__addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    max-width: 680px;
+  }
+
+  /* Si on a un nombre impair de cartes → la dernière se centre sur sa propre ligne */
+  &__addons-grid .home-overview__card-link:last-child:nth-child(odd) {
+    grid-column: 1 / -1;   /* prend toute la ligne */
+    justify-self: center;  /* centrée horizontalement */
+    max-width: 360px;      /* optionnel : évite qu’elle soit trop large */
+  }
+
+
+
+  &__addon-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    border: 1px solid rgba(40, 66, 79, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+
+    padding: 16px 14px 18px;
+
+    /* 👇 pour harmoniser les hauteurs */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;        /* prend toute la hauteur de la cellule */
+    min-height: 190px;   /* ajuste si besoin (180 / 200…) */
+
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      border-color 0.18s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+      border-color: rgba(54, 91, 109, 0.25);
+    }
+  }
+
+  
+
+  &__addon-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 999px;
+
+    background: rgba(54, 91, 109, 0.1);
+    border: 1px solid rgba(54, 91, 109, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #365b6d;
+    margin-bottom: 0.35rem;
+
+    svg {
+      font-size: 1.15rem;
+    }
+  }
+
+  &__addon-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #28424f;
+  }
+
+  &__addon-desc {
+    font-size: 0.9rem;
+    color: #4a5a61;
+    line-height: 1.4;
+  }
+
+
+
+  /* CTA bas de bloc */
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  /* liens autour des cartes principales */
+  &__card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  &__card-link:focus-visible {
+    outline: 2px solid #365b6d;
+    border-radius: 20px;
+  }
+
+  /* liens autour des add-ons */
+  &__addon-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  &__addon-link:focus-visible {
+    outline: 2px solid #365b6d;
+    border-radius: 20px;
+  }
+
+
+  &__btn {
+
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: #365b6d;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      background: #2f4f5f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  &__link {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: #28424f;
+    cursor: pointer;
+
+    &:hover {
+      color: #18272f;
+    }
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 16px 44px;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+&__title {
+    font-size: 3rem; }
+    &__card {
+      padding: 16px 14px 18px;
+    }
+
+     &__addons-pills {
+      flex-direction: column;
+      align-items: center;   /* <-- on reste centré même en mobile */
+      max-width: 100%;
+    }
+
+    &__addon-pill {
+      white-space: normal;
+    }
+
+    &__cta {
+      flex-direction: column;
+      align-items: center;   /* <-- centré */
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 260px;
+      text-align: center;
+    }
+  }
+  }
+

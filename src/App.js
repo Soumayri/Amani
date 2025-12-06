@@ -10,7 +10,6 @@ import Services from "./components/Services";
 import Hero from "./components/Hero";
 import WhyAmani from "./components/WhyAmani";
 import HowItWorks from "./components/HowItWorks";
-import AmaniServices from "./components/AmaniServices";
 import Testimonials from "./components/Testimonials";
 import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
@@ -48,7 +47,6 @@ function RootLayout() {
       <Services />
       <WhyAmani />
       <HowItWorks />
-      <AmaniServices />
       <Testimonials />
       <TheyTrustUs />
       <MiniFAQ />

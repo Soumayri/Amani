@@ -1,103 +1,223 @@
+/* src/styles/_why-amani.scss */
+
 .why-amani {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 5% 8%;
-  background: linear-gradient(to right, #f8f9fa, #e3edf7); /* Dégradé doux */
-}
-
-.why-amani-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
-  gap: 50px;
-}
+  padding: 52px 20px 60px;
+  box-sizing: border-box;
+  background: #fdf7f0; /* fond légèrement plus clair que la section précédente */
 
-/* IMAGE À GAUCHE AVEC SHADOW */
-.why-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
 
-.why-image img {
-  width: 90%;
-  max-height: 100vh;
-  object-fit: center;
-  border-radius: 15px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2); /* Ombre subtile */
-}
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
 
-/* TEXTE À DROITE */
-.why-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  padding: 20px;
-}
-
-.why-text h2 {
-  font-size: 3.2rem;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.why-description {
-  font-size: 1.3rem;
-  font-family: "Lora", serif;
-  color: #444;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-
-/* LISTE AVEC ICÔNES PREMIUM */
-.why-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.why-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.2rem;
-  font-family: "Lora", serif;
-  color: #222;
-}
-
-.why-icon {
-  font-size: 1.8rem;
-  color: #365b6d; /* Couleur principale de l'identité Amani */
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .why-amani-content {
-    flex-direction: column;
-    text-align: center;
+    position: relative;
   }
 
-  .why-image {
+  /* 🖼️ Bloc image décalé (style 3) */
+  &__image-block {
+    flex: 1;
+    min-width: 280px;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
+
+    position: relative;
+    transform: translateY(14px); /* effet décalé léger */
   }
 
-  .why-image img {
-    max-width: 90%;
-    max-height: 400px;
+  /* halo derrière l’image pour effet premium */
+  &__image-block::before {
+    content: "";
+    position: absolute;
+    inset: 12% -8%;
+    border-radius: 32px;
+    background: radial-gradient(
+      circle at top left,
+      rgba(224, 180, 120, 0.22),
+      transparent 55%
+    );
+    opacity: 0.85;
+    z-index: 0;
   }
 
-  .why-text {
+  &__image {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 420px;
+    border-radius: 26px;
+
+    object-fit: cover;
+
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    transform: translateY(6px);
+    transition: transform 0.4s ease, box-shadow 0.35s ease;
+    will-change: transform;
+  }
+
+  /* léger effet “parallax/hover” */
+  &__image-block:hover .why-amani__image {
+    transform: translateY(0) scale(1.01);
+    box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+  }
+
+  /* 🧾 Bloc contenu texte + piliers */
+  &__content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+  }
+
+ &__eyebrow {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6b7b83;
+    margin-bottom: 1.5rem;
+    
+  }
+
+  &__title {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+    margin: 0 0 0.8rem 0;
+    color: #28424f;
+    font-weight: 600;
+  }
+
+  &__lead {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #3b4a52;
+    max-width: 620px;
+    margin: 0 0 1.9rem 0;
+  }
+
+  /* GRID des 4 piliers */
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+  }
+
+   &__card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    padding: 14px 14px 16px;
+    border: 1px solid rgba(40, 66, 79, 0.08);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    /* état initial (avant scroll) */
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.55s ease-out,
+      transform 0.55s ease-out,
+      box-shadow 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  /* état visible, déclenché par le JS */
+  &__card--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+background: rgba(54, 91, 109, 0.08);
+    border: 1px solid rgba(54, 91, 109, 0.16);
+    color: #365b6d;
+
+    margin-bottom: 0.3rem;
+
+    svg {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__card-title {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0;
     text-align: center;
-    max-width: 100%;
-    padding: 5%;
+  }
+
+  &__card-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #4a5a61;
+    margin: 0;
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 992px) {
+    &__inner {
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    &__image-block {
+      order: -1; /* image au-dessus du texte sur tablette/mobile */
+      transform: translateY(0);
+    }
+
+    &__image {
+      max-width: 380px;
+    }
+
+    &__lead {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 16px 48px;
+
+    &__inner {
+      align-items: center;
+      text-align: center;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 1.9rem;
+    }
+
+    &__lead {
+      max-width: 100%;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    &__card {
+      text-align: center;
+      width: 100%;
+    }
   }
 }

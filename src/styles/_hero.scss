@@ -1,95 +1,214 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  // background: url("/hero-image.webp") center/cover no-repeat;
-
-  background-color: rgba(0, 0, 0, 0.6);
+  min-height: calc(100vh - 80px);
+  padding: 120px 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  box-sizing: border-box;
+
+  color: #1d1d1d;
+  overflow: hidden; // évite tout débordement visuel
+
+  /* Overlay sur l’image (le background image est géré dans le Hero.js) */
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: brightness(0.75);
+    z-index: 0;
+  }
+
+  /* Conteneur intérieur */
+  &__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Carte centrale (la box qui contient tout le texte) */
+  &__card {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 24px 24px 28px;
+    margin-top: -3rem; // remonte légèrement la box sur desktop
+
+    background: rgba(255, 245, 235, 0.30); // beige translucide
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+  }
+
+  /* Animation d’apparition */
+  &__card--animated {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: heroFadeInUp 0.85s ease-out forwards;
+  }
+
+  /* Logo */
+  &__logo {
+    width: 110px;
+    display: block;
+    margin: 2rem auto 15px auto;
+  }
+
+  /* Localisation */
+  &__location {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Titre principal */
+  &__title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin: 3rem 0 1rem;
+    font-weight: 500;
+    color: #28424f;
+  }
+
+  /* Élément en gras (Morocco) */
+  &__highlight {
+    font-weight: 500;
+    color: #213641;
+  }
+
+  /* Sous-titre “As if you were there” */
+  &__subtitle {
+    font-weight: 500;
+    color: #2f4f5f;
+  }
+
+  /* Paragraphe principal */
+  &__text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-width: 36rem;
+    margin: 1rem auto 1.5rem auto;
+    opacity: 1;
+  }
+
+  /* Mise en gras du “39€/month” */
+  &__strong {
+    font-weight: 550;
+    color: black;
+  }
+
+  /* Tagline */
+  &__tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  /* Boutons */
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.05rem;
+    border-radius: 999px;
+    min-width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 500;
+    border: none;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__btn--primary {
+    background: #365b6d;
+    color: white;
+
+    &:hover {
+      background: #2f4f5f; // version plus foncée
+    }
+  }
+
+  &__btn--ghost {
+    background: transparent;
+    border: 1px solid #365b6d;
+    color: #213641;
+    backdrop-filter: blur(6px);
+
+    &:hover {
+      background: rgba(54, 91, 109, 0.08);
+    }
+  }
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Assombrit l'image pour améliorer la lisibilité */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 20px;
-}
-
-.hero-logo {
-  width: 200px; /* Ajuste la taille du logo */
-  margin-bottom: 15px; /* Espacement avec le slogan */
-}
-
-.hero-slogan {
-  font-family: "Playfair Display", serif;
-  font-size: 1.9rem;
-  font-weight: bold;
-  margin: 0px 20px 40px 20px;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  background: #365b6d;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-  margin: 30px;
-  min-width: 220px; /* largeur minimale à définir selon ton besoin */
-  text-align: center; /* texte centré */
-  white-space: nowrap; /* empêche les retours à la ligne */
-  overflow: hidden;
-}
-
-.hero-btn:hover {
-  background: #e06a00;
-}
+/* ✅ Responsive : en dehors du bloc .hero */
 @media (max-width: 768px) {
   .hero {
-    height: auto;
-    padding: 60px 20px;
-    flex-direction: column;
+    padding: 40px 16px 20px; // moins d'espace en haut et en bas
+    min-height:85vh;
   }
 
-  .hero-content {
-    max-width: 90%;
-    padding: 10px;
+  .hero__card {
+    padding: 16px 14px 20px;
+    margin-top: -1rem;          // on annule le -3rem sur mobile
+    margin-bottom:1rem;    // léger espace en bas
   }
 
-  .hero-logo {
-    width: 150px;
-    margin-bottom: 10px;
+  .hero__logo {
+    width: 95px;
+    margin-top: 0.5rem;
   }
 
-  .hero-slogan {
-    font-size: 1.5rem;
-    margin: 20px 0;
+  .hero__title {
+    font-size: 2rem;
+    margin: 1.5rem 0 0.75rem;
   }
 
-  .hero-btn {
-    margin: 10px auto;
-    font-size: 1rem;
+  .hero__text {
+    margin: 0.75rem auto 1.2rem auto;
+    line-height: 1.45;
+    font-size: 1;
+  }
+
+  .hero__tagline {
+    font-size: 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero__btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Animation */
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

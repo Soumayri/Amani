@@ -1,149 +1,234 @@
+/* src/styles/_how-it-works.scss */
+
 .how-it-works {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5% 10%;
-  background: linear-gradient(to right, #ffffff, #f8f9fa);
-}
-
-.how-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  max-width: 1200px;
   width: 100%;
-}
+  padding: 52px 20px 60px;
+   backdrop-filter: blur(12px);           /* effet glassy */
+  -webkit-backdrop-filter: blur(12px);   /* support Safari */
+  box-sizing: border-box;
+background: #fdf7f0;
+border: 1px solid rgba(255, 255, 255, 0.25);
+ box-shadow: 22px 8px 22px rgba(0, 0, 0, 0.2);
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-/* IMAGE ILLUSTRATIVE */
-.how-image {
-  flex: 1;
-}
-
-.how-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* CONTENU À DROITE */
-.how-steps {
-  flex: 1;
-  text-align: left;
-}
-
-.how-steps h2 {
-  font-size: 3.2rem;
-  font-family: "Playfair Display", serif;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.how-description {
-  font-size: 1.3rem;
-  color: #555;
-  margin-bottom: 30px;
-  font-family: "Lora", serif;
-}
-
-/* LISTE DES ÉTAPES */
-.steps-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* ÉLÉMENT D'ÉTAPE */
-.step-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* ICÔNES CERCLE + LIGNE */
-.step-icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.step-icon {
-  font-size: 2rem;
-  color: #365b6d;
-  background: white;
-  padding: 15px;
-  border-radius: 50%;
-  border: 2px solid #365b6d;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.step-line {
-  width: 2px;
-  height: 40px;
-  background-color: #365b6d;
-  margin-top: 10px;
-}
-
-/* TEXTE D'ÉTAPE */
-.step-text h3 {
-  font-size: 1.3rem;
-  color: #2c3e50;
-  margin-bottom: 5px;
-}
-
-.step-text p {
-  font-size: 1.1rem;
-  color: #555;
-  font-family: "Lora", serif;
-}
-
-/* CTA */
-.cta-button {
-  display: inline-block;
-  background-color: #365b6d;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  margin-top: 20px; /* 🔥 Ajout d'un espacement */
-}
-
-.cta-button:hover {
-  background-color: #2b4a5a;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .how-content {
-    flex-direction: column;
+ 
+ &__eyebrow {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6b7b83;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
 
-  .step-item {
-    flex-direction: column;
+  &__title {
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    margin: 0 0 0.8rem 0;
+    color: #28424f;
+    font-weight: 600;
     text-align: center;
   }
 
-  .step-icon-container {
-    flex-direction: row;
-    gap: 15px;
+  &__lead {
+    font-size: 0.97rem;
+    line-height: 1.6;
+    color: #3b4a52;
+    max-width: 640px;
+    margin: 0 auto 2.4rem auto;
+    text-align: center;
   }
 
-  .step-line {
-    width: 30px;
-    height: 2px;
+  /* TIMELINE DESKTOP */
+  &__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2.7rem;
   }
 
-  .how-image img {
-    max-width: 80%;
+  &__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
   }
-  .cta-button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+
+  /* Rail gauche (ligne verticale) */
+  &__rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  &__line {
+    flex: 1;
+    width: 2px;
+    margin-top: 4px;
+    background: linear-gradient(
+      to bottom,
+      rgba(54, 91, 109, 0.35),
+      rgba(54, 91, 109, 0.05)
+    );
+  }
+
+  /* Contenu à droite du rail */
+  &__step-content {
+    flex: 1;
+    padding: 12px 16px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(40, 66, 79, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      border-color 0.18s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
+      border-color: rgba(54, 91, 109, 0.22);
+    }
+  }
+
+  &__step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  &__step-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6b7b83;
+  }
+
+  &__step-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: rgba(54, 91, 109, 0.08);
+    border: 1px solid rgba(54, 91, 109, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #365b6d;
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  &__step-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0;
+  }
+
+  &__step-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5a61;
+    margin: 1rem 0 0 0;
+  }
+
+  /* CTA bas de section */
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: #365b6d;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      background: #2f4f5f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    text-decoration: underline;
+    color: #28424f;
+    cursor: pointer;
+
+    &:hover {
+      color: #18272f;
+    }
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    padding: 40px 16px 48px;
+
+    &__timeline {
+      gap: 1.4rem;
+    }
+
+    /* En mobile : on enlève le rail, les cartes sont centrées et full width */
+    &__step {
+      flex-direction: column;
+      align-items: center; /* centre le bloc */
+      gap: 8px;
+    }
+
+    &__rail {
+      display: none;
+    }
+
+    &__step-content {
+      width: 100%;
+      max-width: 480px;
+      padding: 12px 12px 14px;
+      text-align: left;
+    }
+
+    &__step-title {
+      font-size: 0.98rem;
+    }
+
+    &__step-text {
+      font-size: 0.9rem;
+    }
+
+    &__cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 260px;
+      text-align: center;
+    }
   }
 }

@@ -1,11 +1,22 @@
 /* 🌍 Navbar */
-.navbar {
+.navbar.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 10px 20px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 245, 235, 0.2); /* beige translucide */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 🏡 Logo */
@@ -15,20 +26,26 @@
   max-width: 130px;
   flex-shrink: 0;
 }
+
 .navbar,
 .navbar .container {
   flex-wrap: nowrap;
 }
+
 .navbar-brand img {
   max-width: 120px;
   width: auto;
   height: 50px;
   display: block;
   margin: auto;
-  padding: 8px;
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.15); /* effet glassy */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  padding: 6px 10px;
+  border-radius: 14px;
+
+  background: rgba(255, 245, 235, 0.3); /* beige translucide */
+  backdrop-filter: blur(6px); /* effet glassy */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -36,7 +53,7 @@
 .navbar-brand img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* 📌 Style des liens */
@@ -51,11 +68,11 @@
   align-items: center;
 }
 
-/* 🎨 Effet hover sur les liens */
+/* 🎨 Liens */
 .navbar-nav .nav-link {
-  color: #365b6d; /* Couleur principale Amani */
+  color: #28424f; /* Bleu Amani foncé */
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 550;
   padding: 10px 10px;
   transition: color 0.3s ease-in-out;
 }
@@ -64,9 +81,9 @@
   color: #ff7b00; /* Orange hover */
 }
 
-/* 🔥 Style du bouton "Nous Contacter" */
+/* 🔥 Bouton "Nous Contacter" (si tu le réutilises) */
 .navbar-nav .contact-link {
-  background-color: #f4a261;
+  background-color: #365b6d;
   color: white !important;
   padding: 8px 15px;
   border-radius: 10px;
@@ -75,23 +92,30 @@
 }
 
 .navbar-nav .contact-link:hover {
-  background-color: #e06a00;
-  transform: scale(1.05); /* Léger effet de zoom au survol */
+  background-color: #2f4f5f;
+  transform: scale(1.05);
 }
 
-/* 🎯 Centrer les icônes utilisateur et globe */
+/* 🎯 Boutons icônes (user / langue) */
 .navbar .btn-light {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 10px;
+
+  background: rgba(255, 245, 235, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(40, 66, 79, 0.15);
+  backdrop-filter: blur(6px);
 }
 
-.navbar .btn-light svg {
+.navbar .btn-light svg,
+.navbar .btn-light .fi {
   font-size: 20px;
+  color: #28424f;
 }
 
-/* 📌 Ajustement du menu déroulant */
+/* 📌 Dropdowns */
 .nav-item.dropdown {
   position: relative;
 }
@@ -99,11 +123,14 @@
 .dropdown-menu {
   position: absolute !important;
   top: 100%;
-  left: 0;
+  left: auto;
+  right: 0;
   min-width: 160px;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(40, 66, 79, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
   z-index: 1050;
 }
 
@@ -111,16 +138,401 @@
   display: block;
 }
 
-/* ✅ Aligner correctement les drapeaux et le texte */
+/* ✅ Drapeaux & texte */
 .dropdown-item {
   display: flex;
   align-items: center;
   padding: 8px 12px;
+  font-weight: 500;
+  color: #28424f !important;
 }
 
-.dropdown-item img {
+.dropdown-item:hover {
+  background: rgba(54, 91, 109, 0.08);
+}
+
+.dropdown-item img,
+.dropdown-item .fi {
   width: 20px;
   height: 15px;
   margin-right: 10px;
   border-radius: 2px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  /* --- NAVBAR CONTAINER --- */
+  .navbar.custom-navbar {
+    padding: 8px 14px; /* compacte */
+    background: rgba(255, 245, 235, 0.2) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    min-height: 64px; /* hauteur stable */
+  }
+
+  .navbar.custom-navbar .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* --- LOGO --- */
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbar-brand img {
+    height: 42px; /* légèrement plus petit */
+    padding: 4px 8px;
+    background: rgba(255, 245, 235, 0.4); /* beige translucide */
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  /* --- ICONES (TOGGLER, USER, LANGUAGE) --- */
+  .navbar-toggler {
+    border: none !important;
+    padding: 6px 8px;
+    margin-left: 8px;
+
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+
+  .navbar .btn-light {
+    padding: 6px 8px;
+    border-radius: 12px;
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border: 1px solid rgba(40, 66, 79, 0.18);
+    backdrop-filter: blur(6px);
+  }
+
+  /* --- MENU DÉROULANT MOBILE --- */
+  .navbar-collapse {
+    background: rgba(255, 245, 235, 0); /* transparent, mais flou possible */
+    backdrop-filter: blur(15px);
+    margin-top: 12px;
+    border-radius: 16px;
+    padding: 12px 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  /* --- LIENS DU MENU --- */
+  .navbar-nav .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    color: #28424f;
+    border-radius: 10px;
+
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: rgba(54, 91, 109, 0.08);
+    color: #28424f;
+  }
+
+  /* --- SECTIONS DROPDOWN MOBILE --- */
+  .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    margin-top: 6px;
+
+    border-radius: 14px;
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border: none;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+    justify-content: center;
+  }
+
+  /* --- ESPACEMENT BOUTONS LANGUES / USER --- */
+  .nav-item.dropdown {
+    margin-top: 10px;
+  }
+}
+/* 🌍 Navbar */
+.navbar.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 20px;
+
+  background: rgba(255, 245, 235, 0.2); /* beige translucide */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🏡 Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  max-width: 130px;
+  flex-shrink: 0;
+}
+
+.navbar,
+.navbar .container {
+  flex-wrap: nowrap;
+}
+
+.navbar-brand img {
+  max-width: 120px;
+  width: auto;
+  height: 50px;
+  display: block;
+  margin: auto;
+
+  padding: 6px 10px;
+  border-radius: 14px;
+
+  background: rgba(255, 245, 235, 0.3); /* beige translucide */
+  backdrop-filter: blur(6px); /* effet glassy */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 📌 Style des liens */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* 🎨 Liens */
+.navbar-nav .nav-link {
+  color: #28424f; /* Bleu Amani foncé */
+  font-size: 1rem;
+  font-weight: 550;
+  padding: 10px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff7b00; /* Orange hover */
+}
+
+/* 🔥 Bouton "Nous Contacter" (si tu le réutilises) */
+.navbar-nav .contact-link {
+  background-color: #365b6d;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar-nav .contact-link:hover {
+  background-color: #2f4f5f;
+  transform: scale(1.05);
+}
+
+/* 🎯 Boutons icônes (user / langue) */
+.navbar .btn-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+
+  background: rgba(255, 245, 235, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(40, 66, 79, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.navbar .btn-light svg,
+.navbar .btn-light .fi {
+  font-size: 20px;
+  color: #28424f;
+}
+
+/* 📌 Dropdowns */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  top: 100%;
+  left: auto;
+  right: 0;
+  min-width: 160px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(40, 66, 79, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  z-index: 1050;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* ✅ Drapeaux & texte */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-weight: 500;
+  color: #28424f !important;
+}
+
+.dropdown-item:hover {
+  background: rgba(54, 91, 109, 0.08);
+}
+
+.dropdown-item img,
+.dropdown-item .fi {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  /* --- NAVBAR CONTAINER --- */
+  .navbar.custom-navbar {
+    padding: 8px 14px; /* compacte */
+    background: rgba(255, 245, 235, 0.2) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    min-height: 64px; /* hauteur stable */
+  }
+
+  .navbar.custom-navbar .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* --- LOGO --- */
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbar-brand img {
+    height: 42px; /* légèrement plus petit */
+    padding: 4px 8px;
+    background: rgba(255, 245, 235, 0.4); /* beige translucide */
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  /* --- ICONES (TOGGLER, USER, LANGUAGE) --- */
+  .navbar-toggler {
+    border: none !important;
+    padding: 6px 8px;
+    margin-left: 8px;
+
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+
+  .navbar .btn-light {
+    padding: 6px 8px;
+    border-radius: 12px;
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border: 1px solid rgba(40, 66, 79, 0.18);
+    backdrop-filter: blur(6px);
+  }
+
+  /* --- MENU DÉROULANT MOBILE --- */
+  .navbar-collapse {
+    background: rgba(255, 245, 235, 0); /* transparent, mais flou possible */
+    backdrop-filter: blur(15px);
+    margin-top: 12px;
+    border-radius: 16px;
+    padding: 12px 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  /* --- LIENS DU MENU --- */
+  .navbar-nav .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    color: #28424f;
+    border-radius: 10px;
+
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: rgba(54, 91, 109, 0.08);
+    color: #28424f;
+  }
+
+  /* --- SECTIONS DROPDOWN MOBILE --- */
+  .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    margin-top: 6px;
+
+    border-radius: 14px;
+    background: rgba(255, 245, 235, 0.3); /* beige translucide */
+    border: none;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+    justify-content: center;
+  }
+
+  /* --- ESPACEMENT BOUTONS LANGUES / USER --- */
+  .nav-item.dropdown {
+    margin-top: 10px;
+  }
 }

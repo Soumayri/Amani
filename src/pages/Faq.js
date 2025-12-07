@@ -191,8 +191,8 @@ const HomeFAQSection = () => {
           </div>
 
           <div className="home-faq__cta">
-            <Link to="/faq" className="home-faq__btn">
-              {t("See all FAQs")}
+            <Link to="/plans" className="home-faq__btn">
+              {t("Compare memberships from 39€/month")}
             </Link>
             <Link to="/contact" className="home-faq__link">
               {t("Still unsure? Talk to Amani about your home")}

@@ -23,8 +23,7 @@ const MonthlyChecks = lazy(() => import("./pages/services/MonthlyChecks"));
 const ProAccess = lazy(() => import("./pages/services/ProAccess"));
 const WelcomeHomeService = lazy(() => import("./pages/services/WelcomeHomeService"));
 const AmaniWorks = lazy(() => import("./pages/services/AmaniWorks"));
-const AllServices = lazy(() => import("./pages/ServicesPage"));
-const Plans = lazy(() => import("./pages/PrincingPlans"));
+const Plans = lazy(() => import("./pages/Plans"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/AboutUs"));
 const Faq = lazy(() => import("./pages/Faq"));
@@ -83,10 +82,7 @@ const router = createBrowserRouter([
     path: "/services/amani-works",
     element: <AmaniWorks />,
   },
-  {
-    path: "/services",
-    element: <AllServices />,
-  },
+  
   {
     path: "/plans",
     element: <Plans />,

@@ -173,9 +173,9 @@ const WelcomeHomeService = () => {
             <Link to="/plans" className="service__btn">
               {t("Compare memberships from 39€/month")}
             </Link>
-            <Link to="/contact" className="service__btn--glass">
-              {t("Plan your next Welcome Home from 59€")}
-            </Link>
+            <Link to="/#services-section" className="service__btn--glass">
+                          {t("Discover services")}
+                        </Link>
           </div>
         </div>
       </section>

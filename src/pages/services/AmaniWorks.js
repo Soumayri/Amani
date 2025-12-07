@@ -172,8 +172,8 @@ const AmaniWorksService = () => {
             <Link to="/contact" className="service__btn">
               {t("Talk to Amani about your renovation project")}
             </Link>
-            <Link to="/plans" className="service__btn--glass">
-              {t("See how Amani Works fits with your membership")}
+            <Link to="/#services-section" className="service__btn--glass">
+              {t("Discover services")}
             </Link>
           </div>
         </div>

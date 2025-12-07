@@ -15,7 +15,8 @@ const Services= () => {
   const { t } = useTranslation();
 
   return (
-    <section className="home-overview">
+    <section className="home-overview" id="services-section">
+
       <div className="home-overview__inner">
         {/* Eyebrow */}
         <p className="home-overview__eyebrow">

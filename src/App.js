@@ -18,11 +18,11 @@ import Login from "./pages/Login";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 const KeyHolding = lazy(() => import("./pages/services/KeyHolding"));
-const MailCollection = lazy(() => import("./pages/services/MailCollection"));
+const SeasonalCare = lazy(() => import("./pages/services/SeasonalCare"));
 const MonthlyChecks = lazy(() => import("./pages/services/MonthlyChecks"));
-const PreventiveMaintenance = lazy(() => import("./pages/services/PreventiveMaintenance"));
+const ProAccess = lazy(() => import("./pages/services/ProAccess"));
 const WelcomeHomeService = lazy(() => import("./pages/services/WelcomeHomeService"));
-const AirportTransfers = lazy(() => import("./pages/services/AirportTransfers"));
+const AmaniWorks = lazy(() => import("./pages/services/AmaniWorks"));
 const AllServices = lazy(() => import("./pages/ServicesPage"));
 const Plans = lazy(() => import("./pages/PrincingPlans"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -47,7 +47,6 @@ function RootLayout() {
       <Services />
       <WhyAmani />
       <HowItWorks />
-      
       <TheyTrustUs />
       <MiniFAQ />
       <Footer />
@@ -65,24 +64,24 @@ const router = createBrowserRouter([
     element: <KeyHolding />,
   },
   {
-    path: "/services/mail-collection",
-    element: <MailCollection />,
+    path: "/services/seasonal-care",
+    element: <SeasonalCare />,
   },
   {
     path: "/services/monthly-checks",
     element: <MonthlyChecks />,
   },
   {
-    path: "/services/preventive-maintenance",
-    element: <PreventiveMaintenance />,
+    path: "/services/pro-access",
+    element: <ProAccess />,
   },
   {
     path: "/services/welcome-home",
     element: <WelcomeHomeService />,
   },
   {
-    path: "/services/airport-transfers",
-    element: <AirportTransfers />,
+    path: "/services/amani-works",
+    element: <AmaniWorks />,
   },
   {
     path: "/services",

@@ -56,7 +56,9 @@ const Services= () => {
             <p className="home-overview__badge">
               {t("Secure key holding included in all plans")}
             </p>
-          </article></Link>
+            </article></Link>
+          
+
           {/* Monthly Home Check */}
          
           <Link
@@ -82,7 +84,7 @@ const Services= () => {
 </Link>
           {/* Seasonal Care */}
           <Link
-  to="/services/mail-collection"
+  to="/services/seasonal-care"
   className="home-overview__card-link"
 >
           <article className="home-overview__card">
@@ -117,7 +119,7 @@ const Services= () => {
   <div className="home-overview__addons-grid">
             {/* Welcome Home */}
     <Link
-  to="/services/mail-collection"
+  to="/services/welcome-home"
   className="home-overview__card-link"
 >
     <div className="home-overview__addon-card">
@@ -133,7 +135,7 @@ const Services= () => {
 </Link>
             {/* ProAccess */}
             <Link
-  to="/services/mail-collection"
+  to="/services/pro-access"
   className="home-overview__card-link"
 >
     <div className="home-overview__addon-card">
@@ -149,7 +151,7 @@ const Services= () => {
 </Link>
             {/* Amani Works */}
             <Link
-  to="/services/mail-collection"
+  to="/services/amani-works"
   className="home-overview__card-link"
 >
     <div className="home-overview__addon-card">

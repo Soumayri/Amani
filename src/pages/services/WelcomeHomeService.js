@@ -1,111 +1,184 @@
-import React from "react";
+// src/pages/WelcomeHomeService.js
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/Navbar";
+import { Link } from "react-router-dom";
 import {
-  FaHome,
-  FaCheckCircle,
-  FaShoppingCart,
   FaConciergeBell,
-  FaClock,
-  FaTools,
+  FaDoorOpen,
+  FaBed,
+  FaShoppingBag,
 } from "react-icons/fa";
-import ScrollToTop from "../../components/ScrollToTop";
+import SeoHead from "../../components/SeoHead";
+import Navbar from "../../components/Navbar";
 
 const WelcomeHomeService = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+
+  // Toujours arriver en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const steps = [
+    {
+      icon: <FaConciergeBell />,
+      title: t("You tell us when you’re coming – and what you need"),
+      text: t(
+        "Before your trip, you share your arrival date, time and whether you’d like us to prepare basics like water, breakfast items or a full fridge."
+      ),
+    },
+    {
+      icon: <FaDoorOpen />,
+      title: t("We open and refresh your home before you arrive"),
+      text: t(
+        "We go on site ahead of your arrival to open the apartment, air it out, check the main rooms and make sure everything feels safe and ready."
+      ),
+    },
+    {
+      icon: <FaShoppingBag />,
+      title: t("We manage your groceries via Glovo and put everything away"),
+      text: t(
+        "Using your Glovo order or a shopping list you approve, we receive the delivery on your behalf, store fresh items in the fridge and cupboards and remove the packaging."
+      ),
+    },
+    {
+      icon: <FaBed />,
+      title: t("You arrive to a home that feels lived-in, not closed"),
+      text: t(
+        "Beds and essentials can be prepared, the apartment is aired and stocked, so you start your stay by resting – not by cleaning and running to the supermarket."
+      ),
+    },
+  ];
 
   return (
     <>
-      <ScrollToTop />
       <Navbar />
 
-      <div className="service-page">
-        {/* 🔹 HEADER AVEC BACKGROUND IMAGE & TITRE */}
-        <div className="service-header welcome-home-header">
-          <h1>{t("Welcome Home Service")}</h1>
-        </div>
+      <SeoHead
+        titleKey="Welcome Home Service | Amani Home"
+        descriptionKey="Welcome Home by Amani: pre-arrival preparation, airing, light reset and groceries via Glovo so you arrive to a ready home in Morocco."
+        canonical="https://www.amani-services.com/services/welcome-home"
+      />
 
-        {/* 🔹 CONTENU PRINCIPAL */}
-        <div className="service-content">
-          <p className="service-intro">
-            {t("Your home, perfectly prepared for your arrival. Relax and enjoy a stress-free return!")}
+      <section className="service service--keyholding">
+        <div className="service__inner">
+          {/* Eyebrow + header */}
+          <p className="service__eyebrow">
+            {t("Add-on · For your arrivals in Morocco")}
           </p>
 
-          <h2>{t("Why is this service essential?")}</h2>
-          <p className="service-description">
-            {t("After months away, your home needs a refresh before your return: ")}
-            <strong>{t("dust, stale air, disconnected appliances, etc.")}</strong>
-          </p>
+          <div className="service__header-row">
+            <div className="service__header-main">
+              <h1 className="service__title">
+                {t("Welcome Home")}
+              </h1>
+           <p className="service__lead">
+  {t(
+    "Welcome Home is our pre-arrival service so you don’t open a closed, dusty apartment after a long flight. We refresh your home, receive your groceries via "
+  )}
+  <a
+    href="https://glovoapp.com/"
+    className="service__link-inline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Glovo
+  </a>
+  {t(
+    " and put everything away so you can simply arrive and feel at home."
+  )}
+</p>
 
-          <ul className="service-benefits">
-            <li>
-              <FaCheckCircle className="benefit-icon" />{" "}
-              <strong>{t("Return to a spotless, fresh home")}</strong>
-            </li>
-            <li>
-              <FaClock className="benefit-icon" /> {t("Save time and enjoy your stay immediately")}
-            </li>
-            <li>
-              <FaConciergeBell className="benefit-icon" /> {t("Avoid inconveniences like humidity, dust, or inactive appliances")}
-            </li>
-          </ul>
 
-          {/* 🔹 FORMULES STANDARD & PREMIUM */}
-          <h2>{t("Two Levels of Service Tailored to Your Needs")}</h2>
-
-          <div className="service-levels">
-            {/* ✅ STANDARD SERVICE */}
-            <div className="service-box">
-              <h3>{t("Standard Plan Service")}</h3>
-              <ul>
-                <li><FaHome /> {t("Utility setup (electricity, water, heating, AC...)")}</li>
-                <li><FaCheckCircle /> {t("Air circulation & room refreshing")}</li>
-                <li><FaConciergeBell /> {t("Quick cleaning (dust, floors, main surfaces...)")}</li>
-                <li><FaClock /> {t("Linen preparation (clean sheets and towels)")}</li>
-                <li><FaTools /> {t("Equipment check-up (leaks, light bulbs, etc.)")}</li>
-              </ul>
+              <div className="service__badges">
+                <span className="service__badge">
+                  {t("Reserved for Amani members in Casablanca")}
+                </span>
+                <span className="service__badge service__badge--accent">
+                  {t("Welcome Home from")}{" "}
+                  <span style={{ fontWeight: 600 }}>59€</span>
+                  {t(" per visit (excluding groceries)")}
+                </span>
+              </div>
             </div>
 
-            {/* 🔥 PREMIUM SERVICE */}
-            <div className="service-box premium-box">
-              <h3>{t("Premium Plan Service")} <span className="premium-badge">{t("Exclusive Perks")}</span></h3>
-              <ul>
-                <li><FaCheckCircle /> <strong>{t("Deep cleaning (bathrooms, windows, kitchen, furniture...)")}</strong></li>
-                <li><FaShoppingCart /> {t("Essential groceries delivered (water, coffee, bread, fruits…)")}</li>
-                <li><FaTools /> {t("Free small repairs (light bulb replacement, minor fixes...)")}</li>
-                <li><FaClock /> {t("Priority access to additional services (faster response time)")}</li>
-                <li><FaConciergeBell /> {t("One free extra service per year (car wash, terrace cleaning...)")}</li>
+            {/* Aside “What’s included” */}
+            <aside className="service__aside-card">
+              <h2 className="service__aside-title">
+                {t("What’s included with Welcome Home")}
+              </h2>
+              <ul className="service__list">
+                <li>
+                  <FaDoorOpen />
+                  <span>
+                    {t("Pre-arrival visit to open, air and check your home")}
+                  </span>
+                </li>
+                <li>
+                  <FaConciergeBell />
+                  <span>
+                    {t("Light reset of main rooms so the apartment feels fresh")}
+                  </span>
+                </li>
+                <li>
+                  <FaShoppingBag />
+                  <span>
+                    {t("Groceries managed via Glovo and stored in your kitchen")}
+                  </span>
+                </li>
+                <li>
+                  <FaBed />
+                  <span>
+                    {t("Beds and essentials ready for your first night")}
+                  </span>
+                </li>
               </ul>
+
+              <p className="service__aside-note">
+                {t(
+                  "The service starts from"
+                )}{" "}
+                <span style={{ fontWeight: 600 }}>59€</span>{" "}
+                {t(
+                  "per visit for our members in Casablanca. The Glovo order itself is paid directly from your Glovo account or according to the arrangement we agree together."
+                )}
+              </p>
+            </aside>
+          </div>
+
+          {/* Section “How Welcome Home works” */}
+          <div className="service__section">
+            <h2 className="service__section-title">
+              {t("How Welcome Home works")}
+            </h2>
+            <p className="service__section-lead">
+              {t(
+                "From the moment you share your arrival date, we coordinate the visit, groceries and preparation so your home feels open, stocked and welcoming when you turn the key."
+              )}
+            </p>
+
+            <div className="service__steps-grid">
+              {steps.map((step, index) => (
+                <article key={index} className="service__step-card">
+                  <div className="service__step-icon">{step.icon}</div>
+                  <h3 className="service__step-title">{step.title}</h3>
+                  <p className="service__step-text">{step.text}</p>
+                </article>
+              ))}
             </div>
           </div>
 
-          {/* 🔹 FAQ SECTION */}
-          <h3>{t("Good to know:")}</h3>
-          <div className="faq-section">
-            <h4>{t("📌 Can I customize the service?")}</h4>
-            <p>{t("Absolutely! You can adjust the package to fit your needs.")}</p>
-
-            <h4>{t("📌 How do I schedule the service?")}</h4>
-            <p>{t("Simply select the date and time, and we’ll handle the rest.")}</p>
-
-            <h4>{t("📌 What if I need last-minute changes?")}</h4>
-            <p>{t("We do our best to accommodate urgent requests.")}</p>
-          </div>
-
-          {/* 🔹 CTA BOUTONS */}
-          <div className="cta-section">
-            <p>{t("Secure your Welcome Home Service today and enjoy a seamless return.")}</p>
-            <button className="cta-button" onClick={() => navigate("/plans")}>
-              {t("Request This Service")}
-            </button>
-            <button className="back-button" onClick={() => navigate("/services")}>
-              {t("Back to Services")}
-            </button>
+          {/* CTA bas de page */}
+          <div className="service__cta">
+            <Link to="/plans" className="service__btn">
+              {t("Compare memberships from 39€/month")}
+            </Link>
+            <Link to="/contact" className="service__btn--glass">
+              {t("Plan your next Welcome Home from 59€")}
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

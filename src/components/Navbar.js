@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "flag-icons/css/flag-icons.min.css";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -53,6 +54,16 @@ const Navbar = () => {
     setShowUserDropdown(false);
     setShowLangDropdown(false);
   };
+  const location = useLocation();
+
+const handleLogoClick = (e) => {
+  if (location.pathname === "/") {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  handleNavLinkClick();
+};
+
 
   return (
     <nav
@@ -60,10 +71,11 @@ const Navbar = () => {
       ref={navbarRef}
     >
       <div className="container">
-        {/* Logo */}
-        <Link className="navbar-brand" to="/" onClick={handleNavLinkClick}>
-          <img src="/LogoAmani.webp" alt="Logo Amani" height="40" />
-        </Link>
+      {/* Logo */}
+<Link className="navbar-brand" to="/" onClick={handleLogoClick}>
+  <img src="/LogoAmani.webp" alt="Logo Amani" height="40" />
+</Link>
+
 
         {/* Toggler mobile */}
         <button
@@ -83,15 +95,7 @@ const Navbar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto align-items-center">
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="/services"
-                onClick={handleNavLinkClick}
-              >
-                {t("Services")}
-              </Link>
-            </li>
+          
 
             <li className="nav-item">
               <Link
@@ -99,7 +103,7 @@ const Navbar = () => {
                 to="/plans"
                 onClick={handleNavLinkClick}
               >
-                {t("Pricing & Plans")}
+                {t("Membership")}
               </Link>
             </li>
 

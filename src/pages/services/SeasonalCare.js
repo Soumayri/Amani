@@ -1,51 +1,50 @@
-// src/pages/HomeCheckService.js
+// src/pages/SeasonalCareService.js
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
-  FaHome,
-  FaClipboardCheck,
-  FaCamera,
-  FaBell,
+  FaCalendarAlt,
+  FaBroom,
+  FaWind,
+  FaSprayCan,
 } from "react-icons/fa";
 import SeoHead from "../../components/SeoHead";
 import Navbar from "../../components/Navbar";
 
-const HomeCheckService = () => {
+const SeasonalCare = () => {
   const { t } = useTranslation();
 
-  // Toujours arriver en haut de page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const steps = [
     {
-      icon: <FaClipboardCheck />,
-      title: t("We plan your visits based on your membership"),
+      icon: <FaCalendarAlt />,
+      title: t("We plan your seasonal visits ahead of time"),
       text: t(
-        "Depending on your plan, we schedule 1, 2 or 4 home checks per month and define the days and time slots that work best for you."
+        "We agree on the best periods for Seasonal Care based on how often you visit Morocco and how your home is used."
       ),
     },
     {
-      icon: <FaHome />,
-      title: t("We visit your home with a clear checklist"),
+      icon: <FaBroom />,
+      title: t("We refresh and reset your home"),
       text: t(
-        "During each visit, we follow a structured checklist: doors and windows, signs of humidity, leaks, electricity, appliances, balconies, and overall condition."
+        "Our team cleans, dusts, airs out and resets the main rooms so your home doesn’t stay closed and stale for months."
       ),
     },
     {
-      icon: <FaCamera />,
-      title: t("We document what we see"),
+      icon: <FaWind />,
+      title: t("We air, ventilate and check for humidity"),
       text: t(
-        "If something looks unusual, we take photos or short videos so you can see exactly what we see from abroad."
+        "We open windows where possible, check for damp, odors or signs of mold, and let you know if something needs extra attention."
       ),
     },
     {
-      icon: <FaBell />,
-      title: t("You receive a short report after each check"),
+      icon: <FaSprayCan />,
+      title: t("You arrive to a home that feels alive again"),
       text: t(
-        "After every home check, you receive a brief summary with key observations and, when necessary, suggestions for next steps."
+        "Seasonal Care makes it easier to arrive, unpack and enjoy your stay instead of starting with cleaning and inspections."
       ),
     },
   ];
@@ -55,14 +54,14 @@ const HomeCheckService = () => {
       <Navbar />
 
       <SeoHead
-        titleKey="Monthly Home Checks | Amani Home Casablanca"
-        descriptionKey="Amani monthly home check service with structured inspections, checklists and reports for your home in Morocco."
-        canonical="https://www.amani-services.com/services/monthly-checks"
+        titleKey="Seasonal Care | Amani Home Casablanca"
+        descriptionKey="Seasonal Care service by Amani: seasonal cleaning, airing and reset of your home in Morocco, included with your membership."
+        canonical="https://www.amani-services.com/services/seasonal-care"
       />
 
       <section className="service service--keyholding">
         <div className="service__inner">
-          {/* Header */}
+          {/* Eyebrow + header */}
           <p className="service__eyebrow">
             {t("Service · Included in every membership")}
           </p>
@@ -70,20 +69,20 @@ const HomeCheckService = () => {
           <div className="service__header-row">
             <div className="service__header-main">
               <h1 className="service__title">
-                {t("Monthly Home Checks")}
+                {t("Seasonal Care")}
               </h1>
               <p className="service__lead">
                 {t(
-                  "We visit your home in Casablanca at a regular rhythm to make sure everything is in order – so your property doesn’t stay closed and unchecked for months while you’re abroad."
+                  "Seasonal Care is a deeper refresh of your home before and after the main seasons, so your property doesn’t sit closed, dusty or humid for too long while you’re abroad."
                 )}
               </p>
 
               <div className="service__badges">
                 <span className="service__badge">
-                  {t("Included in Basic, Standard & Premium")}
+                  {t("2 Seasonal Care visits per year in Basic & Standard")}
                 </span>
                 <span className="service__badge service__badge--accent">
-                  {t("1, 2 or 4 visits per month depending on your plan")}
+                  {t("4 Seasonal Care visits per year in Premium")}
                 </span>
               </div>
             </div>
@@ -91,51 +90,51 @@ const HomeCheckService = () => {
             {/* Aside “What’s included” */}
             <aside className="service__aside-card">
               <h2 className="service__aside-title">
-                {t("What’s included with Home Checks")}
+                {t("What’s included with Seasonal Care")}
               </h2>
               <ul className="service__list">
                 <li>
-                  <FaHome />
+                  <FaBroom />
                   <span>
-                    {t("Regular on-site visits to your property")}
+                    {t("Seasonal cleaning of key living areas")}
                   </span>
                 </li>
                 <li>
-                  <FaClipboardCheck />
+                  <FaWind />
                   <span>
-                    {t("Structured checklist for every home check")}
+                    {t("Airing and ventilation of the property")}
                   </span>
                 </li>
                 <li>
-                  <FaCamera />
+                  <FaCalendarAlt />
                   <span>
-                    {t("Photos or videos when something needs your attention")}
+                    {t("Planned visits before and after key seasons")}
                   </span>
                 </li>
                 <li>
-                  <FaBell />
+                  <FaSprayCan />
                   <span>
-                    {t("Short written report after each visit")}
+                    {t("Quick reset so your home feels ready sooner")}
                   </span>
                 </li>
               </ul>
 
               <p className="service__aside-note">
                 {t(
-                  "Home checks are the core of your membership: they help detect small issues before they become expensive problems."
+                  "Seasonal Care works together with your monthly home checks so your property stays clean, aired and easier to enjoy when you return."
                 )}
               </p>
             </aside>
           </div>
 
-          {/* Section “How our home checks work” */}
+          {/* Section “How Seasonal Care works” */}
           <div className="service__section">
             <h2 className="service__section-title">
-              {t("How our home checks work")}
+              {t("How Seasonal Care works")}
             </h2>
             <p className="service__section-lead">
               {t(
-                "From scheduling to reporting, the process is clear so you always know when your home was last visited and what we observed."
+                "We combine planning, cleaning and airing so your seasonal visits to Morocco start smoother, with less effort on your side."
               )}
             </p>
 
@@ -156,7 +155,7 @@ const HomeCheckService = () => {
               {t("Compare memberships from 39€/month")}
             </Link>
             <Link to="/contact" className="service__btn--glass">
-              {t("Talk to Amani about your home checks")}
+              {t("Talk to Amani about Seasonal Care")}
             </Link>
           </div>
         </div>
@@ -165,4 +164,4 @@ const HomeCheckService = () => {
   );
 };
 
-export default HomeCheckService;
+export default SeasonalCare;

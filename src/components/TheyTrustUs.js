@@ -58,7 +58,7 @@ const TheyTrustUs = () => {
 
         {/* EYEBROW 2 – numbers */}
         <p className="they-trust-us__numbers-eyebrow">
-          {t("Amani in numbers")}
+          {t("Amani home in numbers")}
         </p>
 
         {/* Numbers Title */}

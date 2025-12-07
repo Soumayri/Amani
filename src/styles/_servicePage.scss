@@ -1,232 +1,304 @@
-/* 🌟 Style général de la page service */
-.service-page {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* src/styles/_service-keyholding.scss */
 
-/* 🔹 Changement du fond global */
-body {
-  background: linear-gradient(to right, #eef5f9, #ffffff);
-}
+.service {
+  width: 100%;
+  padding: 72px 20px 56px;
+  box-sizing: border-box;
+  background: #fdf8f2;
 
-/* 🌍 Background spécifique pour chaque service */
-.service-header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 80px 10%;
-  text-align: center;
-  border-radius: 10px;
-}
-
-/* 📌 Correction des backgrounds */
-.key-holding-header {
-  background-image: url("../../public/img/KeyStorage.webp");
-}
-.mail-collection-header {
-  background-image: url("../../public/img/MailCollection.webp");
-}
-.monthly-checks-header {
-  background-image: url("../../public/img/MonthlyChecks.webp");
-}
-.preventive-maintenance-header {
-  background-image: url("../../public/img/PreventiveMaintenance.webp");
-}
-.welcome-home-header {
-  background-image: url("../../public/img/WelcomeHome.webp");
-}
-.airport-transfers-header {
-  background-image: url("../../public/img/AirportTransfer.webp");
-}
-/* 🔹 TITRE PRINCIPAL */
-.service-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  margin-bottom: 10px;
-}
-
-/* 🔹 SOUS-TITRE */
-.service-intro {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #2c3e50;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-  max-width: 700px;
-  margin: 40px auto 60px;
-}
-.service-benefits {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-  max-width: 700px;
-}
-
-.service-benefits li {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  text-align: justify;
-}
-
-/* ✅ Icônes */
-.benefit-icon {
-  font-size: 1.5rem;
-  color: #365b6d;
-}
-/* 📌 MISE EN PAGE COMPARAISON STANDARD VS PREMIUM */
-.service-levels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 40px;
-  text-align: left;
-}
-
-/* 📦 Bloc standard et premium */
-.service-box {
-  background: #f8f9fa;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
-}
-.service-box h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* 🔥 PREMIUM - Style spécifique */
-.premium-box {
-  background: #365b6d;
-  color: white;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.premium-box h3 {
-  color: white;
-  text-align: center;
-}
-
-.premium-badge {
-  background: gold;
-  color: black;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-/* ✅ Liste des services */
-.service-box ul {
-  list-style: none;
-  padding: 0;
-}
-
-.service-box li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.service-box li svg {
-  color: #365b6d;
-  margin-right: 10px;
-}
-
-.premium-box li svg {
-  color: gold;
-}
-
-/* 🔹 Section FAQ */
-.faq-section {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-.faq-section h3 {
-  font-size: 1.3rem;
-}
-/* 🎯 Boutons CTA */
-.cta-section {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.cta-button {
-  background: #365b6d;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.2s;
-}
-
-.cta-button:hover {
-  background: #2c3e50;
-  transform: translateY(-3px);
-}
-
-/* 🔙 Bouton Retour */
-.back-button {
-  margin-top: 20px;
-  background: #ddd;
-  color: #333;
-  font-size: 0.7em;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.2s;
-}
-
-.back-button:hover {
-  background: #bbb;
-  transform: translateY(-3px);
-}
-
-/* 🔥 Responsive */
-@media (max-width: 768px) {
-  .service-page {
-    padding: 20px;
-  }
-.services-page h2{
-  text-align: center;
-  font-size: 2rem;
-}
-  .service-header h1 {
-    font-size: 2rem;
+  &--keyholding {
+    background: linear-gradient(
+      180deg,
+      rgba(249, 239, 228, 0.9) 0%,
+      #fdfaf6 60%
+    );
   }
 
-  .service-levels {
-    grid-template-columns: repeat(1, 1fr);
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
-  .service-benefits li {
+  &__eyebrow {
     font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6b7b83;
+    margin: 2rem 0 1.5rem 0;
+    text-align: left;
+  }
+
+  &__header-row {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 2.8rem;
+  }
+
+  &__title {
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    margin: 0 0 0.8rem 0;
+    color: #28424f;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &__lead {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #3b4a52;
+    margin: 0 0 1.4rem 0;
+    max-width: 640px;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__badge {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(54, 91, 109, 0.06);
+    color: #365b6d;
+    font-weight: 500;
+  }
+
+  &__badge--accent {
+    background: rgba(224, 106, 0, 0.12);
+    color: #c25a00;
+  }
+
+  /* Aside “What’s included” */
+
+  &__aside-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    padding: 20px 18px 18px;
+    border: 1px solid rgba(40, 66, 79, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  &__aside-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0 0 0.8rem 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.7rem 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #3b4a52;
+
+      svg {
+        font-size: 1rem;
+        margin-top: 2px;
+        color: #365b6d;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__aside-note {
+    font-size: 0.85rem;
+    color: #6b7b83;
+    margin: 0;
+  }
+
+  /* Section étapes */
+
+  &__section {
+    margin-bottom: 2.6rem;
+  }
+
+  &__section-title {
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    margin: 0 0 0.8rem 0;
+    color: #28424f;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &__section-lead {
+    font-size: 0.98rem;
+    color: #4a5a61;
+    margin: 0 0 1.6rem 0;
+    max-width: 620px;
+  }
+
+  &__steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  &__step-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    padding: 16px 14px 18px;
+    border: 1px solid rgba(40, 66, 79, 0.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      border-color 0.18s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+      border-color: rgba(54, 91, 109, 0.22);
+    }
+  }
+
+  &__step-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background: rgba(54, 91, 109, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #365b6d;
+    margin-bottom: 0.3rem;
+
+    svg {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__step-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #28424f;
+    margin: 0;
+  }
+
+  &__step-text {
+    font-size: 0.9rem;
+    color: #4a5a61;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* CTA */
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1.6rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: #365b6d;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      background: #2f4f5f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+  }
+ .service__btn--glass{ 
+  background: transparent;
+    border: 1px solid #365b6d;
+    color: #213641;
+    backdrop-filter: blur(6px);
+
+    &:hover {
+      background: rgba(54, 91, 109, 0.08);
+    }  display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 999px;
+    min-width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 500;
+    border: 3px solid beige;
+  }
+  &__link {
+    font-size: 0.95rem;
+    color: #28424f;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: #18272f;
+    }
+    
+  }
+.service__footer-note {
+  max-width: 680px;
+  margin: 2rem auto 2.4rem auto;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #28424f;
+  opacity: 0.85;
+  line-height: 1.55;
+}
+
+  /* 📱 Responsive */
+
+  @media (max-width: 992px) {
+    &__header-row {
+      grid-template-columns: 1fr;
+    }
+
+    &__steps-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 56px 16px 44px;
+
+    &__steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__aside-card {
+      margin-top: 0.5rem;
+    }
+
+    &__cta {
+      flex-direction: column;
+      align-items: center;
+
+      & > .service__btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+      }
+    }
   }
 }

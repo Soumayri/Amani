@@ -14,7 +14,7 @@ const WhyAmaniSection = () => {
   const [hasRevealed, setHasRevealed] = useState(false);
 
   // 👉 ton image
-  const pillarImage = "/agent.png";
+  const pillarImage = "/agent.webp";
 
   const pillars = [
     {

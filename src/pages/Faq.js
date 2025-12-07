@@ -1,75 +1,209 @@
-// 📁 src/pages/Faq.js
-import React from "react";
-import Navbar from "../components/Navbar";
+// src/components/HomeFAQSection.js
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
 import SeoHead from "../components/SeoHead";
+import ScrollToTop from "../components/ScrollToTop";
 
+/* ---------------------------------------------
+   🔍 Mots-clés SEO à mettre automatiquement en gras
+---------------------------------------------- */
+const HIGHLIGHT_TERMS = [
+  "39€/month",
+  "Morocco",
+  "Moroccans living abroad",
+  "MRE",
+  "memberships",
+  "FreshStart",
+  "Welcome Home",
+  "ProAccess",
+  "Amani Works",
+  "key holding",
+  "home checks",
+  "seasonal care",
+  "Casablanca"
+];
 
-const Faq = () => {
+// Sécurise les caractères spéciaux pour la RegExp
+const escapeRegex = (str) =>
+  str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+// Fonction React-safe qui renvoie un tableau React (PAS innerHTML)
+const highlightText = (text) => {
+  if (!text || typeof text !== "string") return text;
+
+  const pattern = new RegExp(
+    `(${HIGHLIGHT_TERMS.map(escapeRegex).join("|")})`,
+    "gi"
+  );
+
+  const parts = text.split(pattern);
+
+  return parts.map((part, index) => {
+    const isHighlight = HIGHLIGHT_TERMS.some(
+      (term) => term.toLowerCase() === part.toLowerCase()
+    );
+
+    return isHighlight ? (
+      <strong key={index} className="faq__highlight">
+        {part}
+      </strong>
+    ) : (
+      <span key={index}>{part}</span>
+    );
+  });
+};
+
+const HomeFAQSection = () => {
   const { t } = useTranslation();
+  const [openIndex, setOpenIndex] = useState(null);
+  const faqRef = useRef(null);
+
+  const toggleFAQ = (index) =>
+    setOpenIndex(openIndex === index ? null : index);
+
+  // Fermer si clic en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (faqRef.current && !faqRef.current.contains(event.target)) {
+        setOpenIndex(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  /* ---------------------------------------------
+     📌 FAQ LIST — inchangée mais highlight appliqué
+  ---------------------------------------------- */
+  const faqs = [
+    {
+      question: t(
+        "What is Amani and how does your remote home care service in Morocco work?"
+      ),
+      answer: t(
+        "Amani is a remote home care and property management service for owners who have a home in Morocco but live abroad or travel often. We store your keys securely in Casablanca, organise regular Home Checks and Seasonal Care, and coordinate extra services when you need more support. You receive clear reports after each visit so you always know what is happening in your Moroccan property, even when you are not there."
+      ),
+    },
+    {
+      question: t(
+        "How much does an Amani membership cost and what is included from 39€/month?"
+      ),
+      answer: t(
+        "Our memberships start from 39€/month and include secure key holding, regular Home Checks and basic Seasonal Care depending on the plan you choose. You can then add on extra services such as Welcome Home, ProAccess or Amani Works when you need deeper cleaning, professional access or renovation support."
+      ),
+    },
+    {
+      question: t(
+        "Is Amani only for Moroccans living abroad (MRE) or can local owners also use your service?"
+      ),
+      answer: t(
+        "Amani was created first for MRE and international owners who cannot be in Morocco regularly, but local owners in Casablanca and surroundings also use our service. If you travel often, live in another city or simply prefer a professional team to look after your home, you can subscribe to any of our memberships."
+      ),
+    },
+    {
+      question: t(
+        "What is FreshStart and how do Home Checks help protect my property while I am away?"
+      ),
+      answer: t(
+        "FreshStart is our initial visit before your membership really starts. During this visit, we air the property, check each room, do a first cleaning and document the current state of your home with photos and notes. Then, your regular Home Checks follow a clear checklist: doors and windows, water and electricity, signs of humidity or leaks, mail, and general condition. This helps catch small issues before they become bigger problems."
+      ),
+    },
+    {
+      question: t(
+        "How does Amani Works manage renovation and construction projects remotely?"
+      ),
+      answer: t(
+        "Amani Works is our coordination and supervision service for renovation and works when you cannot be on site yourself. You tell us about your project, we source and shortlist trusted professionals, then present you one or two quotes so you can decide how you want to move forward. Once you choose, we coordinate the works, follow progress on the ground, check quality and keep you updated with photos, videos and reports until completion. Our fee is 25% of the total works budget."
+      ),
+    },
+    {
+      question: t(
+        "How are my keys and access to my home in Morocco kept safe with Amani?"
+      ),
+      answer: t(
+        "Your keys are stored in a secure key holding system in Casablanca with a unique code instead of your name or address. Only authorised Amani operators can access the keys when a visit or a service is planned, and every movement is logged."
+      ),
+    },
+  ];
 
   return (
     <>
       <SeoHead
-        titleKey="FAQ - Questions fréquentes | AMANI HOME"
-        descriptionKey="FaqMetaDescription"
+        titleKey="FAQ | Amani Home"
+        descriptionKey="All your questions about remote home care in Morocco, Amani memberships, FreshStart and Amani Works."
         canonical="https://www.amani-services.com/faq"
       />
       <ScrollToTop />
       <Navbar />
-    <div className="faq-page">
-      <div className="faq-header">
-        <h1>{t("Frequently Asked Questions")}</h1>
-        <p>{t("Here are some answers to common questions about our services and how Amani works.")}</p>
-      </div>
 
-      <div className="faq-content">
-        <div className="faq-item">
-          <h3>{t("Do I need to live in Morocco to use Amani?")}</h3>
-          <p>{t("Not at all! Amani was created specifically for people living abroad. We are your local support team, taking care of your property while you're away.")}</p>
-        </div>
+      <section className="home-faq">
+        <div className="home-faq__inner" ref={faqRef}>
+          <p className="home-faq__eyebrow">
+            {t("Frequently asked questions")}
+          </p>
 
-        <div className="faq-item">
-          <h3>{t("Is Amani available all over Morocco?")}</h3>
-          <p>{t("Our operations are currently based in Casablanca, but we are expanding. Feel free to contact us if you're located elsewhere — your feedback helps us grow!")}</p>
-        </div>
+          <h2 className="home-faq__title">
+            {t("Understand how Amani protects your home in Morocco")}
+          </h2>
 
-        <div className="faq-item">
-          <h3>{t("What kind of properties do you manage?")}</h3>
-          <p>{t("We manage apartments, villas, holiday homes, and long-term investments — whether it's a small studio or a family estate.")}</p>
-        </div>
+          <p className="home-faq__lead">
+            {highlightText(
+              t(
+                "Here are answers to the main questions owners ask us about memberships, FreshStart, Amani Works and how remote home care works when you live abroad."
+              )
+            )}
+          </p>
 
-        <div className="faq-item">
-          <h3>{t("How do you handle emergencies or urgent repairs?")}</h3>
-          <p>{t("We have a local network of qualified professionals ready to intervene quickly. You’ll receive a full report and photos after each intervention.")}</p>
-        </div>
+          <div className="home-faq__list">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`home-faq__item ${
+                  openIndex === index ? "home-faq__item--open" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="home-faq__question"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span className="home-faq__question-text">
+                    {highlightText(faq.question)}
+                  </span>
 
-        <div className="faq-item">
-          <h3>{t("Do I need to give you my keys?")}</h3>
-          <p>{t("Yes — securely storing your keys allows us to intervene anytime, even without your presence. Key holding is included in all our subscription plans.")}</p>
-        </div>
+                  <span className="home-faq__icon">
+                    {openIndex === index ? <FaMinus /> : <FaPlus />}
+                  </span>
+                </button>
 
-        <div className="faq-item">
-          <h3>{t("How do I subscribe to a plan or request a service?")}</h3>
-          <p>{t("Simply visit our 'Pricing & Plans' or 'Services' pages, click the request button, and fill out the contact form. We'll take it from there.")}</p>
-        </div>
+                {openIndex === index && (
+                  <div className="home-faq__answer">
+                    <p>{highlightText(faq.answer)}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
 
-        <div className="faq-item">
-          <h3>{t("Is there a long-term commitment when I subscribe?")}</h3>
-          <p>{t("No! All our plans are monthly with no long-term commitment. You can cancel anytime with just one message.")}</p>
+          <div className="home-faq__cta">
+            <Link to="/faq" className="home-faq__btn">
+              {t("See all FAQs")}
+            </Link>
+            <Link to="/contact" className="home-faq__link">
+              {t("Still unsure? Talk to Amani about your home")}
+            </Link>
+          </div>
         </div>
-
-        <div className="faq-item">
-          <h3>{t("Can I combine services from different plans?")}</h3>
-          <p>{t("Of course! You can subscribe to a plan and add extra services à la carte at any time.")}</p>
-        </div>
-      </div>
+      </section>
 
       <Footer />
-    </div></>
+    </>
   );
 };
 
-export default Faq;
+export default HomeFAQSection;

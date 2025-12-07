@@ -25,7 +25,7 @@ const Hero = () => {
     <section
       className="hero"
       style={{
-        backgroundImage: `url("/testhero.jpg")`,
+        backgroundImage: `url("/hero.webp")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

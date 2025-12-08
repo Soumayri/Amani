@@ -116,6 +116,189 @@
         );
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.amani-services.com/#website",
+            "url": "https://www.amani-services.com/",
+            "name": "Amani Home",
+            "description": "Remote home care and key holding service for properties in Morocco. Amani Home looks after your keys, home checks and seasonal care while you live abroad.",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://www.amani-services.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.amani-services.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+
+          {
+            "@type": "Organization",
+            "@id": "https://www.amani-services.com/#organization",
+            "name": "Amani Home",
+            "url": "https://www.amani-services.com/",
+            "logo": "https://www.amani-services.com/LogoAmaniFull.webp",
+            "email": "contact.amani.home@gmail.com",
+            "telephone": "+33 670 779 256",
+            "sameAs": ["https://www.instagram.com/amani.home.services/"]
+          },
+
+          {
+            "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+            "@id": "https://www.amani-services.com/#localbusiness",
+            "name": "Amani Home – Remote home care in Morocco",
+            "url": "https://www.amani-services.com/",
+            "image": "https://www.amani-services.com/testhero.jpg",
+            "description": "Amani Home offers remote home care and key holding services for properties in Morocco: secure key storage, monthly home checks, seasonal care and welcome-home preparation while you are abroad.",
+            "priceRange": "€€",
+            "email": "contact.amani.home@gmail.com",
+            "telephone": "+33 670 779 256",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "29 Bd Lalla Yacout",
+              "addressLocality": "Casablanca",
+              "addressCountry": "MA"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            }
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/key-holding/#service",
+            "serviceType": "Key Holding",
+            "name": "Secure Key Holding for Moroccan Properties",
+            "description": "Secure key holding service in Casablanca for second homes and investment properties in Morocco. Keys are stored safely and released only for planned visits, emergencies or trusted professionals.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/key-holding"
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/home-check/#service",
+            "serviceType": "Home Check",
+            "name": "Monthly Home Check",
+            "description": "Scheduled home checks with a clear checklist and report after each visit: doors and windows, water and electricity, humidity, leaks and general condition of your Moroccan property.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/monthly-checks"
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/seasonal-care/#service",
+            "serviceType": "Seasonal Care",
+            "name": "Seasonal Care for Your Home in Morocco",
+            "description": "Seasonal care visits to air out, refresh and reset your home before or after key travel seasons so it is not left closed for too long.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/seasonal-care"
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/welcome-home/#service",
+            "serviceType": "Welcome Home",
+            "name": "Welcome Home – Arrival Preparation",
+            "description": "Welcome Home service: cleaning, airing and home preparation before you arrive, with optional grocery shopping and fridge stocking so you walk into a home that feels ready and alive.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/welcome-home"
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/proaccess/#service",
+            "serviceType": "ProAccess",
+            "name": "ProAccess – Access for Trusted Professionals",
+            "description": "ProAccess gives one-off access and light supervision when plumbers, electricians or other trusted professionals need to enter your home while you are abroad.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/pro-access"
+          },
+
+          {
+            "@type": "Service",
+            "@id": "https://www.amani-services.com/services/amani-works/",
+            "serviceType": "Amani Works",
+            "name": "Amani Works – Remote Renovation Supervision",
+            "description": "Amani Works is a remote coordination and supervision service for renovation and works: sourcing trusted contractors, presenting quotes, following progress, checking quality and reporting to you until completion.",
+            "provider": {
+              "@id": "https://www.amani-services.com/#localbusiness"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Casablanca"
+            },
+            "url": "https://www.amani-services.com/services/amani-works"
+          },
+
+          {
+            "@type": "OfferCatalog",
+            "@id": "https://www.amani-services.com/plans/#offercatalog",
+            "name": "Amani Home Membership Plans",
+            "url": "https://www.amani-services.com/plans",
+            "description": "Silver, Gold and Platinum memberships for remote home care in Morocco, starting from 39€/month.",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Silver Membership",
+                "description": "Entry-level membership for remote home care with secure key holding and regular home checks.",
+                "priceCurrency": "EUR",
+                "url": "https://www.amani-services.com/plans"
+              },
+              {
+                "@type": "Offer",
+                "name": "Gold Membership",
+                "description": "Balanced membership with more frequent checks and seasonal care for second homes in Morocco.",
+                "priceCurrency": "EUR",
+                "url": "https://www.amani-services.com/plans"
+              },
+              {
+                "@type": "Offer",
+                "name": "Platinum Membership",
+                "description": "Premium membership for owners who want maximum vigilance, coordination and priority support.",
+                "priceCurrency": "EUR",
+                "url": "https://www.amani-services.com/plans"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>

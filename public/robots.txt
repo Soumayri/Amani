@@ -1,13 +1,20 @@
+# robots.txt for https://www.amani-services.com
+
 User-agent: *
+# Autoriser tout ce qui est contenu public
 Allow: /
 
-# Sitemap
-Sitemap: https://www.amani-services.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /operator-portal/
+# Empêcher l’indexation des espaces privés / non pertinents
 Disallow: /client-portal/
+Disallow: /operator-portal/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /api/
+
+# Éviter le duplicate ou les URL techniques
+Disallow: /*?*
+Disallow: /*&*
+
+# Sitemap principal
+Sitemap: https://www.amani-services.com/sitemap.xml

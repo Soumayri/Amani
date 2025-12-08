@@ -63,7 +63,7 @@ const SeasonalCare = () => {
         <div className="service__inner">
           {/* Eyebrow + header */}
           <p className="service__eyebrow">
-            {t("Service · Included in every membership")}
+            {t("Services · Included in every membership")}
           </p>
 
           <div className="service__header-row">

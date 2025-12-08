@@ -65,7 +65,7 @@ useEffect(() => {
         <div className="service__inner">
           {/* Header */}
           <p className="service__eyebrow">
-            {t("Service · Included in every membership")}
+            {t("Services · Included in every membership")}
           </p>
 
           <div className="service__header-row">
@@ -98,7 +98,7 @@ useEffect(() => {
                 <li>
                   <FaKey />{" "}
                   <span>
-                    {t("Secure storage of your keys in Casablanca")}
+                    {t("Secure storage of your keys")}
                   </span>
                 </li>
                 <li>

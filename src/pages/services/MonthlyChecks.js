@@ -64,7 +64,7 @@ const HomeCheckService = () => {
         <div className="service__inner">
           {/* Header */}
           <p className="service__eyebrow">
-            {t("Service · Included in every membership")}
+            {t("Services · Included in every membership")}
           </p>
 
           <div className="service__header-row">
@@ -80,7 +80,7 @@ const HomeCheckService = () => {
 
               <div className="service__badges">
                 <span className="service__badge">
-                  {t("Included in Basic, Standard & Premium")}
+                  {t("Included in Silver, Gold & Platinum")}
                 </span>
                 <span className="service__badge service__badge--accent">
                   {t("1, 2 or 4 visits per month depending on your plan")}

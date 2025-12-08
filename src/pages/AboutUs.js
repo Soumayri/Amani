@@ -53,7 +53,7 @@ const About = () => {
             </div>
 
             <div className="about-hero__image-wrap">
-              {/* Remplace ce path par ton image générée Sora plus tard */}
+              {/* Remplace ce path par ton image */}
               <img
                 src="/Team.webp"
                 alt={t("Amani Home operator visiting a property in Morocco")}

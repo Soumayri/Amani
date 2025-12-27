@@ -55,7 +55,7 @@ const Hero = () => {
             {t(
               "We look after your home with monthly inspections and seasonal care while you're abroad. From"
             )}{" "}
-            <span className="hero__strong">39€/month</span>,{" "}
+            <span className="hero__strong">49€/month</span>,{" "}
             {t("you come back to a home that feels ready, safe and alive.")}
           </p>
 

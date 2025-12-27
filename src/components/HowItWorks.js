@@ -91,7 +91,7 @@ const HowItWorksSection = () => {
         {/* CTA bas de block */}
         <div className="how-it-works__cta">
           <Link to="/plans" className="how-it-works__btn">
-            {t("Compare memberships from 39€/month")}
+            {t("Compare memberships from 49€/month")}
           </Link><br />
           <Link to="/contact" className="how-it-works__link">
             {t("Talk to Amani about your home")}

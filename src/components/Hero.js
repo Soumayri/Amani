@@ -53,9 +53,9 @@ const Hero = () => {
           {/* Paragraphe d’accroche */}
           <p className="hero__text">
             {t(
-              "We look after your home with monthly inspections and seasonal care while you're abroad. From"
+              "We look after your home with monthly inspections and seasonal care while you're abroad."
             )}{" "}
-            <span className="hero__strong">49€/month</span>,{" "}
+            
             {t("you come back to a home that feels ready, safe and alive.")}
           </p>
 

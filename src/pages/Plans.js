@@ -15,7 +15,7 @@ const Plans = () => {
     {
       id: "silver",
       name: "Silver Plan",
-      price: "49€",
+      price: "39€",
       badge: t("Light care"),
       tagline: t("Essential care while you’re abroad."),
       features: [
@@ -30,7 +30,7 @@ const Plans = () => {
     {
       id: "gold",
       name: "Gold Plan",
-      price: "79€",
+      price: "69€",
       badge: t("Most popular"),
       highlight: true,
       tagline: t("Closer follow-up for complete peace of mind."),
@@ -51,7 +51,7 @@ const Plans = () => {
     {
       id: "platinum",
       name: "Platinum Plan",
-      price: "129€", // ✅ mis à jour de 119€ -> 129€
+      price: "119€", // ✅ mis à jour de 119€ -> 129€
       badge: t("Maximum vigilance"),
       tagline: t("We look after your home as if it were ours."),
       features: [

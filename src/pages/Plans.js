@@ -51,7 +51,7 @@ const Plans = () => {
     {
       id: "platinum",
       name: "Platinum Plan",
-      price: "119€", // ✅ mis à jour de 119€ -> 129€
+      price: "119€", 
       badge: t("Maximum vigilance"),
       tagline: t("We look after your home as if it were ours."),
       features: [
@@ -91,7 +91,7 @@ const Plans = () => {
           <h1 className="plans-title">{t("Choose how closely we look after your home.")}</h1>
           <p className="plans-subtitle">
             {t(
-              "From 49€/month, every plan includes secure key holding, home checks and seasonal care. You only add extra services when you need more."
+              "Every plan includes secure key holding, home checks and seasonal care. You only add extra services when you need more."
             )}
           </p>
         </header>

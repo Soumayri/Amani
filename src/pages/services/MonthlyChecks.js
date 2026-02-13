@@ -153,7 +153,7 @@ const HomeCheckService = () => {
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/plans" className="service__btn">
-              {t("Compare memberships from 49€/month")}
+              {t("Compare memberships")}
             </Link>
             <Link to="/#services-section" className="service__btn--glass">
                           {t("Discover services")}

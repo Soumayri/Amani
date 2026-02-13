@@ -84,7 +84,7 @@ useEffect(() => {
                   {t("Included in Basic, Standard & Premium")}
                 </span>
                 <span className="service__badge service__badge--accent">
-                  {t("From 49€/month with home checks")}
+                  {t("From 39€/month with home checks")}
                 </span>
               </div>
             </div>
@@ -152,7 +152,7 @@ useEffect(() => {
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/plans" className="service__btn">
-              {t("Compare memberships from 49€/month")}
+              {t("Compare memberships")}
             </Link>
         <Link to="/#services-section" className="service__btn--glass">
                       {t("Discover services")}

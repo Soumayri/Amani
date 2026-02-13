@@ -91,10 +91,10 @@ const HomeFAQSection = () => {
     },
     {
       question: t(
-        "How much does an Amani membership cost and what is included from 49€/month?"
+        "How much does an Amani membership cost and what is included from 39€/month?"
       ),
       answer: t(
-        "Our memberships start from 49€/month and include secure key holding, regular Home Checks and basic Seasonal Care depending on the plan you choose. You can then add on extra services such as Welcome Home, ProAccess or Amani Works when you need deeper cleaning, professional access or renovation support."
+        "Our memberships start from 39€/month and include secure key holding, regular Home Checks and basic Seasonal Care depending on the plan you choose. You can then add on extra services such as Welcome Home, ProAccess or Amani Works when you need deeper cleaning, professional access or renovation support."
       ),
     },
     {

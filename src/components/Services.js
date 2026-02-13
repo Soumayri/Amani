@@ -170,7 +170,7 @@ const Services= () => {
   <div className="home-overview__cta">
    
     <Link to="/plans" className="home-overview__link">
-      {t("Compare memberships from 49€/month")}
+      {t("Compare memberships")}
     </Link>
   </div>
 </div>

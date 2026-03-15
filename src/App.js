@@ -27,6 +27,11 @@ const Plans = lazy(() => import("./pages/Plans"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/AboutUs"));
 const Faq = lazy(() => import("./pages/Faq"));
+const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
+const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite"));
+const CGV = lazy(() => import("./pages/CGV"));
+const CGU = lazy(() => import("./pages/CGU"));
+const PolitiqueCookies = lazy(() => import("./pages/PolitiqueCookies"));
 
 
 function RootLayout() {
@@ -106,6 +111,26 @@ const router = createBrowserRouter([
   {
     path: "/client-portal",
     element: <Login/>,
+  },
+  {
+    path: "/mentions-legales",
+    element: <MentionsLegales />,
+  },
+  {
+    path: "/privacy",
+    element: <PolitiqueConfidentialite />,
+  },
+  {
+    path: "/terms",
+    element: <CGV />,
+  },
+  {
+    path: "/cgu",
+    element: <CGU />,
+  },
+  {
+    path: "/politique-cookies",
+    element: <PolitiqueCookies />,
   },
   {
     path: "*",

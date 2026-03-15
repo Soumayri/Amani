@@ -86,10 +86,13 @@ const Footer = () => {
 
       {/* 🔹 Bas de page */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} AMANI. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Amani Home SARLU. All rights reserved.</p>
         <p>
-          <Link to="/terms">Terms &amp; Conditions</Link> |{" "}
-          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/mentions-legales">Mentions Légales</Link> |{" "}
+          <Link to="/terms">CGV</Link> |{" "}
+          <Link to="/cgu">CGU</Link> |{" "}
+          <Link to="/privacy">Politique de Confidentialité</Link> |{" "}
+          <Link to="/politique-cookies">Cookies</Link>
         </p>
       </div>
     </footer>

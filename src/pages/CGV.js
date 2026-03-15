@@ -59,7 +59,7 @@ const CGV = () => {
               <li><strong>Welcome Home Service :</strong> préparation du logement avant votre arrivée</li>
               <li><strong>ProAccess :</strong> accès ponctuel et supervision de professionnels de confiance</li>
               <li>
-                <strong>Amani Works :</strong> coordination et supervision de travaux à distance (25% du budget
+                <strong>Amani Works :</strong> coordination et supervision de travaux à distance (20% du budget
                 travaux HT)
               </li>
             </ul>

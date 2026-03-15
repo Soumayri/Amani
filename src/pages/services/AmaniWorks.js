@@ -85,7 +85,7 @@ const AmaniWorksService = () => {
                 </span>
                 <span className="service__badge service__badge--accent">
                   {t("Project fee:")}{" "}
-                  <span style={{ fontWeight: 600 }}>25%</span>{" "}
+                  <span style={{ fontWeight: 600 }}>20%</span>{" "}
                   {t("of the agreed works budget")}
                 </span>
               </div>
@@ -131,7 +131,7 @@ const AmaniWorksService = () => {
 
               <p className="service__aside-note">
                 {t("Our fee is set at")}{" "}
-                <span style={{ fontWeight: 600 }}>25%</span>{" "}
+                <span style={{ fontWeight: 600 }}>20%</span>{" "}
                 {t(
                   "of the works budget we agree together before starting. This covers sourcing contractors, coordination, supervision visits in Casablanca and reporting throughout the project."
                 )}

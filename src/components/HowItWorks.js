@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
       label: t("Step 3"),
       title: t("FreshStart visit & key handover"),
       text: t(
-        "We schedule your FreshStart: an initial visit with cleaning, airing and a full check of your home. During this visit, we collect your keys securely and register them in our key holding system."
+        "Within 7 days of signing, we carry out your FreshStart: a mandatory initial visit with cleaning, airing, a full condition check and a before/after photo reference report. We collect your keys during this visit and register them in our secure key holding system."
       ),
     },
     {
@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
       label: t("Step 4"),
       title: t("Ongoing care while you’re away"),
       text: t(
-        "Your membership starts: monthly home checks, seasonal care and reports after each visit. When you need more, we activate add-ons like Welcome Home, ProAccess or Amani Works."
+        "Your membership starts: monthly home checks, seasonal care and an Amani Report within 48 hours of each visit. When you need more, we activate add-ons like Welcome Home, ProAccess or Amani Works."
       ),
     },
   ];

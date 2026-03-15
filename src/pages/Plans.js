@@ -30,7 +30,7 @@ const Plans = () => {
     {
       id: "gold",
       name: "Gold Plan",
-      price: "69€",
+      price: "59€",
       badge: t("Most popular"),
       highlight: true,
       tagline: t("Closer follow-up for complete peace of mind."),
@@ -51,7 +51,7 @@ const Plans = () => {
     {
       id: "platinum",
       name: "Platinum Plan",
-      price: "119€", 
+      price: "99€", 
       badge: t("Maximum vigilance"),
       tagline: t("We look after your home as if it were ours."),
       features: [

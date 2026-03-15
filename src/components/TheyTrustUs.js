@@ -7,7 +7,7 @@ const standardsData = [
     label: "FreshStart guaranteed",
   },
   {
-    value: "48h",
+    value: "Right away",
     label: "Amani Report after each visit",
   },
   {

@@ -46,9 +46,9 @@ const HomeCheckService = () => {
     },
     {
       icon: <FaBell />,
-      title: t("You receive your Amani Report within 48 hours"),
+      title: t("You receive your Amani Report right after the visit"),
       text: t(
-        "After every home check, you receive your Amani Report within 48 hours: a clear summary of observations, meter readings, photos and any recommended next steps."
+        "As soon as the home check is done, we send your Amani Report: a clear summary of observations, meter readings, photos and any recommended next steps. No waiting – your report arrives the same day."
       ),
     },
   ];
@@ -130,7 +130,7 @@ const HomeCheckService = () => {
                 <li>
                   <FaBell />
                   <span>
-                    {t("Amani Report delivered within 48 hours")}
+                    {t("Amani Report sent right after the visit")}
                   </span>
                 </li>
               </ul>

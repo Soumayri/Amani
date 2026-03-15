@@ -79,7 +79,7 @@ const SeasonalCare = () => {
 
               <div className="service__badges">
                 <span className="service__badge">
-                  {t("2 Seasonal Care visits per year in Silver & Gold")}
+                  {t("2 Seasonal Care visits per year in Silver & Gold (spring & autumn)")}
                 </span>
                 <span className="service__badge service__badge--accent">
                   {t("4 Seasonal Care visits per year in Platinum")}

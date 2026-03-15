@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
       label: t("Step 4"),
       title: t("Ongoing care while you’re away"),
       text: t(
-        "Your membership starts: monthly home checks, seasonal care and an Amani Report within 48 hours of each visit. When you need more, we activate add-ons like Welcome Home, ProAccess or Amani Works."
+        "Your membership starts: monthly home checks, seasonal care and an Amani Report sent right after each visit. When you need more, we activate add-ons like Welcome Home, ProAccess or Amani Works."
       ),
     },
   ];

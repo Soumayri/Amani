@@ -116,7 +116,7 @@ const About = () => {
                 </h3>
                 <p className="about-values__text">
                   {t(
-                    "After each visit, you receive a short report with photos, notes and clear next steps if we notice something unusual."
+                    "After each visit, you receive your Amani Report right away – with photos, notes and clear next steps. No waiting, no follow-up needed."
                   )}
                 </p>
               </article>
@@ -138,7 +138,7 @@ const About = () => {
                 </h3>
                 <p className="about-values__text">
                   {t(
-                    "Monthly home checks follow a fixed checklist so the same points are verified every time, not just when someone remembers."
+                    "Monthly home checks follow a fixed checklist – at least 10 photos, meter readings and mail collection – so the same points are verified every time, not just when someone remembers."
                   )}
                 </p>
               </article>

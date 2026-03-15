@@ -110,7 +110,7 @@ const HomeFAQSection = () => {
         "What is FreshStart and how do Home Checks help protect my property while I am away?"
       ),
       answer: t(
-        "FreshStart is our initial visit before your membership really starts. During this visit, we air the property, check each room, do a first cleaning and document the current state of your home with photos and notes. Then, your regular Home Checks follow a clear checklist: doors and windows, water and electricity, signs of humidity or leaks, mail, and general condition. This helps catch small issues before they become bigger problems."
+        "FreshStart is a mandatory initial visit that must take place within 7 days of handing over your keys. We carry out a full clean, air all rooms, inspect the entire property and produce a room-by-room before/after photo report along with baseline meter readings for water and electricity. This reference document becomes the starting point for everything that follows. Your regular Home Checks then run on a fixed checklist – timestamped facade photo, plumbing, locks, windows, shutters, mail collection, meter readings, minimum 10 photos – with your Amani Report sent right after each visit."
       ),
     },
     {
@@ -126,7 +126,15 @@ const HomeFAQSection = () => {
         "How are my keys and access to my home in Morocco kept safe with Amani?"
       ),
       answer: t(
-        "Your keys are stored in a secure key holding system in Casablanca with a unique code instead of your name or address. Only authorised Amani operators can access the keys when a visit or a service is planned, and every movement is logged."
+        "Your keys are stored in a physical safe in a secure location in Casablanca. Only one authorised Amani agent holds access – no exceptions. Each key set is identified by a unique generated code, never your name or address, so even in the unlikely event of a loss, no one could link the key to your property. Every key movement is logged and access is strictly limited to planned visits and agreed interventions."
+      ),
+    },
+    {
+      question: t(
+        "How do I send my keys to Amani if I am based in France or abroad?"
+      ),
+      answer: t(
+        "If your keys are with you in Europe, we offer two options. You can ship them directly via an international carrier such as DHL with tracked and signed-for delivery, or use a baggage forwarding service operating on the Europe-Morocco route. In both cases, we provide our official Barid Al-Maghrib PO Box address in Casablanca as the secure delivery point. Once you have sent your parcel, share the tracking number with us and we monitor the shipment at every step. We confirm reception to you as soon as your keys are in our hands and registered in our system."
       ),
     },
   ];

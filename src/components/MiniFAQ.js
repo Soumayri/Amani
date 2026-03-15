@@ -90,7 +90,7 @@ const MiniFAQ = () => {
     {
       question: t("Do I need to be in Morocco to start with Amani?"),
       answer: t(
-        "No. Many of our clients live abroad. We can start with a remote onboarding, then schedule your FreshStart visit and key handover when someone you trust is available on site. From there, your membership begins and we take care of your home according to the plan you’ve chosen."
+        "No. Many of our clients live abroad. If your keys are with you in Europe, we handle the shipping – by DHL or a France-Morocco baggage carrier – and monitor tracking until reception. Once your keys arrive, your FreshStart is scheduled within 7 days: a mandatory initial inspection that officially starts your membership. From there, regular care begins according to your plan."
       ),
     },
   ];

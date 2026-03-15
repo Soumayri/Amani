@@ -8,6 +8,8 @@ import {
   FaClock,
   FaHome,
   FaUserFriends,
+  FaFingerprint,
+  FaLock,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import SeoHead from "../../components/SeoHead.js";
@@ -33,21 +35,21 @@ useEffect(() => {
       icon: <FaKey />,
       title: t("We collect and code your keys securely"),
       text: t(
-        "Keys are collected during your FreshStart visit or via a trusted person, then coded and stored without your address written on them."
+        "Keys are collected during your FreshStart visit or securely shipped from abroad. Each set is assigned a unique generated ID – no name, no address. Only the Amani scheduler can link this ID to your property."
       ),
     },
     {
       icon: <FaShieldAlt />,
-      title: t("Keys stored in a secure key cabinet"),
+      title: t("Keys locked in a secure safe, one agent, zero exceptions"),
       text: t(
-        "Your keys are held in Casablanca in a locked system with restricted access, used only for authorised visits or emergencies."
+        "Your keys are stored in a physical safe in a secure location in Casablanca. Only one authorised Amani agent holds access. Every key exit is logged with the date, reason and recipient – and your keys never leave the safe without your prior authorisation."
       ),
     },
     {
       icon: <FaClock />,
-      title: t("Available when you or your providers need us"),
+      title: t("Every exit requires your authorisation and identity verification"),
       text: t(
-        "When you need access for yourself, a guest or a professional, we organise the handover or activate services like ProAccess."
+        "For any key handover to a third party – a professional, a technician or a visitor – we require your explicit prior approval and a copy of that person's ID. The only exceptions are Amani's own service operations (Home Check, Seasonal Care, FreshStart), which are already covered by your membership agreement."
       ),
     },
   ];
@@ -75,7 +77,7 @@ useEffect(() => {
               </h1>
               <p className="service__lead">
                 {t(
-                  "Amani holds your keys securely in Casablanca so your home is always accessible for planned visits, emergencies and trusted professionals – without relying on friends or neighbours."
+                  "Amani holds your keys in a secure safe in Casablanca, accessible only to a single authorised Amani agent. Your keys are managed anonymously: each set carries a unique generated ID, never your name or address. Even if a key were lost, no one could link it to your home."
                 )}
               </p>
 
@@ -96,32 +98,46 @@ useEffect(() => {
               </h2>
               <ul className="service__list">
                 <li>
-                  <FaKey />{" "}
+                  <FaLock />{" "}
                   <span>
-                    {t("Secure storage of your keys")}
-                  </span>
-                </li>
-                <li>
-                  <FaShieldAlt />{" "}
-                  <span>
-                    {t("Keys coded and stored without visible address")}
+                    {t("Keys stored in a physical safe in a secure location in Casablanca")}
                   </span>
                 </li>
                 <li>
                   <FaUserFriends />{" "}
                   <span>
-                    {t("Authorisation list for who can access your home")}
+                    {t("Single authorised Amani agent holds access – no one else")}
+                  </span>
+                </li>
+                <li>
+                  <FaFingerprint />{" "}
+                  <span>
+                    {t("Each key set identified by a unique generated ID, never your name or address")}
+                  </span>
+                </li>
+                <li>
+                  <FaShieldAlt />{" "}
+                  <span>
+                    {t("Only the Amani scheduler can link the ID to your property")}
                   </span>
                 </li>
                 <li>
                   <FaClock />{" "}
-                  <span>{t("Access for emergencies and urgent visits")}</span>
+                  <span>{t("Every key exit logged: date, reason and recipient")}</span>
+                </li>
+                <li>
+                  <FaUserFriends />{" "}
+                  <span>{t("Prior client authorisation required for any third-party handover")}</span>
+                </li>
+                <li>
+                  <FaShieldAlt />{" "}
+                  <span>{t("ID copy taken for every external handover – except Amani service operations")}</span>
                 </li>
               </ul>
 
               <p className="service__aside-note">
                 {t(
-                  "Key holding is the base of every membership – it allows us to inspect, prepare and protect your home while you’re abroad."
+                  "Key holding is the foundation of every membership. If a key were ever lost, no one could connect it to your home. Your property stays protected at every level."
                 )}
               </p>
             </aside>

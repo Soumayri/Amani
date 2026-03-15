@@ -60,7 +60,7 @@ const SeoHead = ({ titleKey, descriptionKey, canonical }) => {
           "@type": "ImageObject",
           "url": `${siteUrl}/LogoAmaniFull.webp`,
         },
-        "email": "contact.amani.home@gmail.com",
+        "email": "contact@amani-services.com",
         "telephone": "+33 670 779 256",
         "sameAs": [
           "https://www.instagram.com/amani.home.services/",

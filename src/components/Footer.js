@@ -51,7 +51,7 @@ const Footer = () => {
             <FaPhone className="icon" /> +33 670 779 256
           </p>
           <p>
-            <FaEnvelope className="icon" /> contact.amani.home@gmail.com
+            <FaEnvelope className="icon" /> contact@amani-services.com
           </p>
         </div>
 

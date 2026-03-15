@@ -36,7 +36,7 @@ const PolitiqueConfidentialite = () => {
             <h2>1. Responsable du traitement</h2>
             <ul>
               <li><strong>Société :</strong> Amani Home SARLU</li>
-              <li><strong>Adresse :</strong> 22 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
+              <li><strong>Adresse :</strong> 29 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
               <li><strong>Email :</strong> <a href="mailto:contact@amani-services.com">contact@amani-services.com</a></li>
             </ul>
           </section>

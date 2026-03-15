@@ -36,7 +36,7 @@ const CGV = () => {
             <h2>1. Identification du vendeur</h2>
             <ul>
               <li><strong>Société :</strong> Amani Home SARLU</li>
-              <li><strong>Siège social :</strong> 22 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
+              <li><strong>Siège social :</strong> 29 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
               <li><strong>Email :</strong> <a href="mailto:contact@amani-services.com">contact@amani-services.com</a></li>
               <li><strong>Téléphone :</strong> <a href="tel:+33670779256">+33 670 779 256</a></li>
             </ul>
@@ -49,15 +49,9 @@ const CGV = () => {
 
             <h3>Abonnements (services récurrents) :</h3>
             <ul>
-              <li><strong>Plan Basic</strong> — à partir de 39€/mois : Key Holding sécurisé + Home Checks mensuels</li>
-              <li>
-                <strong>Plan Standard</strong> — tarif intermédiaire : Key Holding + Home Checks + Seasonal Care
-                (2 visites/an)
-              </li>
-              <li>
-                <strong>Plan Premium</strong> — tarif supérieur : Key Holding + Home Checks renforcés + Seasonal
-                Care (4 visites/an) + suivi prioritaire
-              </li>
+              <li><strong>Silver Plan — 39€/mois :</strong> Key Holding sécurisé + 1 Home Check/mois + 2 Seasonal Care/an</li>
+              <li><strong>Gold Plan — 59€/mois :</strong> Key Holding + 2 Home Checks/mois + 2 Seasonal Care/an + Welcome Home (1×/an) + priorité ProAccess</li>
+              <li><strong>Platinum Plan — 99€/mois :</strong> Key Holding + 4 Home Checks/mois + 4 Seasonal Care/an + Welcome Home inclus + ProAccess prioritaire + coordination renforcée</li>
             </ul>
 
             <h3>Services additionnels (one-shot) :</h3>

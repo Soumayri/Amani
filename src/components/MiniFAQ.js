@@ -84,7 +84,7 @@ const MiniFAQ = () => {
     {
       question: t("How do your memberships work?"),
       answer: t(
-        "You choose between three memberships from 39€/month. Each plan includes secure key holding and regular home checks, with more visits and seasonal care as you move from Basic to Premium. You can then add services like Welcome Home, ProAccess or Amani Works whenever you need more support."
+        "You choose between three memberships from 39€/month. Each plan includes secure key holding and regular home checks, with more visits and seasonal care as you move from Silver to Platinum. You can then add services like Welcome Home, ProAccess or Amani Works whenever you need more support."
       ),
     },
     {

@@ -81,7 +81,7 @@ useEffect(() => {
 
               <div className="service__badges">
                 <span className="service__badge">
-                  {t("Included in Basic, Standard & Premium")}
+                  {t("Included in Silver, Gold & Platinum")}
                 </span>
                 <span className="service__badge service__badge--accent">
                   {t("From 39€/month with home checks")}

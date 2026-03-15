@@ -1,6 +1,5 @@
 // src/components/CookieBanner.js
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const CONSENT_KEY = "amani_cookie_consent";
 
@@ -62,9 +61,9 @@ const CookieBanner = () => {
             Amani Home utilise des cookies analytiques (Google Analytics) pour améliorer votre
             expérience et mesurer la fréquentation de notre site. Les cookies essentiels sont
             toujours actifs.{" "}
-            <Link to="/politique-cookies" className="cookie-banner__link">
+            <a href="/politique-cookies" className="cookie-banner__link">
               En savoir plus
-            </Link>
+            </a>
           </p>
         </div>
 

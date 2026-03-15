@@ -1,9 +1,7 @@
 // src/components/Footer.js
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
@@ -60,25 +58,12 @@ const Footer = () => {
           <h3>Follow Us</h3>
           <div className="social-icons">
             <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaFacebookF />
-            </a>
-            <a
               href="https://www.instagram.com/amani.home.services/"
               target="_blank"
               rel="noreferrer noopener"
+              aria-label="Instagram Amani Home"
             >
               <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaLinkedinIn />
             </a>
           </div>
         </div>

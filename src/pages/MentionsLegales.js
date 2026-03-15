@@ -32,7 +32,7 @@ const MentionsLegales = () => {
             <ul>
               <li><strong>Raison sociale :</strong> Amani Home SARLU</li>
               <li><strong>Forme juridique :</strong> Société à Responsabilité Limitée Unipersonnelle (SARLU)</li>
-              <li><strong>Siège social :</strong> 22 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
+              <li><strong>Siège social :</strong> 29 Boulevard Lalla Yacout, Casablanca 20090, Maroc</li>
               <li><strong>Email :</strong> <a href="mailto:contact@amani-services.com">contact@amani-services.com</a></li>
               <li><strong>Téléphone :</strong> <a href="tel:+33670779256">+33 670 779 256</a></li>
             </ul>

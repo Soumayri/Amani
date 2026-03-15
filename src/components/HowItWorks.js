@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
       label: t("Step 2"),
       title: t("Choose your membership & sign your contract"),
       text: t(
-        "We help you choose between Basic, Standard or Premium, then we sign your membership contract and agree on how you want us to look after your home."
+        "We help you choose between Silver, Gold or Platinum, then we sign your membership contract and agree on how you want us to look after your home."
       ),
     },
     {

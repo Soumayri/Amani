@@ -83,7 +83,7 @@ const ProAccessService = () => {
                   {t("Available to members and non-members")}
                 </span>
                 <span className="service__badge service__badge--accent">
-                  {t("Priority access for Standard & Premium members")}
+                  {t("Priority access for Gold & Platinum members")}
                 </span>
               </div>
             </div>
@@ -122,7 +122,7 @@ const ProAccessService = () => {
 
               <p className="service__aside-note">
                 {t(
-                  "ProAccess is priced per visit with a clear confirmation before each intervention. Standard and Premium members benefit from priority when booking time slots."
+                  "ProAccess is priced per visit with a clear confirmation before each intervention. Gold and Platinum members benefit from priority when booking time slots."
                 )}
               </p>
             </aside>

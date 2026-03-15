@@ -76,20 +76,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <!-- ═══════════════════════════════════════════════
-         COOKIEBOT — CONSENTEMENT RGPD
-         (doit être chargé AVANT Google Analytics)
+         GOOGLE ANALYTICS — chargé conditionnellement
+         après consentement (géré par CookieBanner.js)
     ════════════════════════════════════════════════ -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2bd9779a-7e72-4940-874c-512c0d0bdd3f" type="text/javascript" async></script>
-
-    <!-- ═══════════════════════════════════════════════
-         GOOGLE ANALYTICS
-    ════════════════════════════════════════════════ -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP3VQ9XMC4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YP3VQ9XMC4');
+      window.__GA_ID = 'G-YP3VQ9XMC4';
     </script>
 
     <!-- ═══════════════════════════════════════════════

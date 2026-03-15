@@ -14,6 +14,7 @@ import HowItWorks from "./components/HowItWorks";
 import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 import Login from "./pages/Login";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -148,6 +149,7 @@ function App() {
           v7_relativeSplatPath: true,
         }}
       />
+      <CookieBanner />
       <Analytics />
     </Suspense>
   );

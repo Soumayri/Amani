@@ -44,7 +44,7 @@ const SeasonalCare = () => {
       icon: <FaSprayCan />,
       title: t("You arrive to a home that feels alive again"),
       text: t(
-        "Combined with Welcome Home, Seasonal Care lets you arrive, unpack your bags and enjoy your stay right away – no cleaning, no inspections, just your home ready to welcome you."
+        "Combined with Welcome Home – full clean done, beds made, groceries received if ordered – Seasonal Care means your home is already taken care of before you land. You arrive, open the door and start your stay."
       ),
       link: { to: "/services/welcome-home", label: t("Discover Welcome Home →") },
     },

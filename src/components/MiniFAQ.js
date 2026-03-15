@@ -90,7 +90,7 @@ const MiniFAQ = () => {
     {
       question: t("Do I need to be in Morocco to start with Amani?"),
       answer: t(
-        "No. Many of our clients live abroad. If your keys are with you in Europe, we handle the shipping – by DHL or a France-Morocco baggage carrier – and monitor tracking until reception. Once your keys arrive, your FreshStart is scheduled within 7 days: a mandatory initial inspection that officially starts your membership. From there, regular care begins according to your plan."
+        "No – most of our members subscribe from abroad. You send your keys to our secure Casablanca address via DHL or a France-Morocco carrier, we track the parcel, confirm reception and schedule your FreshStart within 7 days. Your membership starts from that point."
       ),
     },
   ];

@@ -40,7 +40,7 @@ const WelcomeHomeService = () => {
       icon: <FaShoppingBag />,
       title: t("We receive your groceries and put everything away"),
       text: t(
-        "You order your groceries via Glovo or another delivery app – or we can manage the list for you. We receive the delivery on-site, refrigerate fresh items, store everything in your kitchen and remove all packaging before you arrive."
+        "You order your groceries via Glovo or another delivery app. We receive the delivery on-site, refrigerate fresh items, store everything in your kitchen and remove all packaging before you arrive."
       ),
     },
     {

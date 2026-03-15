@@ -165,15 +165,27 @@ useEffect(() => {
             </div>
           </div>
 
+          {/* Lien croisé */}
+          <p className="service__footer-note">
+            {t("Key holding is what makes every visit possible. See how we put your keys to work in our")}{" "}
+            <Link to="/services/monthly-checks" className="service__link-inline">
+              {t("Monthly Home Checks")}
+            </Link>
+            {t(" and")}{" "}
+            <Link to="/services/pro-access" className="service__link-inline">
+              {t("ProAccess")}
+            </Link>
+            {t(" services.")}
+          </p>
+
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/plans" className="service__btn">
               {t("Compare memberships")}
             </Link>
-        <Link to="/#services-section" className="service__btn--glass">
-                      {t("Discover services")}
-                    </Link>
-
+            <Link to="/#services-section" className="service__btn--glass">
+              {t("Discover services")}
+            </Link>
           </div>
         </div>
       </section>

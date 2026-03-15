@@ -147,6 +147,17 @@
   </url>
 
   <url>
+    <loc>https://www.amani-services.com/services/freshstart</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/services/freshstart?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amani-services.com/services/freshstart?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.amani-services.com/services/freshstart?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/services/freshstart"/>
+  </url>
+
+  <url>
     <loc>https://www.amani-services.com/services/amani-works</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>yearly</changefreq>
@@ -162,17 +173,17 @@
        PAGES LÉGALES
   ══════════════════════════════════════════ -->
   <url>
-    <loc>https://www.amani-services.com/cgv</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://www.amani-services.com/terms</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/cgv?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/cgv"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/terms?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/terms"/>
   </url>
 
   <url>
     <loc>https://www.amani-services.com/mentions-legales</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/mentions-legales?lang=fr"/>
@@ -180,17 +191,17 @@
   </url>
 
   <url>
-    <loc>https://www.amani-services.com/politique-confidentialite</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://www.amani-services.com/privacy</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/politique-confidentialite?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/politique-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/privacy?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/privacy"/>
   </url>
 
   <url>
     <loc>https://www.amani-services.com/politique-cookies</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/politique-cookies?lang=fr"/>

@@ -158,6 +158,19 @@ const ProAccessService = () => {
             </div>
           </div>
 
+          {/* Lien croisé */}
+          <p className="service__footer-note">
+            {t("ProAccess works because your keys are always with us – secured and anonymised through our")}{" "}
+            <Link to="/services/key-holding" className="service__link-inline">
+              {t("Key Holding")}
+            </Link>
+            {t(" service. If the professional's visit reveals work that needs managing, see")}{" "}
+            <Link to="/services/amani-works" className="service__link-inline">
+              {t("Amani Works")}
+            </Link>
+            {t(".")}
+          </p>
+
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/plans" className="service__btn">

@@ -183,6 +183,22 @@ const AmaniWorksService = () => {
             )}
           </p>
 
+          {/* Devis supplémentaire */}
+          <p className="service__footer-note">
+            {t(
+              "If once works begin the scope expands or additional issues are discovered on-site, a supplementary quote is prepared and submitted to you for approval before any additional work proceeds. Nothing is done without your written agreement."
+            )}
+          </p>
+
+          {/* Lien croisé */}
+          <p className="service__footer-note">
+            {t("For smaller interventions that don't require a full project – a plumber, an electrician, a technician – our")}{" "}
+            <Link to="/services/pro-access" className="service__link-inline">
+              {t("ProAccess")}
+            </Link>
+            {t(" service handles the access and supervision without the coordination fee.")}
+          </p>
+
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/contact" className="service__btn">

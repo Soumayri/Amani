@@ -267,6 +267,47 @@
   line-height: 1.55;
 }
 
+.service__notice {
+  max-width: 720px;
+  margin: 0 0 2rem 0;
+  padding: 1rem 1.2rem 1rem 1.4rem;
+  border-left: 3px solid #c25a00;
+  background: rgba(194, 90, 0, 0.05);
+  border-radius: 0 10px 10px 0;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4a3520;
+    line-height: 1.6;
+  }
+}
+
+.service__link-inline {
+  color: #365b6d;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: #28424f;
+  }
+}
+
+.service__step-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #365b6d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: #28424f;
+  }
+}
+
   /* 📱 Responsive */
 
   @media (max-width: 992px) {

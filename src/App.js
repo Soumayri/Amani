@@ -15,6 +15,7 @@ import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Login from "./pages/Login";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -24,6 +25,7 @@ const MonthlyChecks = lazy(() => import("./pages/services/MonthlyChecks"));
 const ProAccess = lazy(() => import("./pages/services/ProAccess"));
 const WelcomeHomeService = lazy(() => import("./pages/services/WelcomeHomeService"));
 const AmaniWorks = lazy(() => import("./pages/services/AmaniWorks"));
+const FreshStart = lazy(() => import("./pages/services/FreshStart"));
 const Plans = lazy(() => import("./pages/Plans"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/AboutUs"));
@@ -88,7 +90,10 @@ const router = createBrowserRouter([
     path: "/services/amani-works",
     element: <AmaniWorks />,
   },
-  
+  {
+    path: "/services/freshstart",
+    element: <FreshStart />,
+  },
   {
     path: "/plans",
     element: <Plans />,
@@ -149,6 +154,7 @@ function App() {
           v7_relativeSplatPath: true,
         }}
       />
+      <FloatingWhatsApp />
       <CookieBanner />
       <Analytics />
     </Suspense>

@@ -50,13 +50,15 @@ const SeoHead = ({ titleKey, descriptionKey, canonical }) => {
         "welcome-home": "Welcome Home",
         "pro-access": "ProAccess",
         "amani-works": "Amani Works",
+        freshstart: "FreshStart",
         plans: "Plans & Pricing",
         faq: "FAQ",
         about: "About",
         contact: "Contact",
-        cgv: "CGV",
+        terms: "CGV",
+        privacy: "Politique de Confidentialité",
+        cgu: "CGU",
         "mentions-legales": "Mentions Légales",
-        "politique-confidentialite": "Politique de Confidentialité",
         "politique-cookies": "Politique des Cookies",
       };
 

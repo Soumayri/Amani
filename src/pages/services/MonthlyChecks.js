@@ -165,14 +165,23 @@ const HomeCheckService = () => {
             </div>
           </div>
 
+          {/* Lien croisé */}
+          <p className="service__footer-note">
+            {t("When a visit reveals seasonal maintenance needs, our")}{" "}
+            <Link to="/services/seasonal-care" className="service__link-inline">
+              {t("Seasonal Care")}
+            </Link>
+            {t(" service handles the deeper preparation – airing, cleaning and resetting your home before and after key periods.")}
+          </p>
+
           {/* CTA bas de page */}
           <div className="service__cta">
             <Link to="/plans" className="service__btn">
               {t("Compare memberships")}
             </Link>
             <Link to="/#services-section" className="service__btn--glass">
-                          {t("Discover services")}
-                        </Link>
+              {t("Discover services")}
+            </Link>
           </div>
         </div>
       </section>

@@ -157,4 +157,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/services/amani-works"/>
   </url>
 
+
+  <!-- ══════════════════════════════════════════
+       PAGES LÉGALES
+  ══════════════════════════════════════════ -->
+  <url>
+    <loc>https://www.amani-services.com/cgv</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/cgv?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/cgv"/>
+  </url>
+
+  <url>
+    <loc>https://www.amani-services.com/mentions-legales</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/mentions-legales?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/mentions-legales"/>
+  </url>
+
+  <url>
+    <loc>https://www.amani-services.com/politique-confidentialite</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/politique-confidentialite?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/politique-confidentialite"/>
+  </url>
+
+  <url>
+    <loc>https://www.amani-services.com/politique-cookies</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.amani-services.com/politique-cookies?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amani-services.com/politique-cookies"/>
+  </url>
+
 </urlset>

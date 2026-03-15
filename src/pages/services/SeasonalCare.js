@@ -44,8 +44,9 @@ const SeasonalCare = () => {
       icon: <FaSprayCan />,
       title: t("You arrive to a home that feels alive again"),
       text: t(
-        "Seasonal Care makes it easier to arrive, unpack and enjoy your stay instead of starting with cleaning and inspections."
+        "Combined with Welcome Home, Seasonal Care lets you arrive, unpack your bags and enjoy your stay right away – no cleaning, no inspections, just your home ready to welcome you."
       ),
+      link: { to: "/services/welcome-home", label: t("Discover Welcome Home →") },
     },
   ];
 
@@ -144,6 +145,11 @@ const SeasonalCare = () => {
                   <div className="service__step-icon">{step.icon}</div>
                   <h3 className="service__step-title">{step.title}</h3>
                   <p className="service__step-text">{step.text}</p>
+                  {step.link && (
+                    <Link to={step.link.to} className="service__step-link">
+                      {step.link.label}
+                    </Link>
+                  )}
                 </article>
               ))}
             </div>

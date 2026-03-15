@@ -8,6 +8,8 @@ import {
   FaCamera,
   FaClipboardCheck,
   FaUserTie,
+  FaFileInvoiceDollar,
+  FaShieldAlt,
 } from "react-icons/fa";
 import SeoHead from "../../components/SeoHead";
 import Navbar from "../../components/Navbar";
@@ -23,30 +25,37 @@ const AmaniWorksService = () => {
   const steps = [
     {
       icon: <FaDraftingCompass />,
-      title: t("You tell us what you want to transform"),
+      title: t("You describe your project"),
       text: t(
-        "You explain your project – repainting, bathroom upgrade, new kitchen, built-in furniture – and share your preferences, timing and approximate budget."
+        "Whether Amani spotted something during a home check or you have decided it is time to renovate, you describe what you want: repainting, bathroom upgrade, kitchen, built-in furniture, full renovation. We note your budget, priorities and timeline."
       ),
     },
     {
       icon: <FaUserTie />,
-      title: t("We find the right contractors and gather quotes"),
+      title: t("We select the right artisan – or work with yours"),
       text: t(
-        "Based on your project, we consult our network and other professionals, request detailed quotes and shortlist one or two options that match your budget and expectations."
+        "We propose a trusted artisan from our network, or if you already have a professional you trust, we work with them directly. Either way, Amani collects the detailed quote on your behalf."
       ),
     },
     {
-      icon: <FaHammer />,
-      title: t("You choose the quote, we launch and coordinate"),
+      icon: <FaFileInvoiceDollar />,
+      title: t("One single transparent quote lands in your inbox"),
       text: t(
-        "You validate the quote you prefer and the way you want to phase payments. We confirm everything with the contractor and become their main contact on your behalf."
+        "We consolidate the artisan's quote, add Amani's 20% coordination and supervision fee and send you a single, clear quote. You pay Amani. Amani pays the artisan. No direct negotiations, no separate invoices, no surprises."
       ),
     },
     {
       icon: <FaCamera />,
-      title: t("We supervise on site and control quality until handover"),
+      title: t("We supervise the site with daily simplified reporting"),
       text: t(
-        "We visit the site at key stages, share photos and videos, flag problems early, and help you request corrections so that the final result is as close as possible to what you agreed."
+        "We are on-site at key stages of the project – presence adapted to the size and complexity of the works. You receive a simplified daily update with photos, progress notes and any issues flagged to you immediately."
+      ),
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: t("You confirm the work is done. The artisan gets paid."),
+      text: t(
+        "The artisan is not paid a single dirham until you confirm in writing that the work is complete and satisfactory. Amani holds the payment throughout the project. It is the protection you would want if you were standing on-site yourself."
       ),
     },
   ];
@@ -57,7 +66,7 @@ const AmaniWorksService = () => {
 
       <SeoHead
         titleKey="Amani Works | Remote supervision of renovations in Morocco"
-        descriptionKey="With Amani Works, you describe your renovation project, we find the right contractors, present quotes, then coordinate and supervise the work on site in Morocco for you."
+        descriptionKey="With Amani Works, you describe your renovation project, we source the right artisan, send one transparent quote and supervise on-site in Casablanca. The artisan is only paid after your written confirmation."
         canonical="https://www.amani-services.com/services/amani-works"
       />
 
@@ -75,7 +84,7 @@ const AmaniWorksService = () => {
               </h1>
               <p className="service__lead">
                 {t(
-                  "With Amani Works, you tell us what you want to change in your home, we find the right artisans, present you with quotes and then supervise the project on site in Morocco on your behalf."
+                  "With Amani Works, you describe your renovation project, we find the right artisan or work with yours, send you a single transparent quote and supervise the works on-site in Morocco on your behalf. The artisan is not paid until you confirm the work is done."
                 )}
               </p>
 
@@ -106,34 +115,40 @@ const AmaniWorksService = () => {
                 <li>
                   <FaUserTie />
                   <span>
-                    {t("Sourcing and shortlisting artisans and contractors")}
+                    {t("Sourcing a trusted artisan or working with your chosen professional")}
                   </span>
                 </li>
                 <li>
-                  <FaHammer />
+                  <FaFileInvoiceDollar />
                   <span>
-                    {t("Collecting one or two detailed quotes for you to choose from")}
+                    {t("One single quote: artisan cost + 20% Amani fee, transparent and agreed upfront")}
                   </span>
                 </li>
                 <li>
                   <FaCamera />
                   <span>
-                    {t("On-site supervision with photos, videos and regular updates")}
+                    {t("On-site supervision with daily photo updates and simplified reporting")}
                   </span>
                 </li>
                 <li>
                   <FaClipboardCheck />
                   <span>
-                    {t("Checks at key stages and before final payment")}
+                    {t("Quality checks at key stages and before final handover")}
+                  </span>
+                </li>
+                <li>
+                  <FaShieldAlt />
+                  <span>
+                    {t("Payment protection: artisan is paid only after your written confirmation of completion")}
                   </span>
                 </li>
               </ul>
 
               <p className="service__aside-note">
-                {t("Our fee is set at")}{" "}
+                {t("Our fee is")}{" "}
                 <span style={{ fontWeight: 600 }}>20%</span>{" "}
                 {t(
-                  "of the works budget we agree together before starting. This covers sourcing contractors, coordination, supervision visits in Casablanca and reporting throughout the project."
+                  "of the works budget, agreed before starting. This covers artisan sourcing, coordination, on-site supervision and full reporting throughout the project. The artisan receives payment only after you confirm the work in writing."
                 )}
               </p>
             </aside>
@@ -146,7 +161,7 @@ const AmaniWorksService = () => {
             </h2>
             <p className="service__section-lead">
               {t(
-                "Instead of trying to run a renovation from abroad with random photos on WhatsApp, Amani becomes your project partner on the ground, from first idea to final checks."
+                "Instead of managing a renovation from abroad with random WhatsApp photos, Amani becomes your project partner on the ground – from first idea to final payment release."
               )}
             </p>
 
@@ -160,12 +175,13 @@ const AmaniWorksService = () => {
               ))}
             </div>
           </div>
-{/* Statement de positionnement */}
-<p className="service__footer-note">
-  {t(
-    "Amani is not a contractor — we represent your interests only. Our role is to make sure the work you pay for is done properly, transparently, and safely while you're abroad."
-  )}
-</p>
+
+          {/* Statement de positionnement */}
+          <p className="service__footer-note">
+            {t(
+              "Amani is not a contractor – we represent your interests only. Our role is to make sure the work you pay for is done properly, transparently, and safely while you are abroad. The work you would have done yourself if you were on-site."
+            )}
+          </p>
 
           {/* CTA bas de page */}
           <div className="service__cta">

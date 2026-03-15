@@ -35,6 +35,69 @@ const SeoHead = ({ titleKey, descriptionKey, canonical }) => {
   const siteUrl = "https://www.amani-services.com";
   const defaultImage = `${siteUrl}/LogoAmaniFull.webp`;
 
+  // -------- Auto-generate BreadcrumbList from canonical URL --------
+  const generateBreadcrumbs = (canonicalUrl) => {
+    try {
+      const url = new URL(canonicalUrl);
+      const parts = url.pathname.split("/").filter(Boolean);
+      if (parts.length === 0) return null;
+
+      const labelMap = {
+        services: "Services",
+        "key-holding": "Key Holding",
+        "monthly-checks": "Monthly Checks",
+        "seasonal-care": "Seasonal Care",
+        "welcome-home": "Welcome Home",
+        "pro-access": "ProAccess",
+        "amani-works": "Amani Works",
+        plans: "Plans & Pricing",
+        faq: "FAQ",
+        about: "About",
+        contact: "Contact",
+        cgv: "CGV",
+        "mentions-legales": "Mentions Légales",
+        "politique-confidentialite": "Politique de Confidentialité",
+        "politique-cookies": "Politique des Cookies",
+      };
+
+      const items = [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Amani Home",
+          item: siteUrl + "/",
+        },
+      ];
+
+      let currentPath = siteUrl;
+      parts.forEach((part, i) => {
+        currentPath += "/" + part;
+        const name =
+          labelMap[part] ||
+          part
+            .split("-")
+            .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(" ");
+        items.push({
+          "@type": "ListItem",
+          position: i + 2,
+          name,
+          item: currentPath,
+        });
+      });
+
+      return {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        "itemListElement": items,
+      };
+    } catch {
+      return null;
+    }
+  };
+
+  const breadcrumbSchema = generateBreadcrumbs(resolvedCanonical);
+
   // -------- JSON-LD schema.org --------
   const schemaOrgJSON = {
     "@context": "https://schema.org",
@@ -89,6 +152,11 @@ const SeoHead = ({ titleKey, descriptionKey, canonical }) => {
       },
     ],
   };
+
+  // Append BreadcrumbList to graph if available
+  if (breadcrumbSchema) {
+    schemaOrgJSON["@graph"].push(breadcrumbSchema);
+  }
 
   return (
     <Helmet htmlAttributes={{ lang: currentLang }}>

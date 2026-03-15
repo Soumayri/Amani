@@ -7,6 +7,8 @@ import {
   FaDoorOpen,
   FaBed,
   FaShoppingBag,
+  FaCamera,
+  FaThermometerHalf,
 } from "react-icons/fa";
 import SeoHead from "../../components/SeoHead";
 import Navbar from "../../components/Navbar";
@@ -22,30 +24,30 @@ const WelcomeHomeService = () => {
   const steps = [
     {
       icon: <FaConciergeBell />,
-      title: t("You tell us when you’re coming – and what you need"),
+      title: t("You send us a WhatsApp message with your arrival date and needs"),
       text: t(
-        "Before your trip, you share your arrival date, time and whether you’d like us to prepare basics like water, breakfast items or a full fridge."
+        "Simply message us on WhatsApp with your arrival date, time and any preferences – groceries, AC on arrival, beds to prepare, specific rooms to prioritise. We confirm the slot and build your preparation checklist."
       ),
     },
     {
       icon: <FaDoorOpen />,
-      title: t("We open and refresh your home before you arrive"),
+      title: t("We prepare your home the day before or morning of arrival"),
       text: t(
-        "We go on site ahead of your arrival to open the apartment, air it out, check the main rooms and make sure everything feels safe and ready."
+        "Our agent and a supervised housekeeper carry out a full clean – floors, surfaces, bathrooms – and prepare the beds with fresh clean sheets. We open the water and electricity, run a general test that everything works and switch on the AC if you requested it."
       ),
     },
     {
       icon: <FaShoppingBag />,
-      title: t("We manage your groceries via Glovo and put everything away"),
+      title: t("We receive your groceries and put everything away"),
       text: t(
-        "Using your Glovo order or a shopping list you approve, we receive the delivery on your behalf, store fresh items in the fridge and cupboards and remove the packaging."
+        "You order your groceries via Glovo or another delivery app – or we can manage the list for you. We receive the delivery on-site, refrigerate fresh items, store everything in your kitchen and remove all packaging before you arrive."
       ),
     },
     {
-      icon: <FaBed />,
-      title: t("You arrive to a home that feels lived-in, not closed"),
+      icon: <FaCamera />,
+      title: t("Your home is ready – you get the photo report before landing"),
       text: t(
-        "Beds and essentials can be prepared, the apartment is aired and stocked, so you start your stay by resting – not by cleaning and running to the supermarket."
+        "Before you even land, you receive a WhatsApp photo report: every room clean and ready, fridge stocked, beds made. You turn the key and start your stay immediately – no cleaning, no supermarket run, no stress."
       ),
     },
   ];
@@ -56,7 +58,7 @@ const WelcomeHomeService = () => {
 
       <SeoHead
         titleKey="Welcome Home Service | Amani Home"
-        descriptionKey="Welcome Home by Amani: pre-arrival preparation, airing, light reset and groceries via Glovo so you arrive to a ready home in Morocco."
+        descriptionKey="Welcome Home by Amani: pre-arrival preparation, full clean, beds made, groceries received via Glovo and a photo report sent before you land. For members in Casablanca."
         canonical="https://www.amani-services.com/services/welcome-home"
       />
 
@@ -72,88 +74,99 @@ const WelcomeHomeService = () => {
               <h1 className="service__title">
                 {t("Welcome Home")}
               </h1>
-           <p className="service__lead">
-  {t(
-    "Welcome Home is our pre-arrival service so you don’t open a closed, dusty apartment after a long flight. We refresh your home, receive your groceries via "
-  )}
-  <a
-    href="https://glovoapp.com/"
-    className="service__link-inline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Glovo
-  </a>
-  {t(
-    " and put everything away so you can simply arrive and feel at home."
-  )}
-</p>
-
+              <p className="service__lead">
+                {t(
+                  "Welcome Home is our pre-arrival preparation service. Before you land, we carry out a full clean, prepare the beds, receive your groceries via "
+                )}
+                <a
+                  href="https://glovoapp.com/"
+                  className="service__link-inline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Glovo
+                </a>
+                {t(
+                  " or another delivery app and send you a photo report so you can arrive, unpack and feel at home straight away."
+                )}
+              </p>
 
               <div className="service__badges">
                 <span className="service__badge">
-                  {t("Reserved for Amani members in Casablanca")}
+                  {t("Included 1×/year in Gold · Unlimited in Platinum")}
                 </span>
                 <span className="service__badge service__badge--accent">
-                  {t("Welcome Home from")}{" "}
+                  {t("À la carte from")}{" "}
                   <span style={{ fontWeight: 600 }}>59€</span>
-                  {t(" per visit (excluding groceries)")}
+                  {t(" per visit for Silver (excl. groceries)")}
                 </span>
               </div>
             </div>
 
-            {/* Aside “What’s included” */}
+            {/* Aside "What's included" */}
             <aside className="service__aside-card">
               <h2 className="service__aside-title">
-                {t("What’s included with Welcome Home")}
+                {t("What's included with Welcome Home")}
               </h2>
               <ul className="service__list">
                 <li>
                   <FaDoorOpen />
                   <span>
-                    {t("Pre-arrival visit to open, air and check your home")}
-                  </span>
-                </li>
-                <li>
-                  <FaConciergeBell />
-                  <span>
-                    {t("Light reset of main rooms so the apartment feels fresh")}
-                  </span>
-                </li>
-                <li>
-                  <FaShoppingBag />
-                  <span>
-                    {t("Groceries managed via Glovo and stored in your kitchen")}
+                    {t("Full clean by our agent and a supervised housekeeper")}
                   </span>
                 </li>
                 <li>
                   <FaBed />
                   <span>
-                    {t("Beds and essentials ready for your first night")}
+                    {t("Beds prepared with clean sheets for your first night")}
+                  </span>
+                </li>
+                <li>
+                  <FaShoppingBag />
+                  <span>
+                    {t("Groceries received via Glovo or delivery app and stored in your kitchen")}
+                  </span>
+                </li>
+                <li>
+                  <FaThermometerHalf />
+                  <span>
+                    {t("AC switched on before your arrival, on request")}
+                  </span>
+                </li>
+                <li>
+                  <FaConciergeBell />
+                  <span>
+                    {t("Water and electricity opened and tested")}
+                  </span>
+                </li>
+                <li>
+                  <FaCamera />
+                  <span>
+                    {t("WhatsApp photo report sent before you land")}
                   </span>
                 </li>
               </ul>
 
               <p className="service__aside-note">
                 {t(
-                  "The service starts from"
+                  "Included once per year in Gold, unlimited in Platinum. Available à la carte for Silver members and non-members from"
                 )}{" "}
                 <span style={{ fontWeight: 600 }}>59€</span>{" "}
                 {t(
-                  "per visit for our members in Casablanca. The Glovo order itself is paid directly from your Glovo account or according to the arrangement we agree together."
+                  "per visit. Groceries are ordered from your account or arranged together."
                 )}
               </p>
             </aside>
           </div>
 
-          {/* Section “How Welcome Home works” */}
+          {/* Section "How Welcome Home works" */}
           <div className="service__section">
             <h2 className="service__section-title">
               {t("How Welcome Home works")}
             </h2>
             <p className="service__section-lead">
               {t(
-                "From the moment you share your arrival date, we coordinate the visit, groceries and preparation so your home feels open, stocked and welcoming when you turn the key."
+                "One WhatsApp message from you triggers everything. We coordinate the visit, cleaning, groceries and preparation so your home is ready before you turn the key."
               )}
             </p>
 
@@ -174,8 +187,8 @@ const WelcomeHomeService = () => {
               {t("Compare memberships")}
             </Link>
             <Link to="/#services-section" className="service__btn--glass">
-                          {t("Discover services")}
-                        </Link>
+              {t("Discover services")}
+            </Link>
           </div>
         </div>
       </section>

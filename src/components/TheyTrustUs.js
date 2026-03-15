@@ -1,15 +1,19 @@
 // src/components/TheyTrustUs.js
 import { useTranslation } from "react-i18next";
 
-const partners = [
-  { name: "Attijariwafa Bank", logo: "/partners/Attijariwafa.webp", link: "https://www.attijariwafabank.com/" },
-  { name: "Sanlam Maroc", logo: "/partners/Sanlam.webp", link: "https://www.sanlam.ma/" },
-];
-
-const numbersData = [
-  { value: "20+", label: "Properties Managed" },
-  { value: "100%", label: "Client Satisfaction" },
-  { value: "24H", label: "Guaranteed Response Time" },
+const standardsData = [
+  {
+    value: "7j",
+    label: "FreshStart guaranteed",
+  },
+  {
+    value: "48h",
+    label: "Amani Report after each visit",
+  },
+  {
+    value: "10+",
+    label: "Photos per home check",
+  },
 ];
 
 const TheyTrustUs = () => {
@@ -21,61 +25,36 @@ const TheyTrustUs = () => {
 
         {/* Eyebrow */}
         <p className="they-trust-us__eyebrow">
-          {t("Partnerships & Reputation")}
+          {t("Service standards")}
         </p>
 
         {/* Title */}
         <h2 className="they-trust-us__title">
-          {t("Trusted by key institutions in Morocco")}
+          {t("What every membership guarantees")}
         </h2>
 
-        {/* Intro Text */}
+        {/* Lead */}
         <p className="they-trust-us__lead">
           {t(
-            "Banks and insurance companies rely on Amani for reliable home care, transparency and long-term service. Here are some of the partners who trust us."
+            "Every Amani membership runs on a structured process so you always know what happens, when and how. These are the commitments included in every plan from day one."
           )}
         </p>
 
-        {/* PARTNERS GRID */}
-        <div className="they-trust-us__partners-grid">
-          {partners.map((partner, index) => (
-            <a
-              key={index}
-              href={partner.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="they-trust-us__partner-card"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="they-trust-us__partner-logo"
-                loading="lazy"
-              />
-            </a>
-          ))}
-        </div>
-
-        {/* EYEBROW 2 – numbers */}
-        <p className="they-trust-us__numbers-eyebrow">
-          {t("Amani home in numbers")}
-        </p>
-
-        {/* Numbers Title */}
-        <h3 className="they-trust-us__numbers-title">
-          {t("Numbers that speak for themselves")}
-        </h3>
-
-        {/* NUMBERS GRID */}
+        {/* Standards grid */}
         <div className="they-trust-us__numbers-grid">
-          {numbersData.map((item, index) => (
+          {standardsData.map((item, index) => (
             <div key={index} className="they-trust-us__number-card">
-              <h3 className="they-trust-us__number-value">{item.value}</h3>
+              <h3 className="they-trust-us__number-value">{t(item.value)}</h3>
               <div className="they-trust-us__number-line"></div>
               <p className="they-trust-us__number-label">{t(item.label)}</p>
             </div>
           ))}
         </div>
+
+        {/* Alert note */}
+        <p className="they-trust-us__numbers-eyebrow" style={{ marginTop: "2rem", fontStyle: "italic", opacity: 0.85 }}>
+          {t("If we notice anything unusual during a visit, we send a WhatsApp alert with photos before the written report.")}
+        </p>
 
       </div>
     </section>

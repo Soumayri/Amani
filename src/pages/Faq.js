@@ -118,7 +118,7 @@ const HomeFAQSection = () => {
         "How does Amani Works manage renovation and construction projects remotely?"
       ),
       answer: t(
-        "Amani Works is our coordination and supervision service for renovation and works when you cannot be on site yourself. You tell us about your project, we source and shortlist trusted professionals, then present you one or two quotes so you can decide how you want to move forward. Once you choose, we coordinate the works, follow progress on the ground, check quality and keep you updated with photos, videos and reports until completion. Our fee is 25% of the total works budget."
+        "Amani Works is our coordination and supervision service for renovation and works when you cannot be on site yourself. You tell us about your project, we source and shortlist trusted professionals, then present you one or two quotes so you can decide how you want to move forward. Once you choose, we coordinate the works, follow progress on the ground, check quality and keep you updated with photos, videos and reports until completion. Our fee is 20% of the total works budget."
       ),
     },
     {

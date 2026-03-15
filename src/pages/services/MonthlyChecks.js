@@ -7,6 +7,9 @@ import {
   FaClipboardCheck,
   FaCamera,
   FaBell,
+  FaEnvelope,
+  FaTachometerAlt,
+  FaExclamationTriangle,
 } from "react-icons/fa";
 import SeoHead from "../../components/SeoHead";
 import Navbar from "../../components/Navbar";
@@ -31,21 +34,21 @@ const HomeCheckService = () => {
       icon: <FaHome />,
       title: t("We visit your home with a clear checklist"),
       text: t(
-        "During each visit, we follow a structured checklist: doors and windows, signs of humidity, leaks, electricity, appliances, balconies, and overall condition."
+        "During each visit, we follow a structured checklist: timestamped facade photo, full airing of every room, visual check of ceilings, walls and floors, plumbing fixtures, locks, windows and shutters, water and electricity meter readings, and mail collection."
       ),
     },
     {
       icon: <FaCamera />,
-      title: t("We document what we see"),
+      title: t("We document everything with a minimum of 10 photos"),
       text: t(
-        "If something looks unusual, we take photos or short videos so you can see exactly what we see from abroad."
+        "Every home check includes at least 10 timestamped photos covering all rooms and key areas. If we notice something unusual, we send you a WhatsApp alert with photos immediately – before the written report."
       ),
     },
     {
       icon: <FaBell />,
-      title: t("You receive a short report after each check"),
+      title: t("You receive your Amani Report within 48 hours"),
       text: t(
-        "After every home check, you receive a brief summary with key observations and, when necessary, suggestions for next steps."
+        "After every home check, you receive your Amani Report within 48 hours: a clear summary of observations, meter readings, photos and any recommended next steps."
       ),
     },
   ];
@@ -97,25 +100,37 @@ const HomeCheckService = () => {
                 <li>
                   <FaHome />
                   <span>
-                    {t("Regular on-site visits to your property")}
+                    {t("Full visual inspection: ceilings, walls, floors, plumbing, locks, windows, shutters")}
                   </span>
                 </li>
                 <li>
-                  <FaClipboardCheck />
+                  <FaTachometerAlt />
                   <span>
-                    {t("Structured checklist for every home check")}
+                    {t("Water & electricity meter readings with photos")}
+                  </span>
+                </li>
+                <li>
+                  <FaEnvelope />
+                  <span>
+                    {t("Mail collection on every visit")}
                   </span>
                 </li>
                 <li>
                   <FaCamera />
                   <span>
-                    {t("Photos or videos when something needs your attention")}
+                    {t("Minimum 10 timestamped photos per visit")}
+                  </span>
+                </li>
+                <li>
+                  <FaExclamationTriangle />
+                  <span>
+                    {t("Immediate WhatsApp alert with photos if anything looks wrong")}
                   </span>
                 </li>
                 <li>
                   <FaBell />
                   <span>
-                    {t("Short written report after each visit")}
+                    {t("Amani Report delivered within 48 hours")}
                   </span>
                 </li>
               </ul>

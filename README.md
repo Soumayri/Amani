@@ -6,7 +6,39 @@
 **🌐 Production :** [www.amani-services.com](https://www.amani-services.com)  
 **📦 Framework :** Create React App  
 **☁️ Hébergement :** Vercel  
-**📊 Analytics :** Google Analytics 4 (`G-YP3VQ9XMC4`)  
+**📊 Analytics :** Google Analytics 4 (` veonst rcel écsh eszo nvto u:s
+.🔐  SEtto cqkuéaensd .d aEnts  puonu rcqoufofir.e
+ Cs'éceusrti sçaé
+,📋  lTar avcréeasi eà  tcrhaanqquuei lultiitléi sda'teisopnr i(tq.u
+i
+,📩  Eqnuvaonyde,z -pnoouursq uuoni )m
+e✅ sAscacgees spiobulre se nu nsiaqvuoeimre nptl usse lsounr  vKoesy  iHnosltdriuncgt.i
+o🔗 nLsi
+e
+nV oeuns  bsiaov e→z  wewxwa.catmeamnein-ts eqruvii ceenst.rceo mc
+h
+eAzm avnoiu sH.o mEet  — qVuoatnrde.  mEati spoonu reqsuto il.o
+iCn'.e sEtl lçae,  nlea  dvoriati ep atsr alneq usielnltiitré. d'esprit.
+
+📩 Envoyez-nous un message pour en savoir plus sur Key Holding.
+🔗 Lien en bio → www.amani-services.com
+
+Amani Home — Votre maison est loin. Elle ne doit pas le sentir.Vous partez en France. Vous laissez les clés... à qui ?
+
+Souvent c'est un voisin de confiance. Ou un membre de la famille. Ou derrière une plante 🌿
+Mais soyons honnêtes : ce n'esVto upsa sp avrrtaeizm eennt  Fsrécaunrcies.é .V oEuts  slia iqsuseelzq ulee sc hcolsées .a.r.r ià vqeu i? 
+?
+
+A
+vSeocu vneonttr ec 'seesrtv iucne  vKoeiys iHno lddei ncgo,n fvioasn ccel.és  Osuo nutn  :m
+e🔐m bSrteo cdkeée sl ad afnasm iulnl ec.o fOfur ed esrérciuèrries éu
+n📋 eT rpalcaénetse  à 🌿
+cMhaaiqsu es ouytoinlsi shaotninoênt e(sq u:i ,c eq una'neds,t  ppoausr qvuroaii)m
+e✅n tA cscéecsusriibslé.e sE tu nsiiq uqeumeelnqtu es eclhoons ev oasr riinvset r?u
+c
+tAivoencs 
+n
+oVtorues  ssearvveizc ee xKaecyt eHmoelndti nqgu,i `)  
 **🍪 Cookies :** Cookiebot RGPD (`2bd9779a-7e72-4940-874c-512c0d0bdd3f`)
 
 ---

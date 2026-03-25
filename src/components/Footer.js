@@ -30,6 +30,9 @@ const Footer = () => {
               <Link to="/faq">FAQ</Link>
             </li>
             <li>
+              <Link to="/services/freshstart">FreshStart</Link>
+            </li>
+            <li>
               <Link to="/client-portal">Client Portal</Link>
             </li>
             <li>

@@ -9,6 +9,7 @@ import {
   FaDoorOpen,
   FaConciergeBell,
   FaHammer,
+  FaBroom,
 } from "react-icons/fa";
 
 const Services= () => {
@@ -118,6 +119,21 @@ const Services= () => {
   </p>
 
   <div className="home-overview__addons-grid">
+            {/* FreshStart */}
+    <Link
+  to="/services/freshstart"
+  className="home-overview__card-link"
+>
+    <div className="home-overview__addon-card">
+      <div className="home-overview__addon-icon">
+        <FaBroom aria-hidden="true" />
+      </div>
+      <div className="home-overview__addon-title">{t("FreshStart")}</div>
+      <p className="home-overview__addon-desc">
+        {t("The one-time onboarding visit that starts your membership.")}
+      </p>
+    </div>
+</Link>
             {/* Welcome Home */}
     <Link
   to="/services/welcome-home"

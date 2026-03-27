@@ -68,7 +68,7 @@ const Hero = () => {
               onClick={handleViewPlans}
               className="hero__btn hero__btn--primary"
             >
-              {t("View membership plans")}
+              {t("Discover our services")}
             </button>
 
             <button

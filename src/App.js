@@ -14,6 +14,7 @@ import HowItWorks from "./components/HowItWorks";
 import MiniFAQ from "./components/MiniFAQ";
 import TheyTrustUs from "./components/TheyTrustUs";
 import Footer from "./components/Footer";
+import RapportSection from "./components/RapportSection";
 import CookieBanner from "./components/CookieBanner";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Login from "./pages/Login";
@@ -52,6 +53,7 @@ function RootLayout() {
       <Navbar />
       <Hero />
       <Services />
+      <RapportSection />
       <WhyAmani />
       <HowItWorks />
       <TheyTrustUs />

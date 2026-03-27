@@ -1,16 +1,17 @@
 // src/components/Hero.js
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 const logoAmani = "/LogoAmani.webp";
 
 const Hero = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   const handleViewPlans = () => {
-    navigate("/plans");
+    const section = document.getElementById("services-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const handleWhatsApp = () => {

@@ -1,0 +1,280 @@
+// ── Section wrapper ──
+.rapport-section {
+  background-color: #f5f0e8;
+  padding: 80px 40px;
+}
+
+.rapport-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .rapport-section__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rapport-section {
+    padding: 60px 24px;
+  }
+}
+
+// ── Texte gauche ──
+.rapport-section__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4a8a96;
+  margin-bottom: 12px;
+}
+
+.rapport-section__title {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #1b4f5c;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.rapport-section__desc {
+  font-size: 15px;
+  color: #4a5e65;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.rapport-section__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #4a5e65;
+    line-height: 1.5;
+
+    strong {
+      color: #1b4f5c;
+      font-weight: 500;
+    }
+  }
+}
+
+.rapport-section__feature-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #27ae60;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.rapport-section__live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #1b4f5c;
+  background: rgba(27, 79, 92, 0.07);
+  border-radius: 20px;
+  padding: 7px 14px;
+}
+
+.rapport-section__live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #27ae60;
+  animation: rapport-pulse 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes rapport-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+// ── Carte rapport (droite) ──
+.rapport-section__preview {
+  display: flex;
+  justify-content: center;
+}
+
+.rapport-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(27, 79, 92, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 24px rgba(27, 79, 92, 0.08);
+}
+
+.rapport-card__header {
+  background: #1b4f5c;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rapport-card__brand {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.rapport-card__tier {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-weight: 500;
+}
+
+.rapport-card__client {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(27, 79, 92, 0.08);
+}
+
+.rapport-card__name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1b4f5c;
+  margin-bottom: 2px;
+}
+
+.rapport-card__meta {
+  font-size: 11px;
+  color: #7a8e94;
+}
+
+.rapport-card__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 18px;
+  background: rgba(245, 240, 232, 0.6);
+  border-bottom: 1px solid rgba(27, 79, 92, 0.08);
+}
+
+.rapport-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.rapport-card__stat-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1b4f5c;
+}
+
+.rapport-card__stat-label {
+  font-size: 9px;
+  color: #7a8e94;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rapport-card__alert {
+  background: #fdf0ee;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c0392b;
+}
+
+.rapport-card__alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c0392b;
+  flex-shrink: 0;
+}
+
+.rapport-card__checklist {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.rapport-card__check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rapport-card__check-label {
+  font-size: 12px;
+  color: #4a5e65;
+}
+
+.rapport-card__check-badge {
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 2px 8px;
+
+  &.ok {
+    background: #eafaf1;
+    color: #27ae60;
+  }
+
+  &.warn {
+    background: #fef9ef;
+    color: #e67e22;
+  }
+}
+
+.rapport-card__rec {
+  margin: 0 18px 14px;
+  background: rgba(245, 240, 232, 0.8);
+  padding: 10px 12px;
+  border-left: 3px solid #4a8a96;
+  border-radius: 0 8px 8px 0;
+}
+
+.rapport-card__rec-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: #1b4f5c;
+  margin-bottom: 4px;
+}
+
+.rapport-card__rec-text {
+  font-size: 11px;
+  color: #4a5e65;
+  line-height: 1.5;
+}
+
+.rapport-card__footer {
+  padding: 10px 18px;
+  border-top: 1px solid rgba(27, 79, 92, 0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #7a8e94;
+  letter-spacing: 0.04em;
+}

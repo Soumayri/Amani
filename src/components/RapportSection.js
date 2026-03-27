@@ -1,57 +1,58 @@
 // src/components/RapportSection.js
 import React from "react";
-
-const checklist = [
-  { label: "Accès & serrure", ok: true },
-  { label: "Boîte aux lettres", ok: true },
-  { label: "Aération", ok: true },
-  { label: "Murs & plafonds", ok: false },
-  { label: "Plomberie / Éviers", ok: false },
-  { label: "Électricité", ok: true },
-  { label: "Nuisibles", ok: true },
-  { label: "Fermeture complète", ok: true },
-];
+import { useTranslation } from "react-i18next";
 
 export default function RapportSection() {
+  const { t } = useTranslation();
+
+  const checklist = [
+    { label: t("Access & lock"), ok: true },
+    { label: t("Mailbox"), ok: true },
+    { label: t("Ventilation"), ok: true },
+    { label: t("Walls & ceilings"), ok: false },
+    { label: t("Plumbing / Sinks"), ok: false },
+    { label: t("Electricity"), ok: true },
+    { label: t("Pests"), ok: true },
+    { label: t("Full lock-up"), ok: true },
+  ];
+
   return (
     <section className="rapport-section" id="rapport-digital">
       <div className="rapport-section__inner">
 
         {/* Colonne gauche — texte */}
         <div className="rapport-section__text">
-          <span className="rapport-section__eyebrow">Rapport digital Amani</span>
+          <span className="rapport-section__eyebrow">{t("Amani Digital Report")}</span>
           <h2 className="rapport-section__title">
-            Vous savez ce qui se passe chez vous.
-            <br />En temps réel.
+            {t("You know what's happening at your home.")}
+            <br />{t("In real time.")}
           </h2>
           <p className="rapport-section__desc">
-            Après chaque visite, votre agent envoie un rapport complet directement
-            sur votre téléphone — photos, statut point par point, alertes si nécessaire.
-            Vous n'avez pas à demander. C'est automatique.
+            {t("After each visit, your agent sends a complete report directly to your phone — photos, point-by-point status, alerts if needed. You don't have to ask. It's automatic.")}
           </p>
 
           <ul className="rapport-section__features">
             <li>
               <span className="rapport-section__feature-dot" />
-              <span><strong>Envoyé dans la minute</strong> qui suit la fin de la visite</span>
+              <span><strong>{t("Sent within the minute")}</strong>{t(" following the end of the visit")}</span>
             </li>
             <li>
               <span className="rapport-section__feature-dot" />
-              <span>Photos de chaque pièce, compteurs et anomalies détectées</span>
+              <span>{t("Photos of every room, meters and detected anomalies")}</span>
             </li>
             <li>
               <span className="rapport-section__feature-dot" />
-              <span><strong>Alerte urgente</strong> signalée immédiatement avec recommandation</span>
+              <span><strong>{t("Urgent alert")}</strong>{t(" reported immediately with a recommendation")}</span>
             </li>
             <li>
               <span className="rapport-section__feature-dot" />
-              <span>Historique complet de toutes vos visites dans l'espace client</span>
+              <span>{t("Full history of all your visits in the client area")}</span>
             </li>
           </ul>
 
           <div className="rapport-section__live-badge">
             <span className="rapport-section__live-dot" />
-            Envoi automatique après chaque visite · Inclus dans tous les abonnements
+            {t("Automatic delivery after each visit · Included in all memberships")}
           </div>
         </div>
 
@@ -60,7 +61,7 @@ export default function RapportSection() {
           <div className="rapport-card">
 
             <div className="rapport-card__header">
-              <span className="rapport-card__brand">Amani Home · Rapport de visite</span>
+              <span className="rapport-card__brand">{t("Amani Home · Visit report")}</span>
               <span className="rapport-card__tier">✦ Silver</span>
             </div>
 
@@ -72,25 +73,25 @@ export default function RapportSection() {
             <div className="rapport-card__stats">
               <div className="rapport-card__stat">
                 <span className="rapport-card__stat-val">17/03</span>
-                <span className="rapport-card__stat-label">Date</span>
+                <span className="rapport-card__stat-label">{t("Date")}</span>
               </div>
               <div className="rapport-card__stat">
                 <span className="rapport-card__stat-val">23h40</span>
-                <span className="rapport-card__stat-label">Arrivée</span>
+                <span className="rapport-card__stat-label">{t("Arrival")}</span>
               </div>
               <div className="rapport-card__stat">
                 <span className="rapport-card__stat-val">36 min</span>
-                <span className="rapport-card__stat-label">Durée</span>
+                <span className="rapport-card__stat-label">{t("Duration")}</span>
               </div>
               <div className="rapport-card__stat">
                 <span className="rapport-card__stat-val">Aymen</span>
-                <span className="rapport-card__stat-label">Agent</span>
+                <span className="rapport-card__stat-label">{t("Agent")}</span>
               </div>
             </div>
 
             <div className="rapport-card__alert">
               <span className="rapport-card__alert-dot" />
-              <span>Intervention urgente requise</span>
+              <span>{t("Urgent intervention required")}</span>
             </div>
 
             <div className="rapport-card__checklist">
@@ -98,23 +99,22 @@ export default function RapportSection() {
                 <div key={label} className="rapport-card__check">
                   <span className="rapport-card__check-label">{label}</span>
                   <span className={`rapport-card__check-badge ${ok ? "ok" : "warn"}`}>
-                    {ok ? "✓ OK" : "! Anomalie"}
+                    {ok ? t("✓ OK") : t("! Anomaly")}
                   </span>
                 </div>
               ))}
             </div>
 
             <div className="rapport-card__rec">
-              <div className="rapport-card__rec-title">Recommandation · Plomberie</div>
+              <div className="rapport-card__rec-title">{t("Recommendation · Plumbing")}</div>
               <div className="rapport-card__rec-text">
-                Infiltration d'eau détectée sur le mur du salon et la chambre à coucher.
-                Intervention recommandée sous 48h.
+                {t("Water infiltration detected on the living room wall and bedroom. Intervention recommended within 48 hours.")}
               </div>
             </div>
 
             <div className="rapport-card__footer">
               <span>RPT-20260317-2241</span>
-              <span>Envoyé à 00h18</span>
+              <span>{t("Sent at")} 00h18</span>
             </div>
 
           </div>

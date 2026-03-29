@@ -1,50 +1,69 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useAuth } from "../portal/auth/useAuth";
 
 const Login = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { login, user, isLoading, error, clearError } = useAuth();
 
   const [identifier, setIdentifier] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [password, setPassword]     = useState("");
+  const [localError, setLocalError] = useState("");
+
+  // If already logged in, redirect immediately
+  useEffect(() => {
+    if (user) {
+      const destination = location.state?.from?.pathname || "/client/dashboard";
+      navigate(destination, { replace: true });
+    }
+  }, [user, navigate, location]);
+
+  // Sync auth context error into local error
+  useEffect(() => {
+    if (error) setLocalError(error);
+  }, [error]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
+    setLocalError("");
+    clearError();
+
     if (!identifier || !password) {
-      setError(t("All fields are required"));
+      setLocalError(t("All fields are required"));
       return;
     }
-    if (!/^[^@]+@[^@]+\.[^@]+$/.test(identifier) && !/^\+?\d{6,}$/.test(identifier)) {
-      setError(t("Please enter a valid email or phone number"));
+    if (
+      !/^[^@]+@[^@]+\.[^@]+$/.test(identifier) &&
+      !/^\+?\d{6,}$/.test(identifier)
+    ) {
+      setLocalError(t("Please enter a valid email or phone number"));
       return;
     }
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      if (identifier === "client@amani.com" && password === "test1234") {
-        navigate("/dashboard-client");
-      } else {
-        setError(t("Invalid credentials"));
-      }
-    }, 1200);
+
+    const result = await login(identifier, password);
+    if (result.success) {
+      const destination = location.state?.from?.pathname || "/client/dashboard";
+      navigate(destination, { replace: true });
+    }
   };
 
   return (
     <>
       <Navbar />
-      <div style={{
-        minHeight: "100vh",
-        background: "#eaf0f4",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
+      <div
+        style={{
+          minHeight: "100vh",
+          background: "#eaf0f4",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <form
           onSubmit={handleLogin}
           style={{
@@ -56,16 +75,20 @@ const Login = () => {
             maxWidth: 360,
             display: "flex",
             flexDirection: "column",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
-          <img src="/LogoAmani.webp" alt="Amani Logo" style={{ width: 80, marginBottom: 16 }} />
+          <img
+            src="/LogoAmani.webp"
+            alt="Amani Logo"
+            style={{ width: 80, marginBottom: 16 }}
+          />
           <h2 style={{ marginBottom: 8 }}>{t("Login")}</h2>
-          {/* LanguageSelector removed */}
+
           <input
             type="text"
             value={identifier}
-            onChange={e => setIdentifier(e.target.value)}
+            onChange={(e) => setIdentifier(e.target.value)}
             placeholder={t("Email or phone number")}
             style={{
               width: "100%",
@@ -73,14 +96,14 @@ const Login = () => {
               margin: "8px 0",
               borderRadius: 8,
               border: "1px solid #cfd8dc",
-              fontSize: 16
+              fontSize: 16,
             }}
             autoComplete="username"
           />
           <input
             type="password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder={t("Password")}
             style={{
               width: "100%",
@@ -88,15 +111,17 @@ const Login = () => {
               margin: "8px 0",
               borderRadius: 8,
               border: "1px solid #cfd8dc",
-              fontSize: 16
+              fontSize: 16,
             }}
             autoComplete="current-password"
           />
-          {error && (
+
+          {localError && (
             <div style={{ color: "#d32f2f", margin: "8px 0", fontSize: 15 }}>
-              {error}
+              {localError}
             </div>
           )}
+
           <button
             type="submit"
             disabled={!identifier || !password || isLoading}
@@ -110,23 +135,31 @@ const Login = () => {
               fontSize: 17,
               fontWeight: 600,
               marginTop: 12,
-              cursor: (!identifier || !password || isLoading) ? "not-allowed" : "pointer",
-              opacity: (!identifier || !password || isLoading) ? 0.7 : 1,
-              transition: "opacity 0.2s"
+              cursor:
+                !identifier || !password || isLoading
+                  ? "not-allowed"
+                  : "pointer",
+              opacity: !identifier || !password || isLoading ? 0.7 : 1,
+              transition: "opacity 0.2s",
             }}
           >
             {isLoading ? (
-              <span className="loader" style={{
-                display: "inline-block",
-                width: 20,
-                height: 20,
-                border: "3px solid #fff",
-                borderTop: "3px solid #365b6d",
-                borderRadius: "50%",
-                animation: "spin 1s linear infinite"
-              }} />
-            ) : t("Sign in")}
+              <span
+                style={{
+                  display: "inline-block",
+                  width: 20,
+                  height: 20,
+                  border: "3px solid #fff",
+                  borderTop: "3px solid #365b6d",
+                  borderRadius: "50%",
+                  animation: "spin 1s linear infinite",
+                }}
+              />
+            ) : (
+              t("Sign in")
+            )}
           </button>
+
           <a
             href="/forgot-password"
             style={{
@@ -134,22 +167,19 @@ const Login = () => {
               color: "#365b6d",
               fontSize: 15,
               textDecoration: "underline",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             {t("Forgot password?")}
           </a>
         </form>
+
         <footer style={{ marginTop: 32, color: "#7b8a99", fontSize: 14 }}>
           © {new Date().getFullYear()} Amani. {t("All rights reserved")}
         </footer>
+
         <style>
-          {`
-            @keyframes spin {
-              0% { transform: rotate(0deg);}
-              100% { transform: rotate(360deg);}
-            }
-          `}
+          {`@keyframes spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }`}
         </style>
       </div>
     </>

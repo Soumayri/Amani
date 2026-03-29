@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -19,6 +19,10 @@ import RapportSection from "./components/RapportSection";
 import CookieBanner from "./components/CookieBanner";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Login from "./pages/Login";
+
+import ProtectedRoute  from "./portal/routes/ProtectedRoute";
+import PortalLayout    from "./portal/components/PortalLayout";
+import Dashboard       from "./portal/pages/Dashboard";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 const KeyHolding = lazy(() => import("./pages/services/KeyHolding"));
@@ -119,7 +123,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/client-portal",
-    element: <Login/>,
+    element: <Login />,
+  },
+  // Client portal — protected, nested layout
+  {
+    path: "/client",
+    element: (
+      <ProtectedRoute>
+        <PortalLayout />
+      </ProtectedRoute>
+    ),
+    children: [
+      { index: true, element: <Navigate to="dashboard" replace /> },
+      { path: "dashboard", element: <Dashboard /> },
+    ],
   },
   {
     path: "/mentions-legales",

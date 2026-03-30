@@ -7,13 +7,15 @@ export default function RapportSection() {
 
   const checklist = [
     { label: t("Access & lock"), ok: true },
-    { label: t("Mailbox"), ok: true },
-    { label: t("Ventilation"), ok: true },
-    { label: t("Walls & ceilings"), ok: false },
-    { label: t("Plumbing / Sinks"), ok: false },
-    { label: t("Electricity"), ok: true },
-    { label: t("Pests"), ok: true },
     { label: t("Full lock-up"), ok: true },
+    { label: t("Electricity"), ok: true },
+    { label: t("Plumbing / Sinks"), ok: true },
+    { label: t("Pipes"), ok: true },
+    { label: t("Ventilation"), ok: true },
+    { label: t("Air quality"), ok: true },
+    { label: t("Walls & ceilings"), ok: false },
+    { label: t("Mailbox"), ok: true },
+    { label: t("Pests"), ok: true },
   ];
 
   return (
@@ -62,25 +64,25 @@ export default function RapportSection() {
 
             <div className="rapport-card__header">
               <span className="rapport-card__brand">{t("Amani Home · Visit report")}</span>
-              <span className="rapport-card__tier">✦ Silver</span>
+              <span className="rapport-card__tier">✦ Platinum</span>
             </div>
 
             <div className="rapport-card__client">
-              <div className="rapport-card__name">EL HACHIMI Soumayri</div>
-              <div className="rapport-card__meta">CL012 · Casablanca – Oulfa</div>
+              <div className="rapport-card__name">HOUARI Fatima</div>
+              <div className="rapport-card__meta">CL014 · Casablanca – Ain Sbaa</div>
             </div>
 
             <div className="rapport-card__stats">
               <div className="rapport-card__stat">
-                <span className="rapport-card__stat-val">17/03</span>
+                <span className="rapport-card__stat-val">27/03</span>
                 <span className="rapport-card__stat-label">{t("Date")}</span>
               </div>
               <div className="rapport-card__stat">
-                <span className="rapport-card__stat-val">23h40</span>
+                <span className="rapport-card__stat-val">15h55</span>
                 <span className="rapport-card__stat-label">{t("Arrival")}</span>
               </div>
               <div className="rapport-card__stat">
-                <span className="rapport-card__stat-val">36 min</span>
+                <span className="rapport-card__stat-val">49 min</span>
                 <span className="rapport-card__stat-label">{t("Duration")}</span>
               </div>
               <div className="rapport-card__stat">
@@ -108,13 +110,13 @@ export default function RapportSection() {
             <div className="rapport-card__rec">
               <div className="rapport-card__rec-title">{t("Recommendation · Plumbing")}</div>
               <div className="rapport-card__rec-text">
-                {t("Water infiltration detected on the living room wall and bedroom. Intervention recommended within 48 hours.")}
+                {t("Water infiltration on the right wall of the living room. Emergency intervention for assessment and coordination with the upstairs neighbor and insurers.")}
               </div>
             </div>
 
             <div className="rapport-card__footer">
-              <span>RPT-20260317-2241</span>
-              <span>{t("Sent at")} 00h18</span>
+              <span>RPT-20260328-2112</span>
+              <span>contact@amani-services.com</span>
             </div>
 
           </div>

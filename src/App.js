@@ -51,7 +51,7 @@ function RootLayout() {
   return (
     <>
       <SeoHead
-        titleKey="Accueil - Gestion Immobilière à Casablanca & Maroc | AMANI HOME"
+        titleKey="Amani Home - Remote property care for owners abroad in Morocco"
         descriptionKey="AccueilMetaDescription"
         canonical="https://www.amani-services.com/"
       />

@@ -45,16 +45,16 @@ const Hero = () => {
 
           {/* Titre */}
           <h1 className="hero__title">
-            {t("Your home in")}{" "}
-            <span className="hero__highlight">{t("Morocco")}</span>.
+            {t("We take care of your home in")}{" "}
+            <span className="hero__highlight">{t("Morocco")}</span>
             <br />
-            <span className="hero__subtitle">{t("As if you were there.")}</span>
+            <span className="hero__subtitle">{t("when you can’t be there.")}</span>
           </h1>
 
           {/* Paragraphe d’accroche */}
           <p className="hero__text">
             {t(
-              "We look after your home with monthly inspections and seasonal care while you're abroad. So you come back to a home that feels ready, safe and alive."
+              "We check, maintain and follow your home throughout the year, with regular visits and detailed reports — so you always know what’s happening, even from abroad."
             )}
           </p>
 
@@ -68,7 +68,7 @@ const Hero = () => {
               onClick={handleViewPlans}
               className="hero__btn hero__btn--primary"
             >
-              {t("Discover our services")}
+              {t("See how it works")}
             </button>
 
             <button
@@ -76,7 +76,7 @@ const Hero = () => {
               onClick={handleWhatsApp}
               className="hero__btn hero__btn--ghost"
             >
-              {t("Talk to us on WhatsApp")}
+              {t("Start a conversation")}
             </button>
           </div>
         </div>

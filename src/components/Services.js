@@ -32,7 +32,7 @@ const Services= () => {
         {/* Intro */}
         <p className="home-overview__lead">
           {t(
-            "Every membership includes regular home checks, seasonal care and secure key holding in Casablanca. Amani acts as your eyes and hands on the ground while you’re abroad."
+            "We take care of your home so nothing is left to chance while you’re away."
           )}
         </p>
 
@@ -52,7 +52,7 @@ const Services= () => {
             </h3>
             <p className="home-overview__card-text">
               {t(
-                "Your keys are stored securely, ready for emergencies, visits or trusted professionals."
+                "Your keys are securely stored and ready when needed — with controlled access and full traceability."
               )}
             </p>
             <p className="home-overview__badge">
@@ -76,7 +76,7 @@ const Services= () => {
             </h3>
             <p className="home-overview__card-text">
               {t(
-                "Scheduled visits to your property with a clear checklist and a short report after each round."
+                "Regular visits to make sure everything stays in order — and nothing goes unnoticed."
               )}
             </p>
             <p className="home-overview__badge">
@@ -98,7 +98,7 @@ const Services= () => {
             </h3>
             <p className="home-overview__card-text">
               {t(
-                "Seasonal cleaning to freshen, air out and reset your home before and after the main seasons."
+                "Your home is refreshed, aired and maintained throughout the year — so it never feels closed or neglected."
               )}
             </p>
             <p className="home-overview__badge">
@@ -110,11 +110,11 @@ const Services= () => {
 {/* ADD-ONS */}
 <div className="home-overview__addons">
   <h3 className="home-overview__addons-title">
-    {t("Add services when you need more")}
+    {t("When your home needs more, we handle it.")}
   </h3>
   <p className="home-overview__addons-text">
     {t(
-      "On top of your membership, you can activate extra services for special stays, a fresh start or renovation projects."
+      "From preparing your arrival to handling unexpected issues or supervising work, we take care of everything — without you needing to be there."
     )}
   </p>
 
@@ -130,7 +130,7 @@ const Services= () => {
       </div>
       <div className="home-overview__addon-title">{t("FreshStart")}</div>
       <p className="home-overview__addon-desc">
-        {t("The one-time onboarding visit that starts your membership.")}
+        {t("We inspect, prepare and set everything right from the start — so your home is ready from day one.")}
       </p>
     </div>
 </Link>
@@ -145,7 +145,7 @@ const Services= () => {
       </div>
       <div className="home-overview__addon-title">{t("Welcome Home")}</div>
       <p className="home-overview__addon-desc">
-        {t("Before you arrive, we bring your home back to life.")}
+        {t("Before you arrive, your home is cleaned, aired and prepared — so you walk into comfort, not chores.")}
       </p>
       
     </div>
@@ -159,9 +159,9 @@ const Services= () => {
       <div className="home-overview__addon-icon">
         <FaDoorOpen aria-hidden="true" />
       </div>
-      <div className="home-overview__addon-title">{t("ProAccess service")}</div>
+      <div className="home-overview__addon-title">{t("ProAccess")}</div>
       <p className="home-overview__addon-desc">
-        {t("One-off access and short supervision for trusted professionals.")}
+        {t("We open, supervise and secure your home for any trusted professional — so you don't have to manage it remotely.")}
       </p>
       
     </div>
@@ -177,7 +177,7 @@ const Services= () => {
       </div>
       <div className="home-overview__addon-title">{t("Amani Works")}</div>
       <p className="home-overview__addon-desc">
-        {t("Remote supervision for your renovation and works.")}
+        {t("We manage and supervise your renovation on site — with updates, coordination and control from a distance.")}
       </p>
     
     </div></Link>
@@ -186,7 +186,7 @@ const Services= () => {
   <div className="home-overview__cta">
    
     <Link to="/plans" className="home-overview__link">
-      {t("Compare memberships")}
+      {t("See plans")}
     </Link>
   </div>
 </div>

@@ -16,15 +16,15 @@ const Plans = () => {
       id: "silver",
       name: "Silver Plan",
       price: "39€",
-      badge: t("Light care"),
-      tagline: t("Essential care while you’re abroad."),
+      badge: t("Essential"),
+      tagline: t("A reliable presence. Every month. Nothing left unchecked."),
       features: [
-        { label: t("key holding"), href: "/services/key-holding" },
+        { label: t("Secure key holding"), href: "/services/key-holding" },
         { label: t("1 home check per month"), href: "/services/monthly-checks" },
         { label: t("2 seasonal care visits per year"), href: "/services/seasonal-care" },
       ],
       bestFor: t(
-        "Owners who want us to keep an eye on the home without too much intervention."
+        "Owners who want a dependable baseline — checked once a month, with a report after every visit."
       ),
     },
     {
@@ -33,9 +33,9 @@ const Plans = () => {
       price: "59€",
       badge: t("Most popular"),
       highlight: true,
-      tagline: t("Closer follow-up for complete peace of mind."),
+      tagline: t("Twice-monthly visits. A home you can trust from afar."),
       features: [
-        { label: t("key holding"), href: "/services/key-holding" },
+        { label: t("Secure key holding"), href: "/services/key-holding" },
         { label: t("2 home checks per month"), href: "/services/monthly-checks" },
         { label: t("2 seasonal care visits per year"), href: "/services/seasonal-care" },
 
@@ -45,7 +45,7 @@ const Plans = () => {
         { label: t("Priority on ProAccess visits"), href: "/services/pro-access" },
       ],
       bestFor: t(
-        "Owners who want us to look after their home more closely and receive regular updates."
+        "Owners who want more frequent oversight and a Welcome Home preparation included once a year."
       ),
     },
     {
@@ -53,9 +53,9 @@ const Plans = () => {
       name: "Platinum Plan",
       price: "99€", 
       badge: t("Maximum vigilance"),
-      tagline: t("We look after your home as if it were ours."),
+      tagline: t("Every week, someone is there. Nothing goes unnoticed."),
       features: [
-        { label: t("key holding"), href: "/services/key-holding" },
+        { label: t("Secure key holding"), href: "/services/key-holding" },
         { label: t("4 home checks per month (weekly)"), href: "/services/monthly-checks" },
         { label: t("4 seasonal care visits per year"), href: "/services/seasonal-care" },
 
@@ -63,10 +63,10 @@ const Plans = () => {
         { label: t("Welcome Home (included)"), href: "/services/welcome-home" },
 
         { label: t("High priority on ProAccess"), href: "/services/pro-access" },
-        { label: t("Enhanced coordination for issues and works"), href: "/services/amani-works" },
+        { label: t("Full coordination for unexpected issues and works"), href: "/services/amani-works" },
       ],
       bestFor: t(
-        "Owners who expect full vigilance and premium responsiveness while they’re abroad."
+        "Owners who want the highest level of monitoring — and a team that acts before being asked."
       ),
     },
   ];
@@ -78,7 +78,7 @@ const Plans = () => {
   return (
     <>
       <SeoHead
-        titleKey="Memberships & Pricing | AMANI HOME"
+        titleKey="Home Care Memberships in Morocco | Amani Home"
         descriptionKey="PlansMetaDescription"
         canonical="https://www.amani-services.com/plans"
       />
@@ -88,10 +88,10 @@ const Plans = () => {
       <div className="plans-page">
         <header className="plans-header">
           <p className="plans-eyebrow">{t("Memberships · Casablanca")}</p>
-          <h1 className="plans-title">{t("Choose how closely we look after your home.")}</h1>
+          <h1 className="plans-title">{t("An empty home doesn't maintain itself. Choose how closely we care for yours.")}</h1>
           <p className="plans-subtitle">
             {t(
-              "Every plan includes secure key holding, home checks and seasonal care. You only add extra services when you need more."
+              "Every membership includes key holding, regular home checks and seasonal care. 6-month membership — because real care requires consistency."
             )}
           </p>
         </header>
@@ -138,7 +138,7 @@ const Plans = () => {
                 className="plan-button"
                 onClick={() => handleSelectPlan(plan.name)}
               >
-                {t("Choose this plan")}
+                {t("Start with this plan")}
               </button>
             </div>
           ))}
@@ -146,7 +146,7 @@ const Plans = () => {
 
         <section className="plans-extra">
           <div className="plans-extra__column">
-            <h3 className="plans-extra__title">{t("Included in every membership")}</h3>
+            <h3 className="plans-extra__title">{t("What every membership includes")}</h3>
             <ul className="plans-extra__list">
               <li>
                 <Link to="/services/key-holding" className="plans-extra__link">
@@ -155,7 +155,7 @@ const Plans = () => {
               </li>
               <li>
                 <Link to="/services/monthly-checks" className="plans-extra__link">
-                  {t("Home checks according to your plan")}
+                  {t("Home checks — frequency based on your plan")}
                 </Link>
               </li>
               <li>
@@ -164,12 +164,12 @@ const Plans = () => {
                   {t("Seasonal care")}
                 </Link>
               </li>
-              <li>{t("Short report after every visit")}</li>
+              <li>{t("A written report after every visit")}</li>
             </ul>
           </div>
 
           <div className="plans-extra__column">
-            <h3 className="plans-extra__title">{t("Available as add-ons")}</h3>
+            <h3 className="plans-extra__title">{t("On-demand services")}</h3>
             <ul className="plans-extra__list">
               <li>
                 <Link to="/services/welcome-home" className="plans-extra__link">

@@ -108,7 +108,7 @@ const PortalSidebar = ({ isOpen, onClose }) => {
 
         {/* Navigation */}
         <nav className="portal-sidebar__nav">
-          <ul className="portal-sidebar__nav-list" role="list">
+          <ul className="portal-sidebar__nav-list">
             {NAV_ITEMS.map((item) => (
               <li key={item.to} className="portal-sidebar__nav-item">
                 {item.disabled ? (

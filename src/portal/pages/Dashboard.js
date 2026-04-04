@@ -374,7 +374,7 @@ const ActivitySection = ({ activity }) => {
     <div className="dashboard__activity">
       <h3 className="dashboard__section-title">{t("Recent activity")}</h3>
       {activity && activity.length > 0 ? (
-        <ul className="dashboard__activity-list" role="list">
+        <ul className="dashboard__activity-list">
           {activity.map((item) => (
             <li key={item.id} className="dashboard__activity-item">
               <span className="dashboard__activity-label">{item.label}</span>

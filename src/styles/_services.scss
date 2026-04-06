@@ -264,12 +264,144 @@ height: 100%;        /* occupe toute la cellule */
 
 
 
+  /* ── Powered by Amani Control System ── */
+  &__control-system {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #1B4F5C;
+    border-radius: 14px;
+    padding: 14px 20px;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    max-width: 640px;
+    box-shadow: 0 4px 18px rgba(27, 79, 92, 0.22);
+  }
+
+  &__control-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 5px 13px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  &__control-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #B8955A;
+    flex-shrink: 0;
+    animation: amani-pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes amani-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  &__control-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  &__control-headline {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.3;
+  }
+
+  &__control-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: #B8955A;
+  }
+
+  &__control-sep {
+    color: rgba(184, 149, 90, 0.45);
+  }
+
   /* CTA bas de bloc */
   &__cta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
+  }
+
+  /* Bouton primaire — Voir les formules */
+  &__btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #1B4F5C;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(27, 79, 92, 0.28);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      background: #2A6B7C;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(27, 79, 92, 0.34);
+    }
+  }
+
+  /* Bouton WhatsApp — Talk to Amani */
+  &__btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 26px;
+    border-radius: 999px;
+    background: transparent;
+    color: #1B4F5C;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid rgba(27, 79, 92, 0.35);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+
+    svg {
+      flex-shrink: 0;
+      color: #25D366;
+    }
+
+    &:hover {
+      border-color: #1B4F5C;
+      background: rgba(27, 79, 92, 0.05);
+      transform: translateY(-2px);
+    }
   }
   /* liens autour des cartes principales */
   &__card-link {
@@ -363,13 +495,33 @@ height: 100%;        /* occupe toute la cellule */
 
     &__cta {
       flex-direction: column;
-      align-items: center;   /* <-- centré */
+      align-items: center;
     }
 
     &__btn {
       width: 100%;
       max-width: 260px;
       text-align: center;
+    }
+
+    &__btn-primary,
+    &__btn-whatsapp {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__control-system {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      padding: 14px 16px;
+    }
+
+    &__control-text {
+      align-items: center;
     }
   }
   }

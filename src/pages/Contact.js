@@ -1,142 +1,119 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import SeoHead from "../components/SeoHead";
+import ContactRequestForm from "../components/contact/ContactRequestForm";
 
+const WHATSAPP_PHONE = "33670779256";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const location = useLocation();
 
-  const queryParams = new URLSearchParams(location.search);
-  const serviceParam = queryParams.get("service");
-  const planParam = queryParams.get("plan");
+  const whatsappHref = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
+    t("Hello, I'd like to know more about Amani Home services.")
+  )}`;
 
-  const [form, setForm] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    address: "",
-    propertyAddress: "",
-    propertySize: "",
-    service: "",
-    message: "",
-  });
-
-  useEffect(() => {
-    const prefilledService = serviceParam || planParam || "";
-    setForm((prev) => ({ ...prev, service: prefilledService }));
-  }, [serviceParam, planParam]);
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const whatsappMessage = `👋 Hello Amani! \n
-Name: ${form.fullName}
-Email: ${form.email}
-Phone: ${form.phone}
-Client address: ${form.address}
-Property address: ${form.propertyAddress}
-Property size: ${form.propertySize}
-Service requested: ${form.service}
-Message: ${form.message}
-    `;
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/33670779256?text=${encodedMessage}`;
-    window.open(whatsappURL, "_blank");
-  };
+  function scrollToForm() {
+    const el = document.getElementById("contact-request-form");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   return (
     <>
       <SeoHead
-        titleKey="Contactez-nous | AMANI HOME"
-        descriptionKey="ContactMetaDescription"
+        titleKey="Contact Amani Home | Home Care in Morocco for Owners Abroad"
+        descriptionKey="Tell us about your home in Morocco and let Amani Home recommend the right care plan for regular checks, key holding, seasonal care and arrival preparation."
         canonical="https://www.amani-services.com/contact"
       />
       <ScrollToTop />
       <Navbar />
-      <div className="contact-page">
-        <h1>{t("Let's get in touch")}</h1>
-        <p className="contact-subtitle">
-          {t("Tell us more about your request and we’ll get back to you shortly.")}
-        </p>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="fullName"
-            placeholder={t("Full Name")}
-            value={form.fullName}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder={t("Email")}
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder={t("Phone Number")}
-            value={form.phone}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="address"
-            placeholder={t("Your Address (City, Country)")}
-            value={form.address}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="propertyAddress"
-            placeholder={t("Property Address in Morocco")}
-            value={form.propertyAddress}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="propertySize"
-            placeholder={t("Approximate Size (in m²)")}
-            value={form.propertySize}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="service"
-            placeholder={t("Which service or plan are you interested in?")}
-            value={form.service}
-            onChange={handleChange}
-          />
-          <textarea
-            name="message"
-            rows="4"
-            placeholder={t("Additional notes (optional)")}
-            value={form.message}
-            onChange={handleChange}
-          ></textarea>
+      <section className="contact-hero">
+        <div className="contact-hero__card">
+          <h1 className="contact-hero__title">{t("Tell us about your home")}</h1>
+          <p className="contact-hero__subtitle">
+            {t("A few details, and we'll know exactly how to take care of it.")}
+          </p>
+          <p className="contact-hero__intro">
+            {t(
+              "Share a little about you, your property in Morocco and what matters most to you. Amani Home will use it to recommend the right level of care — no commitment, no pressure."
+            )}
+          </p>
+          <div className="contact-hero__actions">
+            <button
+              type="button"
+              className="contact-hero__btn contact-hero__btn--primary"
+              onClick={scrollToForm}
+            >
+              {t("Start my request")}
+            </button>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-hero__btn contact-hero__btn--ghost"
+            >
+              {t("Chat on WhatsApp")}
+            </a>
+          </div>
+        </div>
+      </section>
 
-          <button type="submit" className="contact-submit">
-            {t("Send via WhatsApp")}
-          </button>
-        </form>
-      </div>
+      <section id="contact-request-form" className="contact-section">
+        <div className="contact-section__inner">
+          <ContactRequestForm />
+        </div>
+      </section>
 
-      <Footer /> {/* ✅ Ajout du footer ici */}
+      <section className="contact-whatsapp-block">
+        <div className="contact-whatsapp-block__inner">
+          <h2 className="contact-whatsapp-block__title">{t("Prefer to speak directly?")}</h2>
+          <p className="contact-whatsapp-block__text">
+            {t("Send us a message on WhatsApp and one of our advisors will get back to you shortly.")}
+          </p>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-whatsapp-block__btn"
+          >
+            {t("Chat on WhatsApp")}
+          </a>
+        </div>
+      </section>
+
+      <section className="contact-next-steps">
+        <div className="contact-next-steps__inner">
+          <h2 className="contact-next-steps__title">{t("What happens next?")}</h2>
+          <div className="contact-next-steps__timeline">
+            <div className="contact-next-steps__step">
+              <span className="contact-next-steps__icon">1</span>
+              <h3 className="contact-next-steps__step-title">{t("We review your request")}</h3>
+              <p className="contact-next-steps__step-text">
+                {t("Our team looks at your property and your situation to understand what you really need.")}
+              </p>
+            </div>
+            <div className="contact-next-steps__step">
+              <span className="contact-next-steps__icon">2</span>
+              <h3 className="contact-next-steps__step-title">{t("We recommend a care plan")}</h3>
+              <p className="contact-next-steps__step-text">
+                {t("We suggest the Silver, Gold or Platinum plan that fits your home best — explained clearly, with no obligation.")}
+              </p>
+            </div>
+            <div className="contact-next-steps__step">
+              <span className="contact-next-steps__icon">3</span>
+              <h3 className="contact-next-steps__step-title">{t("We get started together")}</h3>
+              <p className="contact-next-steps__step-text">
+                {t("Once you're ready, we set everything up so your home is looked after, even from a distance.")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };
